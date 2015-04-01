@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+@import "compass";
+@import "compass/css3";
+
+@import "honoka/variables";
+
+body {
+	margin-top: $navbar-height;
+}
+
+.jumbotron {
+	background-color: #FDCEA0;
+	background-image: url(/assets/img/circle.png);
+	background-repeat: no-repeat;
+	background-position: -35% center;
+	background-size: 70%;
+	h1,
+	.h1 {
+		font-family: Montserrat, sans-serif;
+	}
+	.download {
+		margin-top: $padding-large-vertical * 2;
+	}
+}

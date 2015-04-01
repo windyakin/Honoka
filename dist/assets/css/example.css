@@ -1,0 +1,19 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+body {
+  margin-top: 80px;
+}
+
+.jumbotron {
+  background-color: #FDCEA0;
+  background-image: url(/assets/img/circle.png);
+  background-repeat: no-repeat;
+  background-position: -35% center;
+  background-size: 70%;
+}
+.jumbotron h1,
+.jumbotron .h1 {
+  font-family: Montserrat, sans-serif;
+}
+.jumbotron .download {
+  margin-top: 20px;
+}
