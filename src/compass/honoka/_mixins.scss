@@ -9,8 +9,6 @@
 
   &:hover,
   &:focus,
-  &.focus,
-  &:active,
   &.active,
   .open > &.dropdown-toggle {
     color: $color;
