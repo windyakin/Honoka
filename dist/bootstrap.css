@@ -1,7 +1,7 @@
 /*!
  * Honoka v0.0.0
  * Website: http://honokak.osaka/
- * Copyright 2012-2015 windyakin
+ * Copyright 2015 windyakin
  * Licensed under MIT License
  * Based on Bootstrap
 */
@@ -2967,7 +2967,7 @@ output {
   display: block;
   width: 100%;
   height: 37px;
-  padding: 6px 16px;
+  padding: 6px 12px;
   font-size: 16px;
   line-height: 1.42857;
   color: #555555;
@@ -3200,7 +3200,7 @@ select[multiple].input-sm,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn {
   height: 49px;
-  padding: 10px 32px;
+  padding: 10px 20px;
   font-size: 20px;
   line-height: 1.33;
   border-radius: 4px;
@@ -3225,7 +3225,7 @@ select[multiple].input-lg,
 
 .form-group-lg .form-control {
   height: 49px;
-  padding: 10px 32px;
+  padding: 10px 20px;
   font-size: 20px;
   line-height: 1.33;
   border-radius: 4px;
@@ -3240,7 +3240,7 @@ select[multiple].input-lg,
 }
 .form-group-lg .form-control-static {
   height: 49px;
-  padding: 10px 32px;
+  padding: 10px 20px;
   font-size: 20px;
   line-height: 1.33;
   min-height: 42px;
@@ -3483,7 +3483,7 @@ select[multiple].input-lg,
   background-image: none;
   border: 1px solid transparent;
   white-space: nowrap;
-  padding: 6px 16px;
+  padding: 6px 12px;
   font-size: 16px;
   line-height: 1.42857;
   border-radius: 2px;
@@ -3708,7 +3708,7 @@ select[multiple].input-lg,
 }
 
 .btn-lg, .btn-group-lg > .btn {
-  padding: 10px 32px;
+  padding: 10px 20px;
   font-size: 20px;
   line-height: 1.33;
   border-radius: 4px;
@@ -4168,7 +4168,7 @@ tbody.collapse.in {
 }
 
 .input-group-addon {
-  padding: 6px 16px;
+  padding: 6px 12px;
   font-size: 16px;
   font-weight: normal;
   line-height: 1;
@@ -4188,7 +4188,7 @@ tbody.collapse.in {
 .input-group-addon.input-lg,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .input-group-addon.btn {
-  padding: 10px 32px;
+  padding: 10px 20px;
   font-size: 20px;
   border-radius: 4px;
 }
@@ -4965,7 +4965,7 @@ tbody.collapse.in {
 .pagination > li > span {
   position: relative;
   float: left;
-  padding: 6px 16px;
+  padding: 6px 12px;
   line-height: 1.42857;
   text-decoration: none;
   color: #2196f3;
@@ -5015,7 +5015,7 @@ tbody.collapse.in {
 
 .pagination-lg > li > a,
 .pagination-lg > li > span {
-  padding: 10px 32px;
+  padding: 10px 20px;
   font-size: 20px;
 }
 .pagination-lg > li:first-child > a,

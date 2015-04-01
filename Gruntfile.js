@@ -7,7 +7,7 @@ module.exports = function(grunt) {
 		pkg: pkg,
 		// banner
 		usebanner: {
-			css: {
+			build: {
 				options: {
 					position: 'top',
 					banner:	'/*!\n' +
@@ -20,6 +20,21 @@ module.exports = function(grunt) {
 				},
 				files: {
 					src: ['dist/bootstrap.css', 'dist/bootstrap.min.css']
+				}
+			},
+			css: {
+				options: {
+					position: 'top',
+					banner:	'/*!\n' +
+									' * <%= pkg.name %> v<%= pkg.version %>\n' +
+									' * Website: <%= pkg.website %>\n' +
+									' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
+									' * Licensed under <%= pkg.license %>\n' +
+									' * Based on Bootstrap\n' +
+									'*/',
+				},
+				files: {
+					src: ['dist/bootstrap.css']
 				}
 			}
 		},
@@ -55,7 +70,7 @@ module.exports = function(grunt) {
 			// compassの自動コンパイル
 			compass: {
 				files: ['src/compass/**/*.scss'],
-				tasks: ['compass:dist'],
+				tasks: ['compass:dist', 'usebanner:css'],
 			}
 		},
 		// テストサーバ
@@ -81,7 +96,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('default', ['compass:dist', 'connect', 'watch']);
 
 	// ミニファイ
-	grunt.registerTask('build', ['clean:build','compass:dist', 'cssmin:minify', 'usebanner:css']);
+	grunt.registerTask('build', ['clean:build','compass:dist', 'cssmin:minify', 'usebanner:build']);
 	
 	grunt.registerTask('eatwarnings', function() {
 		grunt.warn = grunt.fail.warn = function(warning) {
