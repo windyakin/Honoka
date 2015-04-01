@@ -1,0 +1,69 @@
+/* font load */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+@import "compass";
+@import "compass/css3";
+
+// animation
+a {
+	@include transition-property(all);
+	@include transition-duration(0.3s);
+	@include transition-timing-function(ease);
+}
+
+// buttons
+.btn {
+	&:active,
+	&.active {
+		@include box-shadow(none);
+	}
+}
+
+// navbar
+.navbar-nav {
+	@media (min-width: $grid-float-breakpoint) {
+		> li {
+			> a {
+				padding-top:    0;
+				padding-bottom: 0;
+				margin-top:     $navbar-padding-vertical/4*3;
+				margin-bottom:  $navbar-padding-vertical/4*3;
+				padding-top:    $navbar-padding-vertical/4;
+				padding-bottom: $navbar-padding-vertical/4;
+				border-radius:  $border-radius-large;
+			}
+			> .dropdown-menu {
+				margin-top: -$navbar-padding-vertical/4*3;	
+			}
+		}
+		> li:not(:last-child) {
+			margin-right: $navbar-padding-horizontal/3;
+		}
+	}
+}
+
+.navbar-brand {
+	font-size: $font-size-large;
+	margin-right: $navbar-padding-horizontal/3;
+}
+
+// label
+.label {
+	vertical-align: 2px;
+}
+
+// フォント指定
+.navbar,
+.btn,
+.form-control,
+.input-gruop,
+.breadcrumb,
+.nav-tabs,
+.nav-pills,
+.panel-title,
+.list-group,
+.pagination,
+.pager
+{
+	font-family: $font-family-sans-serif;
+}

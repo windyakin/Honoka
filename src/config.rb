@@ -8,9 +8,10 @@ sass_dir        = "src/compass/"
 images_dir		  = "dist/assets/img/"
 javascripts_dir	= "dist/assets/js/"
 line_comments	  = false
-output_style	  = :compressed
+output_style	  = :expanded
 
 additional_import_paths = [
 	# Bootstrap Core
-	"src/bootstrap/assets/stylesheets/"
+	"src/bootstrap/assets/stylesheets/",
+	"src/honoka/"
 ]
