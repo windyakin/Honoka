@@ -4,6 +4,38 @@ module.exports = function(grunt) {
 	var pkg, taskName, ect_var;
 	pkg = grunt.file.readJSON('package.json');
 	grunt.initConfig({
+		pkg: pkg,
+		// banner
+		usebanner: {
+			css: {
+				options: {
+					position: 'top',
+					banner:	'/*!\n' +
+									' * <%= pkg.name %> v<%= pkg.version %>\n' +
+									' * Website: <%= pkg.website %>\n' +
+									' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
+									' * Licensed under <%= pkg.license %>\n' +
+									' * Based on Bootstrap\n' +
+									'*/',
+				},
+				files: {
+					src: ['dist/bootstrap.css', 'dist/bootstrap.min.css']
+				}
+			}
+		},
+		// cssmin
+		cssmin: {
+			minify: {
+				expand: true,
+				cwd: 'dist/',
+				src: ['bootstrap.css'],
+				dest: 'dist/',
+				ext: '.min.css',
+				options: {
+					noAdvanced: true
+				}
+			}
+		},
 		// compassのコンパイル
 		compass: {
 			dist: {
@@ -11,6 +43,11 @@ module.exports = function(grunt) {
 					sassDir: 'src/compass',
 					config: 'src/config.rb'
 				}
+			}
+		},
+		clean: {
+			build: {
+				src: ['dist/bootstrap**.css']
 			}
 		},
 		// ファイル更新監視
@@ -42,6 +79,9 @@ module.exports = function(grunt) {
 	
 	// 通常 (compass/connect/watch)
 	grunt.registerTask('default', ['compass:dist', 'connect', 'watch']);
+
+	// ミニファイ
+	grunt.registerTask('build', ['clean:build','compass:dist', 'cssmin:minify', 'usebanner:css']);
 	
 	grunt.registerTask('eatwarnings', function() {
 		grunt.warn = grunt.fail.warn = function(warning) {
