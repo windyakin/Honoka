@@ -4,38 +4,19 @@ module.exports = function(grunt) {
 	var pkg, taskName, ect_var;
 	pkg = grunt.file.readJSON('package.json');
 	grunt.initConfig({
-		pkg: pkg,
-		// banner
-		usebanner: {
-			build: {
-				options: {
-					position: 'top',
-					banner:	'/*!\n' +
-									' * <%= pkg.name %> v<%= pkg.version %>\n' +
-									' * Website: <%= pkg.website %>\n' +
-									' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
-									' * Licensed under <%= pkg.license %>\n' +
-									' * Based on Bootstrap\n' +
-									'*/',
+		// bannerの調整
+		replace: {
+			banner: {
+				src: ['dist/bootstrap.min.css'],
+				dest: 'dist/bootstrap.min.css',
+				replacements: [{
+					from: '@charset "UTF-8";/*!',
+					to: '@charset "UTF-8";\n/*!',
 				},
-				files: {
-					src: ['dist/bootstrap.css', 'dist/bootstrap.min.css']
-				}
-			},
-			css: {
-				options: {
-					position: 'top',
-					banner:	'/*!\n' +
-									' * <%= pkg.name %> v<%= pkg.version %>\n' +
-									' * Website: <%= pkg.website %>\n' +
-									' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
-									' * Licensed under <%= pkg.license %>\n' +
-									' * Based on Bootstrap\n' +
-									'*/',
-				},
-				files: {
-					src: ['dist/bootstrap.css']
-				}
+				{
+					from: 'Based on Bootstrap\n */',
+					to: 'Based on Bootstrap\n */\n'	
+				}]
 			}
 		},
 		// cssmin
@@ -70,7 +51,7 @@ module.exports = function(grunt) {
 			// compassの自動コンパイル
 			compass: {
 				files: ['src/compass/**/*.scss'],
-				tasks: ['compass:dist', 'usebanner:css'],
+				tasks: ['compass:dist'],
 			}
 		},
 		// テストサーバ
@@ -96,7 +77,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('default', ['compass:dist', 'connect', 'watch']);
 
 	// ミニファイ
-	grunt.registerTask('build', ['clean:build','compass:dist', 'cssmin:minify', 'usebanner:build']);
+	grunt.registerTask('build', ['clean:build', 'compass:dist', 'cssmin:minify', 'replace:banner']);
 	
 	grunt.registerTask('eatwarnings', function() {
 		grunt.warn = grunt.fail.warn = function(warning) {
