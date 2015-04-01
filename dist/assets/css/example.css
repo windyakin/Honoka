@@ -4,6 +4,10 @@ body {
 }
 
 .jumbotron {
+  position: relative;
+  overflow: hidden;
+  min-height: 530px;
+  text-align: center;
   background-color: #FDCEA0;
   background-image: url(/assets/img/circle.png);
   background-repeat: no-repeat;
@@ -16,4 +20,16 @@ body {
 }
 .jumbotron .download {
   margin-top: 20px;
+}
+.jumbotron .honoka {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  height: 530px;
+  width: 400px;
+  background-image: url(/assets/img/honoka.png);
+  background-repeat: no-repeat;
+}
+.jumbotron .outline {
+  margin-top: 200px;
 }
