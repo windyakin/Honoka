@@ -12,7 +12,5 @@ output_style	= :compressed
 
 additional_import_paths = [
 	# Bootstrap Core
-	"src/bootstrap/core/assets/stylesheets/",
-	# Bootstrap Theme
-	"src/bootstrap/theme/"
+	"src/bootstrap/assets/stylesheets/"
 ]
