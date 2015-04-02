@@ -1,4 +1,78 @@
+@charset "UTF-8";
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
+.btn-twitter .fa.fa-lg, .btn-facebook .fa.fa-lg {
+  vertical-align: -1px;
+  margin-right: 2px;
+}
+
+.btn-twitter {
+  color: #FFF;
+  background-color: #55ACEE;
+  border-color: #4ca7ed;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -moz-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+.btn-twitter:hover, .btn-twitter:focus, .btn-twitter.focus, .btn-twitter.active, .btn-twitter.active, .open > .btn-twitter.dropdown-toggle {
+  color: #FFF;
+  background-color: #3ea1ec;
+  border-color: #309aea;
+}
+.btn-twitter:active, .btn-twitter.active, .open > .btn-twitter.dropdown-toggle {
+  background-image: none;
+}
+.btn-twitter.disabled, .btn-twitter.disabled:hover, .btn-twitter.disabled:focus, .btn-twitter.disabled.focus, .btn-twitter.disabled:active, .btn-twitter.disabled.active, .btn-twitter[disabled], .btn-twitter[disabled]:hover, .btn-twitter[disabled]:focus, .btn-twitter[disabled].focus, .btn-twitter[disabled]:active, .btn-twitter[disabled].active, fieldset[disabled] .btn-twitter, fieldset[disabled] .btn-twitter:hover, fieldset[disabled] .btn-twitter:focus, fieldset[disabled] .btn-twitter.focus, fieldset[disabled] .btn-twitter:active, fieldset[disabled] .btn-twitter.active {
+  background-color: #55ACEE;
+  border-color: #4ca7ed;
+}
+.btn-twitter .badge {
+  color: #55ACEE;
+  background-color: #FFF;
+}
+
+.btn-facebook {
+  color: #FFF;
+  background-color: #3B5998;
+  border-color: #385591;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -moz-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+.btn-facebook:hover, .btn-facebook:focus, .btn-facebook.focus, .btn-facebook.active, .btn-facebook.active, .open > .btn-facebook.dropdown-toggle {
+  color: #FFF;
+  background-color: #344e86;
+  border-color: #30487b;
+}
+.btn-facebook:active, .btn-facebook.active, .open > .btn-facebook.dropdown-toggle {
+  background-image: none;
+}
+.btn-facebook.disabled, .btn-facebook.disabled:hover, .btn-facebook.disabled:focus, .btn-facebook.disabled.focus, .btn-facebook.disabled:active, .btn-facebook.disabled.active, .btn-facebook[disabled], .btn-facebook[disabled]:hover, .btn-facebook[disabled]:focus, .btn-facebook[disabled].focus, .btn-facebook[disabled]:active, .btn-facebook[disabled].active, fieldset[disabled] .btn-facebook, fieldset[disabled] .btn-facebook:hover, fieldset[disabled] .btn-facebook:focus, fieldset[disabled] .btn-facebook.focus, fieldset[disabled] .btn-facebook:active, fieldset[disabled] .btn-facebook.active {
+  background-color: #3B5998;
+  border-color: #385591;
+}
+.btn-facebook .badge {
+  color: #3B5998;
+  background-color: #FFF;
+}
+
 body {
   margin-top: 80px;
 }
@@ -43,11 +117,50 @@ section.section {
   padding: 80px 0;
 }
 section.section.section-inverse {
-  background-color: #BBDDFF;
+  background-color: #fee8d2;
 }
 section.section .subtitle {
   text-align: center;
   margin-bottom: 20px;
+}
+
+.point .point-box {
+  text-align: center;
+}
+.point .point-box .point-circle {
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  font-size: 60px;
+  line-height: 100px;
+  color: #fff;
+  border-radius: 100%;
+}
+.point .point-box .point-circle.start {
+  background-color: #4caf50;
+}
+.point .point-box .point-circle.replace {
+  background-color: #ff9800;
+}
+.point .point-box .point-circle.compass {
+  background-color: #2196f3;
+}
+.point .point-box .point-circle.japanese {
+  background-color: #f44336;
+}
+.point .point-box .point-circle.japanese span.icon-jp:before {
+  content: "あ";
+  font-weight: bold;
+}
+.point .point-box .point-description h4 {
+  text-align: center;
+}
+.point .point-box .point-description p {
+  text-align: justify;
+}
+
+.japanese-font .well > h3 {
+  margin-top: 10px;
 }
 
 .bootstrap-default {

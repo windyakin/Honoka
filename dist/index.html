@@ -5,7 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Honoka</title>
+  <title>Honoka - 日本語も美しく表示できるBootstrapテーマ</title>
+
+  <link rel="shortcut icon" type="image/png" href="assets/img/brand.png">
+
+  <meta property="og:title" content="Honoka - 日本語も美しく表示できるBootstrapテーマ">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://honokak.osaka/">
+  <meta property="og:image" content="">
+  <meta property="og:description" content="Honokaは日本語表示に最適化されたオリジナルBootstrapテーマです。">
+
 
   <link rel="stylesheet" type="text/css" href="bootstrap.css">
   <link rel="stylesheet" type="text/css" href="assets/css/example.css">
@@ -59,10 +68,12 @@
           </li>
         </ul>
 
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Kousaka Yukiho</a></li>
-          <li><a href="#">Ayase Alisa</a></li>
-        </ul>
+        <div class="nav navbar-form navbar-right">
+          <div class="form-group">
+            <a href="https://twitter.com/intent/tweet?url=http://honokak.osaka/&text=Honoka%20%2d%20%e6%97%a5%e6%9c%ac%e8%aa%9e%e3%82%82%e7%be%8e%e3%81%97%e3%81%8f%e8%a1%a8%e7%a4%ba%e3%81%a7%e3%81%8d%e3%82%8bBootstrap%e3%83%86%e3%83%bc%e3%83%9e" class="btn btn-twitter"><i class="fa fa-twitter fa-lg"></i> Tweet</a>
+            <a href="http://www.facebook.com/sharer.php?u=http://honokak.osaka/" class="btn btn-facebook"><i class="fa fa-facebook fa-lg"></i> Share</a>
+          </div>
+        </div>
 
       </div>
     </div>
@@ -75,7 +86,7 @@
     <div class="row">
       <div class="col-xs-12 outline">
         <h1>Bootstrap Theme for Japanese.</h1>
-        <p>"Honoka" は日本語表示の対応を強化したBootstrapテーマです。</p>
+        <p>"Honoka" は日本語も美しく表示できるBootstrapテーマです。</p>
         <div class="download">
           <a href="https://github.com/windyakin/Honoka" class="btn btn-warning btn-lg"><i class="fa fa-github-alt"></i> Download from GitHub</a>
           <a href="/bootstrap.html" class="btn btn-primary btn-lg"><i class="fa fa-eye"></i> Watch Demo</a>
@@ -88,46 +99,105 @@
   </div>
 </div>
 
-<section class="section section-default">
+<section class="section section-default point">
   <div class="container">
     <div class="row">
       <div class="col-xs-12 subtitle">
         <h2>HonokaはオリジナルBootstrapテーマです</h2>
+        <p>HonokaはBootstrapテーマの一つですが、以下の特徴を持っています。</p>
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-5 col-lg-offset-1 col-md-6">
-        <h3><i class="fa fa-check"></i> Honokaを使うのは簡単です</h3>
-        <p class="text-justify">本家Bootstrapとは見た目が違うだけなので，マークアップに関する規約はBootstrapを使っている時と何ら変わりません。</p>
+      <div class="col-md-3 col-sm-6 point-box">
+        <div class="point-circle start">
+          <i class="fa fa-check"></i>
+        </div>
+        <div class="point-description">
+          <h4>Easy to Start</h4>
+          <p>HonokaはBootstrapを元に製作されているため、非常に高い互換性を持っています。マークアップに関する規約はほとんど変わりません。</p>
+        </div>
       </div>
-      <div class="col-lg-5 col-md-6">
-        <h3><i class="fa fa-refresh"></i> 既存のBootstrapと置換え</h3>
-        <p class="text-justify">既にBootstrapを使って作成したウェブサイトがある場合も，CSSを置き換えるだけで簡単に利用することが出来ます。</p>
+      <div class="col-md-3 col-sm-6 point-box">
+        <div class="point-circle replace">
+          <i class="fa fa-refresh"></i>
+        </div>
+        <div class="point-description">
+          <h4>Replace Bootstrap</h4>
+          <p>既にBootstrapを使って作成したウェブサイトがある場合は、CSSを置き換えるだけで簡単にHonokaを利用できます。</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 point-box">
+        <div class="point-circle compass">
+          <i class="fa fa-github-alt"></i>
+        </div>
+        <div class="point-description">
+          <h4>Open Source</h4>
+          <p>作成に使用したSASSファイルは全て公開されています。変数の定義ファイルを変更することで自分好みの設定に変更することも可能です。</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 point-box">
+        <div class="point-circle japanese">
+          <span class="icon-jp"></span>
+        </div>
+        <div class="point-description">
+          <h4>Optimization Japanese</h4>
+          <p>本家Bootstrapでは指定されていない日本語フォントに関する指定が行われているため、美しく日本語を表示できます。</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section section-inverse">
+<section class="section section-inverse japanese-font">
   <div class="container">
     <div class="row">
       <div class="col-xs-12 subtitle">
-        <h2>Honoka</h2>
+        <h2>Honokaは日本語を美しく表示します</h2>
+        <p>本家Bootstrapでは指定されていない日本語のフォント指定を行っているので、日本語も美しく表示されます。</p>
       </div>
     </div>
     <div class="row">
       <div class="col-md-6">
-        <h3><i class="fa fa-check"></i> Honokaは簡単に利用できます</h3>
-        <p class="text-justify">通常のBootstrapと見た目が違うだけでマークアップに対しての影響はありません。今までBootstrapを使っていたのであればそのCSSをHonokaに置き換えるだけでテーマを使用することが出来ます。</p>
+        <div class="well bootstrap-default text-justify">
+          <h3>従来の日本語表示</h3>
+          <p>
+            秋葉原と神田と神保町という3つの街のはざまにある伝統校、音ノ木坂学院は統廃合の危機に瀕していた。
+            学校の危機に、2年生の高坂穂乃果を中心とした9人の女子生徒が立ち上がる。
+            私たちの大好きな学校を守るために、私たちができること……。それは、アイドルになること！ アイドルになって学校を世に広く宣伝し、入学者を増やそう！ 
+            ここから、彼女たちの「みんなで叶える物語」（ スクールアイドルプロジェクト）が始まった！
+          </p>
+        </div>
       </div>
       <div class="col-md-6">
-        <h3><i class="fa fa-language"></i> Honokaは日本語に最適化されています</h3>
-        <p class="text-justify">通常のBootstrapでは日本語フォントに対する対応はされていません。しかしHonokaではCSSで日本語フォントの指定も行うことで通常のBootstrapより美しく日本語を表示します。</p>
+        <div class="well text-justify">
+          <h3>Honokaの日本語表示</h3>
+          <p>
+            秋葉原と神田と神保町という3つの街のはざまにある伝統校、音ノ木坂学院は統廃合の危機に瀕していた。
+            学校の危機に、2年生の高坂穂乃果を中心とした9人の女子生徒が立ち上がる。
+            私たちの大好きな学校を守るために、私たちができること……。それは、アイドルになること！ アイドルになって学校を世に広く宣伝し、入学者を増やそう！ 
+            ここから、彼女たちの「みんなで叶える物語」（ スクールアイドルプロジェクト）が始まった！
+          </p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
+<section class="section section-default getting-started">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 subtitle">
+        <h2>さあ、はじめましょう。</h2>
+        <p>導入はとっても簡単。本家Bootstrapと何ら変わりません。</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+      a
+      </div>
+    </div>
+  </div>
+</section>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>

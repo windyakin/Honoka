@@ -6,6 +6,24 @@
 @import "compass/css3";
 
 @import "honoka/variables";
+@import "honoka/mixins";
+
+$brand-honoka: #FDCEA0;
+$brand-twitter: #55ACEE;
+$brand-facebook: #3B5998;
+
+.btn-twitter,.btn-facebook {
+	.fa.fa-lg {
+		vertical-align: -1px;
+		margin-right: 2px;
+	}
+}
+.btn-twitter {
+	@include button-variant(#FFF, $brand-twitter, darken($brand-twitter, 2%));
+}
+.btn-facebook {
+	@include button-variant(#FFF, $brand-facebook, darken($brand-facebook, 2%));
+}
 
 body {
 	margin-top: $navbar-height;
@@ -17,7 +35,7 @@ body {
 	min-height: 530px;
 	margin-bottom: 0;
 	text-align: center;
-	background-color: #FDCEA0;
+	background-color: $brand-honoka;
 	background-image: url(/assets/img/circle.png);
 	background-repeat: no-repeat;
 	background-position: -35% center;
@@ -51,11 +69,59 @@ section.section {
 	padding: ($padding-large-vertical * 8) 0;
 	&.section-default {}
 	&.section-inverse {
-		background-color: #BBDDFF;
+		background-color: lighten($brand-honoka, 10%);
 	}
 	.subtitle {
 		text-align: center;
 		margin-bottom: $padding-large-vertical * 2;
+	}
+}
+
+.point {
+	.point-box {
+		text-align: center;
+		.point-circle {
+			$point-circle-size: 100px;
+			margin: 0 auto;
+			width: $point-circle-size;
+			height: $point-circle-size;
+			font-size: $point-circle-size * 0.6;
+			line-height: $point-circle-size;
+			color: #fff;
+			border-radius: 100%;
+			&.start {
+				background-color: $brand-success;
+			}
+			&.replace {
+				background-color: $brand-warning;
+			}
+			&.compass {
+				background-color: $brand-primary;
+			}
+			&.japanese {
+				background-color: $brand-danger;
+				span.icon-jp:before {
+					content: "あ";
+					font-weight: bold;
+				}
+			}
+		}
+		.point-description {
+			h4 {
+				text-align: center;
+			}
+			p {
+				text-align: justify;
+			}
+		}
+	}
+}
+
+.japanese-font {
+	.well {
+		> h3 {
+			margin-top: $padding-large-vertical;
+		}
 	}
 }
 
