@@ -1,19 +1,21 @@
+@charset "UTF-8";
+
+@import "honoka/variables";
 /*!
- * Honoka v0.0.0
+ * Honoka v#{$bootstrap-version}
  * Website: http://honokak.osaka/
  * Copyright 2015 windyakin
  * The MIT License
  * Based on Bootstrap
  */
-@charset "UTF-8";
 // Core variables and mixins
-@import "honoka/variables";
 @import "bootstrap/mixins";
 @import "honoka/mixins";
 
 @import "bootstrap/normalize";
 @import "bootstrap/grid";
 @import "bootstrap/print";
+@import "bootstrap/glyphicons";
 
 // Core CSS
 @import "bootstrap/scaffolding";
