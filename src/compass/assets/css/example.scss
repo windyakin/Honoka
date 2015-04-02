@@ -74,6 +74,9 @@ section.section {
 	.subtitle {
 		text-align: center;
 		margin-bottom: $padding-large-vertical * 2;
+		h2 {
+			margin-top: 0;
+		}
 	}
 }
 
@@ -122,6 +125,44 @@ section.section {
 		> h3 {
 			margin-top: $padding-large-vertical;
 		}
+	}
+}
+
+
+footer {
+	padding: $padding-large-vertical*4 0px;
+	color: $gray-lighter;
+	background-color: $gray-dark;
+	.social-button {
+		position: relative;
+		overflow: hidden;
+		margin: 0px auto !important;
+		padding: $padding-large-vertical 0;
+		> ul {
+			position: relative;
+			left: 50%;
+			float: left;
+			margin: 0px;
+			padding: 0px;
+			list-style: outside none none;
+			> li {
+				position: relative;
+				left: -50%;
+				float: left;
+				margin: 0px 10px;
+				padding: 0px;
+
+				.fb-like {
+					> span {
+						vertical-align: 0 !important;
+					}
+				}
+			}
+		}
+	}
+	.copyright {
+		padding-top: $padding-large-vertical;
+		padding-bottom: $padding-large-vertical;
 	}
 }
 

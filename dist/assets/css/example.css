@@ -123,6 +123,9 @@ section.section .subtitle {
   text-align: center;
   margin-bottom: 20px;
 }
+section.section .subtitle h2 {
+  margin-top: 0;
+}
 
 .point .point-box {
   text-align: center;
@@ -161,6 +164,40 @@ section.section .subtitle {
 
 .japanese-font .well > h3 {
   margin-top: 10px;
+}
+
+footer {
+  padding: 40px 0px;
+  color: #eeeeee;
+  background-color: #333333;
+}
+footer .social-button {
+  position: relative;
+  overflow: hidden;
+  margin: 0px auto !important;
+  padding: 10px 0;
+}
+footer .social-button > ul {
+  position: relative;
+  left: 50%;
+  float: left;
+  margin: 0px;
+  padding: 0px;
+  list-style: outside none none;
+}
+footer .social-button > ul > li {
+  position: relative;
+  left: -50%;
+  float: left;
+  margin: 0px 10px;
+  padding: 0px;
+}
+footer .social-button > ul > li .fb-like > span {
+  vertical-align: 0 !important;
+}
+footer .copyright {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .bootstrap-default {
