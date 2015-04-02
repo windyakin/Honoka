@@ -162,6 +162,10 @@ section.section .subtitle h2 {
   text-align: justify;
 }
 
+.getting-started h3 {
+  margin-top: 0;
+}
+
 .japanese-font .well > h3 {
   margin-top: 10px;
 }
