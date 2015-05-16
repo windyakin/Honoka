@@ -117,7 +117,7 @@ section.section {
   padding: 80px 0;
 }
 section.section.section-inverse {
-  background-color: #fee8d2;
+  background-color: #fff5eb;
 }
 section.section .subtitle {
   text-align: center;
@@ -206,7 +206,9 @@ footer .copyright {
 
 .bootstrap-default {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
 }
 .bootstrap-default > h3 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 24px;
 }
