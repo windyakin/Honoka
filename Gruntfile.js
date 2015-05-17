@@ -74,7 +74,7 @@ module.exports = function(grunt) {
 	}
 	
 	// 通常 (compass/connect/watch)
-	grunt.registerTask('default', ['compass:dist', 'connect', 'watch']);
+	grunt.registerTask('server', ['compass:dist', 'connect', 'watch']);
 
 	// ミニファイ
 	grunt.registerTask('build', ['clean:build', 'compass:dist', 'cssmin:minify', 'replace:banner']);
