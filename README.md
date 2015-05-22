@@ -1,5 +1,7 @@
 # Honoka
 
+<div style="font-size: 2em; text-align: center;">[honokak.osaka](http://honokak.osaka/)</div>
+
 ![honoka](honoka.png)
 
 "Honoka" は日本語も美しく表示できるBootstrapテーマです。
