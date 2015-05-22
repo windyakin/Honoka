@@ -2,7 +2,7 @@
 
 [http://honokak.osaka/](http://honokak.osaka/)
 
-![honoka](honoka.png)
+![honoka](dist/assets/img/sample.png)
 
 "Honoka" は日本語も美しく表示できるBootstrapテーマです。
 
