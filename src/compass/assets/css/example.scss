@@ -11,6 +11,7 @@
 $brand-honoka: #FDCEA0;
 $brand-twitter: #55ACEE;
 $brand-facebook: #3B5998;
+$brand-hatena: #178fde;
 
 .btn-twitter,.btn-facebook {
 	.fa.fa-lg {
@@ -23,6 +24,15 @@ $brand-facebook: #3B5998;
 }
 .btn-facebook {
 	@include button-variant(#FFF, $brand-facebook, darken($brand-facebook, 2%));
+}
+.btn-hatebu {
+	@include button-variant(#FFF, $brand-hatena, darken($brand-hatena, 2%));
+}
+
+.fa.fa-hatebu:before {
+	content: "B!";
+	font-family: Verdana;
+	font-weight: bold;
 }
 
 body {

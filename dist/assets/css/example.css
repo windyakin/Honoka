@@ -73,6 +73,46 @@
   background-color: #FFF;
 }
 
+.btn-hatebu {
+  color: #FFF;
+  background-color: #178fde;
+  border-color: #1689d5;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -moz-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+.btn-hatebu:hover, .btn-hatebu:focus, .btn-hatebu.focus, .btn-hatebu.active, .btn-hatebu.active, .open > .btn-hatebu.dropdown-toggle {
+  color: #FFF;
+  background-color: #1580c7;
+  border-color: #1377b9;
+}
+.btn-hatebu:active, .btn-hatebu.active, .open > .btn-hatebu.dropdown-toggle {
+  background-image: none;
+}
+.btn-hatebu.disabled, .btn-hatebu.disabled:hover, .btn-hatebu.disabled:focus, .btn-hatebu.disabled.focus, .btn-hatebu.disabled:active, .btn-hatebu.disabled.active, .btn-hatebu[disabled], .btn-hatebu[disabled]:hover, .btn-hatebu[disabled]:focus, .btn-hatebu[disabled].focus, .btn-hatebu[disabled]:active, .btn-hatebu[disabled].active, fieldset[disabled] .btn-hatebu, fieldset[disabled] .btn-hatebu:hover, fieldset[disabled] .btn-hatebu:focus, fieldset[disabled] .btn-hatebu.focus, fieldset[disabled] .btn-hatebu:active, fieldset[disabled] .btn-hatebu.active {
+  background-color: #178fde;
+  border-color: #1689d5;
+}
+.btn-hatebu .badge {
+  color: #178fde;
+  background-color: #FFF;
+}
+
+.fa.fa-hatebu:before {
+  content: "B!";
+  font-family: Verdana;
+  font-weight: bold;
+}
+
 body {
   margin-top: 80px;
 }
