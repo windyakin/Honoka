@@ -1,6 +1,6 @@
 # Honoka
 
-<div style="font-size: 2em; text-align: center;">[honokak.osaka](http://honokak.osaka/)</div>
+[http://honokak.osaka/](http://honokak.osaka/)
 
 ![honoka](honoka.png)
 
