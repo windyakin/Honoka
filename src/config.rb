@@ -5,13 +5,13 @@
 http_path       = "/"
 css_dir         = "dist/"
 sass_dir        = "src/compass/"
-images_dir		  = "dist/assets/img/"
-javascripts_dir	= "dist/assets/js/"
+images_dir		  = "dist/img/"
+javascripts_dir	= "dist/js/"
 line_comments	  = false
 output_style	  = :expanded
 
 additional_import_paths = [
 	# Bootstrap Core
 	"src/bootstrap/assets/stylesheets/",
-	"src/honoka/"
+	"src/compass/css/"
 ]

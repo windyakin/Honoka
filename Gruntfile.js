@@ -7,8 +7,8 @@ module.exports = function(grunt) {
 		// bannerの調整
 		replace: {
 			banner: {
-				src: ['dist/bootstrap.min.css'],
-				dest: 'dist/bootstrap.min.css',
+				src: ['dist/css/bootstrap.min.css'],
+				dest: 'dist/css/bootstrap.min.css',
 				replacements: [{
 					from: '@charset "UTF-8";/*!',
 					to: '@charset "UTF-8";\n/*!',
@@ -23,9 +23,9 @@ module.exports = function(grunt) {
 		cssmin: {
 			minify: {
 				expand: true,
-				cwd: 'dist/',
+				cwd: 'dist/css/',
 				src: ['bootstrap.css'],
-				dest: 'dist/',
+				dest: 'dist/css/',
 				ext: '.min.css',
 				options: {
 					noAdvanced: true
@@ -43,7 +43,25 @@ module.exports = function(grunt) {
 		},
 		clean: {
 			build: {
-				src: ['dist/bootstrap**.css']
+				src: ['dist/css/**/*', 'dist/js/**/*', 'dist/fonts/**/*']
+			}
+		},
+		copy: {
+			build: {
+				files: [
+					{
+						expand: true,
+						cwd: 'src/bootstrap/assets/fonts/bootstrap/',
+						src: ["**/*"],
+						dest: 'dist/fonts'
+					},
+					{
+						expand: true,
+						cwd: "src/bootstrap/assets/javascripts/",
+						src: ["bootstrap.**js"],
+						dest: "dist/js"
+					}
+				]
 			}
 		},
 		// ファイル更新監視
@@ -73,23 +91,30 @@ module.exports = function(grunt) {
 					{
 						//CSS
 						expand: true,
-						cwd: "dist/",
+						cwd: "dist/css/",
 						src: ["bootstrap**.css"],
 						dest: "honoka/css"
 					},
 					{
 						// Font
 						expand: true,
-						cwd: "src/bootstrap/assets/fonts/bootstrap/",
+						cwd: "dist/fonts/",
 						src: ["**/*"],
 						dest: "honoka/fonts"
 					},
 					{
 						// JavaScript
 						expand: true,
-						cwd: "src/bootstrap/assets/javascripts/",
+						cwd: "dist/js/",
 						src: ["bootstrap.**js"],
 						dest: "honoka/js"
+					},
+					{
+						// Sample html
+						expand: true,
+						cwd: "dist/",
+						src: ["bootstrap.html"],
+						dest: "honoka"
 					},
 					{
 						// README
@@ -112,7 +137,10 @@ module.exports = function(grunt) {
 	grunt.registerTask('server', ['compass:dist', 'connect', 'watch']);
 
 	// ミニファイ
-	grunt.registerTask('build', ['clean:build', 'compass:dist', 'cssmin:minify', 'replace:banner']);
+	grunt.registerTask('build', ['clean:build', 'copy:build', 'compass:dist', 'cssmin:minify', 'replace:banner']);
+
+	// 配布用パッケージ作成
+	grunt.registerTask('package', ['build', 'compress:main']);
 	
 	grunt.registerTask('eatwarnings', function() {
 		grunt.warn = grunt.fail.warn = function(warning) {

@@ -83,7 +83,7 @@ $headings-color:          inherit !default;
 //** Load fonts from this directory.
 
 // [converter] Asset helpers such as Sprockets and Node.js Mincer do not resolve relative paths
-$icon-font-path:          "https://maxcdn.bootstrapcdn.com/bootstrap/#{$bootstrap-version}/fonts/" !default;
+$icon-font-path:          "../fonts/" !default;
 
 //** File name for all font files.
 $icon-font-name:          "glyphicons-halflings-regular" !default;
