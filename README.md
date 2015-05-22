@@ -10,6 +10,10 @@
 
 通常の[Bootstrap](http://getbootstrap.com/)では，日本語のフォント指定や文字サイズは最適とはいえません。"Honoka"はそんなBootstrapをベースに，日本語表示に適したフォント指定や，文字サイズに関するコードを追記したBootstrapテーマの一つです。
 
+## Live Demo
+
+[http://honokak.osaka/bootstrap.html](http://honokak.osaka/bootstrap.html)
+
 ## Usage
 
 Honokaは単なるBootstrapテーマにしか過ぎないため，基本的な使い方は本家Bootstrapとほとんど変わりません。よって以下に書くことは[本家Bootstrap](http://getbootstrap.com/getting-started/)からの引用，もしくはその一部を変更したものです。用意されたCSSクラスやコンポーネントなど，より詳細な使い方のドキュメントは本家Bootstrapの各種リファレンスページ([CSS](http://getbootstrap.com/css/) / [Components](http://getbootstrap.com/components/) / [JavaScript](http://getbootstrap.com/javascript/))をご覧になることを推奨します。
