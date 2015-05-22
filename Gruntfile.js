@@ -63,6 +63,41 @@ module.exports = function(grunt) {
 					base: 'dist'
 				}
 			}
+		},
+		compress: {
+			main: {
+				options: {
+					archive: 'data/bootstrap-honoka-dist.zip'
+				},
+				files: [
+					{
+						//CSS
+						expand: true,
+						cwd: "dist/",
+						src: ["bootstrap**.css"],
+						dest: "honoka/css"
+					},
+					{
+						// Font
+						expand: true,
+						cwd: "src/bootstrap/assets/fonts/bootstrap/",
+						src: ["**/*"],
+						dest: "honoka/fonts"
+					},
+					{
+						// JavaScript
+						expand: true,
+						cwd: "src/bootstrap/assets/javascripts/",
+						src: ["bootstrap.**js"],
+						dest: "honoka/js"
+					},
+					{
+						// README
+						src: ["README.md"],
+						dest: "honoka"
+					}
+				]
+			},
 		}
 	});
 
