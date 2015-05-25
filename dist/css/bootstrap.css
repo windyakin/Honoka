@@ -7182,7 +7182,7 @@ button.close {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1040;
+  z-index: 1050;
   -webkit-overflow-scrolling: touch;
   outline: 0;
 }
@@ -8137,6 +8137,11 @@ a {
 .panel-title,
 .list-group,
 .pagination,
-.pager {
+.pager,
+.alert,
+.label,
+.badge,
+.panel-heading,
+.lead {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, "Arial", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
 }
