@@ -84,8 +84,8 @@ Bootstrapをつかってウェブページを作成する際に基本となるHT
 このリポジトリはGruntを使った自動タスクによって，テストや配布用パッケージ生成することができます。
 
 ### Attention
-``src/bootstrap/``以下についてはGitのSubmodule機能(https://git-scm.com/book/en/v2/Git-Tools-Submodules)を使って[twbs/bootstra-sass](https://github.com/twbs/bootstrap-sass/)(BootstrapのSASS版コード)を読み込んでいるため，ReleaseページでダウンロードできるSource Codeというアーカイブの
-中に含まれていません。よって[twbs/bootstra-sass](https://github.com/twbs/bootstrap-sass/)を直接ダウンロードしてファイルを配置する必要があります。ダウンロードするときにはバージョンに注意して下さい。
+``src/bootstrap/``以下についてはGitの[Submodule機能](https://git-scm.com/book/en/v2/Git-Tools-Submodules)を使って[twbs/bootstra-sass](https://github.com/twbs/bootstrap-sass/)(BootstrapのSASS版コード)を読み込んでいるため，ReleaseページでダウンロードできるSource Codeというアーカイブの
+中に含まれていません。よって[twbs/bootstra-sass](https://github.com/twbs/bootstrap-sass/)を直接ダウンロードしてファイルを配置する必要があります。
 
 一番いいのは，Honokaのリポジトリ自体を``git clone``，もしくはforkすることです。
 
