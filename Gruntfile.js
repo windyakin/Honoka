@@ -85,7 +85,7 @@ module.exports = function(grunt) {
 		compress: {
 			main: {
 				options: {
-					archive: 'data/bootstrap-honoka-dist.zip'
+					archive: 'data/bootstrap-honoka-'+ pkg.version +'-dist.zip'
 				},
 				files: [
 					{
