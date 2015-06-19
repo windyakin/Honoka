@@ -92,6 +92,18 @@
         <h1>Honoka</h1>
         <p class="lead">日本語も美しく表示できるBootstrapテーマ</p>
       </div>
+      <div class="col-lg-4 col-md-5 col-sm-6">
+        <aside class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">游ゴシックの有効・無効切り替え</h4>
+          </div>
+          <div class="panel-body">
+            <p>v3.3.5から<code>&lt;body&gt;</code>に<code>.no-thank-yu</code>を指定することで游ゴシックを使わないようにすることができるようになりました。</p>
+            <p id="anti-yu-gothic-message">現在デモページは游ゴシックの指定が<span class="text-primary">有効</span>になっています。</p>
+            <div><button id="anti-yu-gothic-button" class="btn btn-danger btn-block">游ゴシックを無効にする</button></div>
+          </div>
+        </aside>
+      </div>
     </div>
   </div>
 
@@ -1233,6 +1245,19 @@
 <script type="text/javascript">
   $('.bs-component [data-toggle="popover"]').popover();
   $('.bs-component [data-toggle="tooltip"]').tooltip();
+
+  $('#anti-yu-gothic-button').on('click', function() {
+    if ( $('body').hasClass('no-thank-yu') ) {
+      $('body').removeClass('no-thank-yu');
+      $(this).text('游ゴシックを無効にする').removeClass('btn-primary').addClass('btn-danger');
+      $("#anti-yu-gothic-message").html('現在デモページは游ゴシックの指定が<span class="text-primary">有効</span>になっています。');
+    }
+    else {
+      $('body').addClass('no-thank-yu');
+      $(this).text('游ゴシックを有効にする').removeClass('btn-danger').addClass('btn-primary');
+      $("#anti-yu-gothic-message").html('現在デモページは游ゴシックの指定が<span class="text-danger">無効</span>になっています。');
+    }
+  });
 </script>
 
 </body>
