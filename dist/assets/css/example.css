@@ -22,10 +22,25 @@
   -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
 }
-.btn-twitter:hover, .btn-twitter:focus, .btn-twitter.focus, .btn-twitter.active, .btn-twitter.active, .open > .btn-twitter.dropdown-toggle {
+.btn-twitter:focus, .btn-twitter.focus {
+  color: #FFF;
+  background-color: #2795e9;
+  border-color: #1167a8;
+}
+.btn-twitter:hover {
+  color: #FFF;
+  background-color: #2795e9;
+  border-color: #178ce5;
+}
+.btn-twitter.active, .btn-twitter.active, .open > .btn-twitter.dropdown-toggle {
   color: #FFF;
   background-color: #3ea1ec;
   border-color: #309aea;
+}
+.btn-twitter.active:hover, .btn-twitter.active:focus, .btn-twitter.active.focus, .btn-twitter.active:hover, .btn-twitter.active:focus, .btn-twitter.active.focus, .open > .btn-twitter.dropdown-toggle:hover, .open > .btn-twitter.dropdown-toggle:focus, .open > .btn-twitter.dropdown-toggle.focus {
+  color: #FFF;
+  background-color: #1583d7;
+  border-color: #1167a8;
 }
 .btn-twitter:active, .btn-twitter.active, .open > .btn-twitter.dropdown-toggle {
   background-image: none;
@@ -56,10 +71,25 @@
   -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
 }
-.btn-facebook:hover, .btn-facebook:focus, .btn-facebook.focus, .btn-facebook.active, .btn-facebook.active, .open > .btn-facebook.dropdown-toggle {
+.btn-facebook:focus, .btn-facebook.focus {
+  color: #FFF;
+  background-color: #2d4373;
+  border-color: #141f35;
+}
+.btn-facebook:hover {
+  color: #FFF;
+  background-color: #2d4373;
+  border-color: #273b65;
+}
+.btn-facebook.active, .btn-facebook.active, .open > .btn-facebook.dropdown-toggle {
   color: #FFF;
   background-color: #344e86;
   border-color: #30487b;
+}
+.btn-facebook.active:hover, .btn-facebook.active:focus, .btn-facebook.active.focus, .btn-facebook.active:hover, .btn-facebook.active:focus, .btn-facebook.active.focus, .open > .btn-facebook.dropdown-toggle:hover, .open > .btn-facebook.dropdown-toggle:focus, .open > .btn-facebook.dropdown-toggle.focus {
+  color: #FFF;
+  background-color: #23345a;
+  border-color: #141f35;
 }
 .btn-facebook:active, .btn-facebook.active, .open > .btn-facebook.dropdown-toggle {
   background-image: none;
@@ -90,10 +120,25 @@
   -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
 }
-.btn-hatebu:hover, .btn-hatebu:focus, .btn-hatebu.focus, .btn-hatebu.active, .btn-hatebu.active, .open > .btn-hatebu.dropdown-toggle {
+.btn-hatebu:focus, .btn-hatebu.focus {
+  color: #FFF;
+  background-color: #1271b0;
+  border-color: #0a3f61;
+}
+.btn-hatebu:hover {
+  color: #FFF;
+  background-color: #1271b0;
+  border-color: #10659d;
+}
+.btn-hatebu.active, .btn-hatebu.active, .open > .btn-hatebu.dropdown-toggle {
   color: #FFF;
   background-color: #1580c7;
   border-color: #1377b9;
+}
+.btn-hatebu.active:hover, .btn-hatebu.active:focus, .btn-hatebu.active.focus, .btn-hatebu.active:hover, .btn-hatebu.active:focus, .btn-hatebu.active.focus, .open > .btn-hatebu.dropdown-toggle:hover, .open > .btn-hatebu.dropdown-toggle:focus, .open > .btn-hatebu.dropdown-toggle.focus {
+  color: #FFF;
+  background-color: #0f5c8f;
+  border-color: #0a3f61;
 }
 .btn-hatebu:active, .btn-hatebu.active, .open > .btn-hatebu.dropdown-toggle {
   background-image: none;
