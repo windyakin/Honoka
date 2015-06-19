@@ -2,7 +2,7 @@
 // When there no function is defined, `fn('')` is parsed as string that equals the right hand side
 // NB: in Sass 3.3 there is a native function: function-exists(twbs-font-path)
 $bootstrap-sass-asset-helper: (twbs-font-path("") != unquote('twbs-font-path("")')) !default;
-$bootstrap-version: "3.3.4";
+$bootstrap-version: "3.3.5";
 
 //
 // Variables
@@ -178,6 +178,9 @@ $btn-danger-border:              darken($btn-danger-bg, 2%) !default;
 
 $btn-link-disabled-color:        $gray-light !default;
 
+$btn-border-radius-base:         $border-radius-base !default;
+$btn-border-radius-large:        $border-radius-large !default;
+$btn-border-radius-small:        $border-radius-small !default;
 
 //== Forms
 //
@@ -390,7 +393,7 @@ $navbar-default-toggle-icon-bar-bg:        #888 !default;
 $navbar-default-toggle-border-color:       #ddd !default;
 
 
-// Inverted navbar
+//=== Inverted navbar
 // Reset inverted navbar basics
 $navbar-inverse-color:                      $gray-darker !default;
 $navbar-inverse-bg:                         $gray-darker !default;
@@ -491,6 +494,7 @@ $jumbotron-color:                inherit !default;
 $jumbotron-bg:                   $gray-lighter !default;
 $jumbotron-heading-color:        inherit !default;
 $jumbotron-font-size:            ceil(($font-size-base * 1.5)) !default;
+$jumbotron-heading-font-size:    ceil(($font-size-base * 4.5)) !default;
 
 
 //== Form states and alerts
