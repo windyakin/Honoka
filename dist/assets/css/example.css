@@ -255,6 +255,19 @@ section.section .subtitle h2 {
   margin-top: 10px;
 }
 
+.featured .subtitle h2 {
+  font-size: 24px;
+}
+.featured ul.featured-list a {
+  opacity: 0.7;
+}
+.featured ul.featured-list a:hover, .featured ul.featured-list a:active, .featured ul.featured-list a:focus {
+  opacity: 0.5;
+}
+.featured ul.featured-list li {
+  margin: 6px 20px;
+}
+
 footer {
   padding: 40px 0px;
   color: #eeeeee;
