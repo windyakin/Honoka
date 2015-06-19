@@ -76,7 +76,7 @@ body {
 }
 
 section.section {
-	padding: ($padding-large-vertical * 10) 0;
+	padding: ($padding-large-vertical * 15) 0;
 	&.section-default {}
 	&.section-inverse {
 		background-color: lighten($brand-honoka, 15%);
