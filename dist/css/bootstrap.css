@@ -8142,6 +8142,8 @@ a {
 .label,
 .badge,
 .panel-heading,
-.lead {
+.lead,
+.tooltip,
+.popover {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, "Arial", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
 }
