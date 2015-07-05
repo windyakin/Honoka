@@ -1,5 +1,5 @@
 // font
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 @import "compass";
 @import "compass/css3";
@@ -33,7 +33,7 @@ a {
 				border-radius:  $border-radius-large;
 			}
 			> .dropdown-menu {
-				margin-top: -$navbar-padding-vertical/4*3;	
+				margin-top: -$navbar-padding-vertical/4*3;
 			}
 		}
 		> li:not(:last-child) {
