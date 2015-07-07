@@ -1,34 +1,32 @@
-# Honoka
+# Nico
 
-[http://honokak.osaka/](http://honokak.osaka/)
+"Nico"は"Honoka"を元にした、日本語も美しく表示できるBootstrapテーマです。
 
-![honoka](dist/assets/img/sample.png)
+## About "Nico"
 
-"Honoka" は日本語も美しく表示できるBootstrapテーマです。
+通常の[Bootstrap](//getbootstrap.com/)では，日本語のフォント指定や文字サイズは最適とはいえません。"Nico"はそんなBootstrapをベースに，日本語表示に適したフォント指定や，文字サイズに関するコードを追記したBootstrapテーマの一つです。
 
-## About "Honoka"
-
-通常の[Bootstrap](http://getbootstrap.com/)では，日本語のフォント指定や文字サイズは最適とはいえません。"Honoka"はそんなBootstrapをベースに，日本語表示に適したフォント指定や，文字サイズに関するコードを追記したBootstrapテーマの一つです。
+"Nico"は"Honoka"にピンク系の配色を適応したテーマです。
 
 ## Live Demo
 
- * [http://honokak.osaka/bootstrap-ja.html](http://honokak.osaka/bootstrap-ja.html) (日本語レイアウト)
- * [http://honokak.osaka/bootstrap.html](http://honokak.osaka/bootstrap.html) (英語レイアウト)
+ * [Nico/bootstrap-ja.html](//kubosho.github.io/Nico/bootstrap-ja.html) (日本語レイアウト)
+ * [Nico/bootstrap.html](//kubosho.github.io/Nico/bootstrap.html) (英語レイアウト)
 
 ## Usage
 
-Honokaは単なるBootstrapテーマにしか過ぎないため，基本的な使い方は本家Bootstrapとほとんど変わりません。よって以下に書くことは[本家Bootstrap](http://getbootstrap.com/getting-started/)からの引用，もしくはその一部を変更したものです。用意されたCSSクラスやコンポーネントなど，より詳細な使い方のドキュメントは本家Bootstrapの各種リファレンスページをご覧になることを推奨します。
+Nicoは単なるBootstrapテーマにしか過ぎないため，基本的な使い方は本家Bootstrapとほとんど変わりません。よって以下に書くことは[本家Bootstrap](//getbootstrap.com/getting-started/)からの引用，もしくはその一部を変更したものです。用意されたCSSクラスやコンポーネントなど，より詳細な使い方のドキュメントは本家Bootstrapの各種リファレンスページをご覧になることを推奨します。
 
- * [CSS](http://getbootstrap.com/css/)
- * [Components](http://getbootstrap.com/components/)
- * [JavaScript](http://getbootstrap.com/javascript/)
+ * [CSS](//getbootstrap.com/css/)
+ * [Components](//getbootstrap.com/components/)
+ * [JavaScript](//getbootstrap.com/javascript/)
 
 ### Package
 
 配布しているzipファイルの内容物は以下のとおりです。``bootstrap.min.*``といったように，ファイル名に``min``がつくファイルは，改行やインデント・スペーシングをなくした(minifyされた)コードで，ユーザがウェブページを読み込む際の転送量を少なくすることができます。通常はこの``bootstrap.min.*``を使うことをおすすめします。
 
 ```
-honoka/
+nico/
 ├─ bootstrap.html
 ├─ css/
 │   ├─ bootstrap.css
@@ -64,15 +62,15 @@ Bootstrapをつかってウェブページを作成する際に基本となるHT
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
   <body>
     <h1>Hello, world!</h1>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
   </body>
@@ -87,13 +85,19 @@ Bootstrapをつかってウェブページを作成する際に基本となるHT
 
 ## Grunt
 
-このリポジトリはGruntを使った自動タスクによって，テストや配布用パッケージ生成することができます。
+このリポジトリはGruntを使った自動タスクによって，テストや配布用パッケージを生成することができます。
+
+なお、事前に[Compass](http://compass-style.org/)のインストールが必要です。インストールしていない方は以下のコマンドを実行してください。
+
+```bash
+gem install compass
+```
 
 ### Attention
-``src/bootstrap/``以下についてはGitの[Submodule機能](https://git-scm.com/book/en/v2/Git-Tools-Submodules)を使って[twbs/bootstra-sass](https://github.com/twbs/bootstrap-sass/)(BootstrapのSASS版コード)を読み込んでいるため，ReleaseページでダウンロードできるSource Codeというアーカイブの
-中に含まれていません。よって[twbs/bootstra-sass](https://github.com/twbs/bootstrap-sass/)を直接ダウンロードしてファイルを配置する必要があります。
+``src/bootstrap/``以下についてはGitの[Submodule機能](//git-scm.com/book/en/v2/Git-Tools-Submodules)を使って[twbs/bootstra-sass](//github.com/twbs/bootstrap-sass/)(BootstrapのSASS版コード)を読み込んでいるため，ReleaseページでダウンロードできるSource Codeというアーカイブの
+中に含まれていません。よって[twbs/bootstra-sass](//github.com/twbs/bootstrap-sass/)を直接ダウンロードしてファイルを配置する必要があります。
 
-一番いいのは，Honokaのリポジトリ自体を``git clone``し，以下のコマンドを実行することです。
+一番いいのは，Nicoのリポジトリ自体を``git clone``し，以下のコマンドを実行することです。
 
 ```
 % git submodule update --init src/bootstrap
@@ -102,7 +106,7 @@ Bootstrapをつかってウェブページを作成する際に基本となるHT
 ### Test
 
 ```
-grunt server
+npm run server
 ```
 
 テスト用サーバを起動します。``localhost:8000``に接続することで``dist/``以下のディレクトリをプレビューすることができます。また起動中にscssファイルを更新した場合，自動的にビルドされます(だがLive Reloadはされない)。
@@ -110,7 +114,7 @@ grunt server
 ### Build
 
 ```
-grunt build
+npm start
 ```
 
 Bootstrapに関連するファイルのビルドを行います。
@@ -118,7 +122,7 @@ Bootstrapに関連するファイルのビルドを行います。
 ### Package
 
 ```
-grunt package
+npm run release
 ```
 
 配布用パッケージを作成します。作成したファイルは``data/``ディレクトリ(``.gitignore``で無視ディレクトリに指定)の``bootstrap-honoka-dist.zip``へ出力されます。
@@ -127,6 +131,10 @@ grunt package
 
 [MIT Licesne](LICENSE)
 
-## Author
+## Author of "Honoka"
 
- * windyakin ([windyakin.net](http://windyakin.net/)) 
+- windyakin ([windyakin.net](//windyakin.net/))
+
+## Editor of "Nico"
+
+- kubosho ([blog.kubosho.com](//blog.kubosho.com/))
