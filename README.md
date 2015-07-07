@@ -1,6 +1,6 @@
 # Nico
 
-"Nico"は"Honoka"を元にした、日本語も美しく表示できるBootstrapテーマです。
+"Nico"は"[Honoka](https://github.com/windyakin/Honoka)"を元にした、日本語も美しく表示できるBootstrapテーマです。
 
 ## About "Nico"
 
