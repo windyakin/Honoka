@@ -1,16 +1,16 @@
 @charset "UTF-8";
 
-@import "honoka/variables";
+@import "nico/variables";
 /*!
- * Honoka v#{$bootstrap-version}
- * Website: http://honokak.osaka/
- * Copyright 2015 windyakin
+ * Nico v#{$bootstrap-version}
+ * Website: kubosho.github.io/Nico
+ * Copyright 2015 windyakin, Editor: kubosho
  * The MIT License
- * Based on Bootstrap
+ * Based on Bootstrap, Honoka
  */
 // Core variables and mixins
 @import "bootstrap/mixins";
-@import "honoka/mixins";
+@import "nico/mixins";
 
 @import "bootstrap/normalize";
 @import "bootstrap/grid";
@@ -59,4 +59,4 @@
 @import "bootstrap/utilities";
 @import "bootstrap/responsive-utilities";
 
-@import "honoka/override";
+@import "nico/override";

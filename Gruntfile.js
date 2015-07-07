@@ -15,7 +15,7 @@ module.exports = function(grunt) {
 				},
 				{
 					from: 'Based on Bootstrap\n */',
-					to: 'Based on Bootstrap\n */\n'	
+					to: 'Based on Bootstrap\n */\n'
 				}]
 			}
 		},
@@ -85,7 +85,7 @@ module.exports = function(grunt) {
 		compress: {
 			main: {
 				options: {
-					archive: 'data/bootstrap-honoka-'+ pkg.version +'-dist.zip'
+					archive: 'data/bootstrap-nico-'+ pkg.version +'-dist.zip'
 				},
 				files: [
 					{
@@ -93,33 +93,33 @@ module.exports = function(grunt) {
 						expand: true,
 						cwd: "dist/css/",
 						src: ["bootstrap**.css"],
-						dest: "honoka/css"
+						dest: "nico/css"
 					},
 					{
 						// Font
 						expand: true,
 						cwd: "dist/fonts/",
 						src: ["**/*"],
-						dest: "honoka/fonts"
+						dest: "nico/fonts"
 					},
 					{
 						// JavaScript
 						expand: true,
 						cwd: "dist/js/",
 						src: ["bootstrap.**js"],
-						dest: "honoka/js"
+						dest: "nico/js"
 					},
 					{
 						// Sample html
 						expand: true,
 						cwd: "dist/",
 						src: ["bootstrap.html"],
-						dest: "honoka"
+						dest: "nico"
 					},
 					{
 						// README
 						src: ["README.md"],
-						dest: "honoka"
+						dest: "nico"
 					}
 				]
 			},
@@ -132,7 +132,7 @@ module.exports = function(grunt) {
 			grunt.loadNpmTasks(taskName);
 		}
 	}
-	
+
 	// 通常 (compass/connect/watch)
 	grunt.registerTask('server', ['compass:dist', 'connect', 'watch']);
 
@@ -141,7 +141,7 @@ module.exports = function(grunt) {
 
 	// 配布用パッケージ作成
 	grunt.registerTask('package', ['build', 'compress:main']);
-	
+
 	grunt.registerTask('eatwarnings', function() {
 		grunt.warn = grunt.fail.warn = function(warning) {
 			grunt.log.error(warning);

@@ -174,13 +174,13 @@ body {
   background-position: -35% center;
   background-size: 70%;
 }
-.jumbotron.special .honoka {
+.jumbotron.special .nico {
   position: absolute;
   bottom: -20px;
   left: 0;
   height: 530px;
   width: 400px;
-  background-image: url(/assets/img/honoka.png);
+  background-image: url(/assets/img/nico.png);
   background-repeat: no-repeat;
 }
 .jumbotron.special .outline {

@@ -125,7 +125,7 @@ Bootstrapに関連するファイルのビルドを行います。
 npm run release
 ```
 
-配布用パッケージを作成します。作成したファイルは``data/``ディレクトリ(``.gitignore``で無視ディレクトリに指定)の``bootstrap-honoka-dist.zip``へ出力されます。
+配布用パッケージを作成します。作成したファイルは``data/``ディレクトリ(``.gitignore``で無視ディレクトリに指定)の``bootstrap-nico-dist.zip``へ出力されます。
 
 ## License
 

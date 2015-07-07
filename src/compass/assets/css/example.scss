@@ -5,10 +5,10 @@
 @import "compass";
 @import "compass/css3";
 
-@import "honoka/variables";
-@import "honoka/mixins";
+@import "nico/variables";
+@import "nico/mixins";
 
-$brand-honoka: #FDCEA0;
+$brand-nico: #FDCEA0;
 $brand-twitter: #55ACEE;
 $brand-facebook: #3B5998;
 $brand-hatena: #178fde;
@@ -45,18 +45,18 @@ body {
 	min-height: 530px;
 	margin-bottom: 0;
 	text-align: center;
-	background-color: $brand-honoka;
+	background-color: $brand-nico;
 	background-image: url(/assets/img/circle.png);
 	background-repeat: no-repeat;
 	background-position: -35% center;
 	background-size: 70%;
-	.honoka {
+	.nico {
 		position: absolute;
 		bottom: -20px;
 		left: 0;
 		height: 530px;
 		width: 400px;
-		background-image: url(/assets/img/honoka.png);
+		background-image: url(/assets/img/nico.png);
 		background-repeat: no-repeat;
 	}
 	.outline {
@@ -79,7 +79,7 @@ section.section {
 	padding: ($padding-large-vertical * 15) 0;
 	&.section-default {}
 	&.section-inverse {
-		background-color: lighten($brand-honoka, 15%);
+		background-color: lighten($brand-nico, 15%);
 	}
 	.subtitle {
 		text-align: center;
@@ -209,4 +209,3 @@ footer {
 		font-size: 24px;
 	}
 }
-
