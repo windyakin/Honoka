@@ -27,4 +27,4 @@ node_modules/
 *.stTheme.cache
 
 sftp-config.json
-
+npm-debug.log
