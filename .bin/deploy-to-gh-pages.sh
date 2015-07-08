@@ -1,6 +1,6 @@
 #!/bin/bash
 
-readonly REPOSITORY=`git config --get remote.origin.url`
+readonly REPOSITORY="https://$GH_TOKEN@github.com/kubosho/Nico.git"
 readonly PROJECT_ROOT=`git rev-parse --show-toplevel`
 readonly BUILD_DIR=$PROJECT_ROOT/build
 readonly PUBLISH_BRANCH='gh-pages'
