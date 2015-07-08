@@ -1,0 +1,29 @@
+language: node_js
+node_js:
+  - "0.12"
+
+sudo: false
+cache: node_modules
+
+env:
+  global:
+    - export LC_CTYPE=ja_JP.UTF-8
+    - GIT_COMMITTER_NAME=kubosho_
+    - GIT_COMMITTER_EMAIL=ta2@o2p.jp
+    - GIT_AUTHOR_NAME=kubosho_
+    - GIT_AUTHOR_EMAIL=ta2@o2p.jp
+    - secure: "Nl4Gj8rdZ/PsSj7v2lwhkxWCwIs0mgPRlK35jifrYL45VNwJtbu4eyLBR3AX3AeEH6K3qJQ7y0oIPnJjr/5BwhVU8SZFp9Q1dP5vqoT/lQVbxr0vimDc/odn+qnvjWf5vN0j/r5FgJV7uJ663o9b0CahlEoWmkefxugsW8gwKADcVPoGvxmGzfkW24zZMxgr51QO9fdVo7+tdCdJCt3bNe7zQ8JHqoRCG3KpeXBBrN/Lw/nLDReFhlEgWbBxx1bXGN8R+3qIOq3HOmsSxyCT9anwFSJXa6BV1t6BLq3escP1qwEMUp9jDxoTnxysDxo2Y9aSA2EmVdG09Y6RdlVzE9q9v2KOarFFD8JemFcUWu3LPUDoL/6apAxf78LVQ3U+HTA1uY8aNfNBSfZwsefb2YT1mTUHBqoVk4R5nEd0OwJvEod9HyvBe/Om6qsvkBZRPOq211XwtPwlm41dz2TtdbGfbEiWkvjotJ/9PKtKurVdcIulvCsapVDv9kMff9N2hQpYK/Avss1eVvAwLV39wQdFk1UlXB3iXujfnVzort6SNAfq1l2AGuEUNPldgczylAAUJ7Lltq9M7TxxrfltekvGf49+L6D1Fc+/IU4i7Ud08HjdeH3cOWvRJWJTPpu5DkgdVQFJi4d6PuXHw6oVKaeAONPgM6m+N3wO4gH+sts="
+
+git:
+  submodules: false
+
+before_install:
+  - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
+  - git submodule update --init src/bootstrap
+  - gem install compass
+
+script:
+  - npm start
+
+after_success:
+  - '[ "$TRAVIS_BRANCH" == "master" ] && [ "${TRAVIS_PULL_REQUEST}" = "false" ] && [ "$GH_TOKEN" ] && ./.bin/deploy-to-gh-pages.sh > /dev/null'
