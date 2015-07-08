@@ -99,6 +99,14 @@ Bootstrapをつかってウェブページを作成する際に基本となるHT
 % git submodule update --init src/bootstrap
 ```
 
+#### Using Compass
+
+Sassコードのコンパイルに[Compass](http://compass-style.org/)の機能の一部を使用しています。よってSassとは別にコンピュータへCompassがインストールされているする必要があります。
+
+```
+% gem install compass
+```
+
 ### Test
 
 ```
