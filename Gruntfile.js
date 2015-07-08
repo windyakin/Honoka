@@ -15,7 +15,7 @@ module.exports = function(grunt) {
 				},
 				{
 					from: 'Based on Bootstrap\n */',
-					to: 'Based on Bootstrap\n */\n'	
+					to: 'Based on Bootstrap\n */\n'
 				}]
 			}
 		},
@@ -132,7 +132,7 @@ module.exports = function(grunt) {
 			grunt.loadNpmTasks(taskName);
 		}
 	}
-	
+
 	// 通常 (compass/connect/watch)
 	grunt.registerTask('server', ['compass:dist', 'connect', 'watch']);
 
@@ -141,7 +141,7 @@ module.exports = function(grunt) {
 
 	// 配布用パッケージ作成
 	grunt.registerTask('package', ['build', 'compress:main']);
-	
+
 	grunt.registerTask('eatwarnings', function() {
 		grunt.warn = grunt.fail.warn = function(warning) {
 			grunt.log.error(warning);
