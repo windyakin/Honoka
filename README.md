@@ -1,5 +1,7 @@
 # Nico
 
+[![Build Status](https://travis-ci.org/kubosho/Nico.svg?branch=master)](https://travis-ci.org/kubosho/Nico)
+
 "Nico"は"[Honoka](https://github.com/windyakin/Honoka)"を元にした、日本語も美しく表示できるBootstrapテーマです。
 
 ## About "Nico"
