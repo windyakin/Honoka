@@ -8,7 +8,7 @@
 @import "nico/variables";
 @import "nico/mixins";
 
-$brand-nico: #FDCEA0;
+$brand-nico: #FEC4D8;
 $brand-twitter: #55ACEE;
 $brand-facebook: #3B5998;
 $brand-hatena: #178fde;
@@ -106,7 +106,7 @@ section.section {
 				background-color: $brand-success;
 			}
 			&.replace {
-				background-color: $brand-warning;
+				background-color: $brand-info;
 			}
 			&.compass {
 				background-color: $brand-primary;

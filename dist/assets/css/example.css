@@ -168,7 +168,7 @@ body {
   min-height: 530px;
   margin-bottom: 0;
   text-align: center;
-  background-color: #FDCEA0;
+  background-color: #FEC4D8;
   background-image: url(/assets/img/circle.png);
   background-repeat: no-repeat;
   background-position: -35% center;
@@ -202,7 +202,7 @@ section.section {
   padding: 150px 0;
 }
 section.section.section-inverse {
-  background-color: #fff5eb;
+  background-color: white;
 }
 section.section .subtitle {
   text-align: center;
@@ -228,13 +228,13 @@ section.section .subtitle h2 {
   background-color: #4caf50;
 }
 .point .point-box .point-circle.replace {
-  background-color: #ff9800;
+  background-color: #5cfaf9;
 }
 .point .point-box .point-circle.compass {
-  background-color: #2196f3;
+  background-color: #ff50ac;
 }
 .point .point-box .point-circle.japanese {
-  background-color: #f44336;
+  background-color: #ac62ff;
 }
 .point .point-box .point-circle.japanese span.icon-jp:before {
   content: "あ";
