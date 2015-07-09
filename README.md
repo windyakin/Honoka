@@ -131,7 +131,7 @@ npm run release
 
 ## License
 
-[MIT Licesne](LICENSE)
+[MIT License](LICENSE)
 
 ## Author of "Honoka"
 
