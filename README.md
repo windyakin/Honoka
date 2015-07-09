@@ -135,7 +135,7 @@ grunt package
 
 ## License
 
-[MIT Licesne](LICENSE)
+[MIT License](LICENSE)
 
 ## Author
 
