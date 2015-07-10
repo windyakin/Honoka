@@ -169,7 +169,7 @@ body {
   margin-bottom: 0;
   text-align: center;
   background-color: #FDCEA0;
-  background-image: url(/assets/img/circle.png);
+  background-image: url(../img/circle.png);
   background-repeat: no-repeat;
   background-position: -35% center;
   background-size: 70%;
@@ -180,7 +180,7 @@ body {
   left: 0;
   height: 530px;
   width: 400px;
-  background-image: url(/assets/img/honoka.png);
+  background-image: url(../img/honoka.png);
   background-repeat: no-repeat;
 }
 .jumbotron.special .outline {
