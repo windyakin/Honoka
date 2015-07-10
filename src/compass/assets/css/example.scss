@@ -164,6 +164,7 @@ section.section {
 }
 
 .thumbnail {
+	background: #FFF;
 	> a {
 		&:hover, &:active, &:focus {
 			opacity: 0.7;

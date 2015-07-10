@@ -268,6 +268,9 @@ section.section .subtitle h2 {
   margin: 6px 20px;
 }
 
+.thumbnail {
+  background: #FFF;
+}
 .thumbnail > a:hover, .thumbnail > a:active, .thumbnail > a:focus {
   opacity: 0.7;
 }
