@@ -1,50 +1,53 @@
 #!/bin/bash
 
-readonly REPOSITORY="https://$GH_TOKEN@github.com/kubosho/Nico.git"
+function init() {
+    # build directory doesn't exist?
+    if [ ! -d "$2" ]; then
+        mkdir $2
+    fi
+
+    if [ ! -d $2/.git ]; then
+        rm -rf $2
+        git clone --quiet $1 $2
+    fi
+}
+
+function sync() {
+    cd $1
+    git checkout --orphan $2
+    git fetch origin
+    git reset --hard origin/$2
+}
+
+function clean() {
+    rm -rf $1/*.*
+}
+
+function build() {
+    npm run release
+    cp -r $1/dist/* $2
+}
+
+function pushToBranch() {
+    cd $1
+    sha1=`git rev-parse $(git log --oneline -n 1 . | awk '{{print $1}}')`
+    git add -A
+    git commit -m "[ci skip] Update with ${sha1}"
+    git push --quiet origin $2
+}
+
+# ------------------------------
+
 readonly PROJECT_ROOT=`git rev-parse --show-toplevel`
+readonly REMOTE_REPOSITORY=`git config --get remote.origin.url`
 readonly BUILD_DIR=$PROJECT_ROOT/build
 readonly PUBLISH_BRANCH='gh-pages'
 
-init() {
-    # build directory doesn't exist?
-    if [ ! -d "$BUILD_DIR" ]; then
-        mkdir $BUILD_DIR
-    fi
+repo=`echo $REMOTE_REPOSITORY | sed -e 's/ssh:\/\/git@github\.com\(.*\)/https:\/\/$GH_TOKEN@github\.com\1\.git/'`
 
-    cd $PROJECT_ROOT
-
-    if [ ! -d $BUILD_DIR/.git ]; then
-        rm -rf $BUILD_DIR
-        git clone --quiet $1 $BUILD_DIR
-    fi
-
-    cd $BUILD_DIR
-    git checkout --orphan $2
-    git fetch origin
-    git reset --hard origin/$PUBLISH_BRANCH
-}
-
-clean() {
-    rm -rf $BUILD_DIR/*.*
-    rm -rf $BUILD_DIR/external
-}
-
-build() {
-    npm run release
-    cp $PROJECT_ROOT/src/*.* $BUILD_DIR
-    cp -r $PROJECT_ROOT/dist/* $BUILD_DIR
-}
-
-pushToBranch() {
-    cd $PROJECT_ROOT
-    sha1=`git rev-parse $(git log --oneline -n 1 . | awk '{{print $1}}')`
-    cd $BUILD_DIR
-    git add -A
-    git commit -m "[ci skip] Update with ${sha1}"
-    git push --quiet $REPOSITORY $PUBLISH_BRANCH
-}
-
-init $REPOSITORY $PUBLISH_BRANCH
-clean
-build
-pushToBranch $PUBLISH_BRANCH
+cd $PROJECT_ROOT
+init $repo $BUILD_DIR
+sync $BUILD_DIR $PUBLISH_BRANCH
+clean $BUILD_DIR
+build $PROJECT_ROOT $BUILD_DIR
+pushToBranch $BUILD_DIR $PUBLISH_BRANCH
