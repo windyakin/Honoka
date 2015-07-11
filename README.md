@@ -1,5 +1,7 @@
 # Honoka
 
+[![Build Status](https://travis-ci.org/windyakin/Honoka.svg?branch=master)](https://travis-ci.org/windyakin/Honoka)
+
 [http://honokak.osaka/](http://honokak.osaka/)
 
 ![honoka](dist/assets/img/sample.png)
