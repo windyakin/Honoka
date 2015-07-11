@@ -26,7 +26,5 @@ script:
 - npm start
 
 after_success:
-- git config credential.helper "store --file=.git/credentials"
-- echo "https://${GH_TOKEN}:@github.com" > .git/credentials
 - '[ "$TRAVIS_BRANCH" == "master" ] && [ "${TRAVIS_PULL_REQUEST}" = "false" ] && [
   "$GH_TOKEN" ] && ./.bin/deploy-to-gh-pages.sh > /dev/null'
