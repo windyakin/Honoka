@@ -66,8 +66,9 @@ readonly BUILD_DIR=$PROJECT_ROOT/build
 readonly PUBLISH_BRANCH='gh-pages'
 
 base_repo=`echo $REMOTE_REPOSITORY | sed -e 's/ssh:\/\/git@github\.com\(.*\)/https:\/\/$GH_TOKEN@github\.com\1\.git/'`
+repo=$base_repo
 
-if [ `echo $GH_TOKEN` -e '']; then
+if [ "$GH_TOKEN" = "" ]; then
     repo=$REMOTE_REPOSITORY
 else
     repo=$base_repo
