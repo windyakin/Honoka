@@ -107,7 +107,13 @@ readonly REMOTE_REPOSITORY=`git config --get remote.origin.url`
 readonly BUILD_DIR=$PROJECT_ROOT/build
 readonly PUBLISH_BRANCH='gh-pages'
 
-repo=`echo $REMOTE_REPOSITORY | sed -e 's/ssh:\/\/git@github\.com\(.*\)/https:\/\/$GH_TOKEN@github\.com\1\.git/'`
+base_repo=`echo $REMOTE_REPOSITORY | sed -e 's/ssh:\/\/git@github\.com\(.*\)/https:\/\/$GH_TOKEN@github\.com\1\.git/'`
+
+if [ `echo $GH_TOKEN` -e '']; then
+    repo=$REMOTE_REPOSITORY
+else
+    repo=$base_repo
+fi
 
 cd $PROJECT_ROOT
 init $repo $BUILD_DIR
