@@ -13,10 +13,9 @@ function init() {
 }
 
 function sync() {
-    cd $1
-    git checkout --orphan $2
+    git checkout --orphan $1
     git fetch origin
-    git reset --hard origin/$2
+    git reset --hard origin/$1
 }
 
 function clean() {
@@ -29,11 +28,10 @@ function build() {
 }
 
 function pushToBranch() {
-    cd $1
     sha1=`git rev-parse $(git log --oneline -n 1 . | awk '{{print $1}}')`
     git add -A
     git commit -m "[ci skip] Update with ${sha1}"
-    git push --quiet origin $2
+    git push --quiet $1 $2
 }
 
 # ------------------------------
@@ -47,7 +45,8 @@ repo=`echo $REMOTE_REPOSITORY | sed -e 's/ssh:\/\/git@github\.com\(.*\)/https:\/
 
 cd $PROJECT_ROOT
 init $repo $BUILD_DIR
-sync $BUILD_DIR $PUBLISH_BRANCH
+cd $BUILD_DIR
+sync $PUBLISH_BRANCH
 clean $BUILD_DIR
 build $PROJECT_ROOT $BUILD_DIR
-pushToBranch $BUILD_DIR $PUBLISH_BRANCH
+pushToBranch $repo $PUBLISH_BRANCH
