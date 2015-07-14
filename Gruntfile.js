@@ -6,17 +6,31 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		// bannerの調整
 		replace: {
+			// バージョン表記
+			version: {
+				src: ['dist/css/bootstrap.**css'],
+				dest: 'dist/css/',
+				replacements: [
+					{
+						from: '{%version%}',
+						to: pkg.version
+					}
+				]
+			},
+			// minifyファイルの改行の追加
 			banner: {
 				src: ['dist/css/bootstrap.min.css'],
 				dest: 'dist/css/bootstrap.min.css',
-				replacements: [{
-					from: '@charset "UTF-8";/*!',
-					to: '@charset "UTF-8";\n/*!',
-				},
-				{
-					from: 'Based on Bootstrap\n */',
-					to: 'Based on Bootstrap\n */\n'
-				}]
+				replacements: [
+					{
+						from: '@charset "UTF-8";/*!',
+						to: '@charset "UTF-8";\n/*!'
+					},
+					{
+						from: /Based on Bootstrap v([\d\.]+)\n \*\//g,
+						to: 'Based on Bootstrap v$1\n */\n'
+					}
+				]
 			}
 		},
 		// cssmin
@@ -69,7 +83,7 @@ module.exports = function(grunt) {
 			// compassの自動コンパイル
 			compass: {
 				files: ['src/compass/**/*.scss'],
-				tasks: ['compass:dist'],
+				tasks: ['compass:dist', 'replace:version'],
 			}
 		},
 		// テストサーバ
@@ -137,7 +151,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('server', ['compass:dist', 'connect', 'watch']);
 
 	// ミニファイ
-	grunt.registerTask('build', ['clean:build', 'copy:build', 'compass:dist', 'cssmin:minify', 'replace:banner']);
+	grunt.registerTask('build', ['clean:build', 'copy:build', 'compass:dist', 'cssmin:minify', 'replace:banner', 'replace:version']);
 
 	// 配布用パッケージ作成
 	grunt.registerTask('package', ['build', 'compress:main']);
