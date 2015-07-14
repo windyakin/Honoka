@@ -1,7 +1,6 @@
 'use strict';
 
 module.exports = function(grunt) {
-	var pkg, taskName, ect_var;
 	pkg = grunt.file.readJSON('package.json');
 	grunt.initConfig({
 		// bannerの調整
