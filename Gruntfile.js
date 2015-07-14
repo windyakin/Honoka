@@ -1,7 +1,9 @@
 'use strict';
 
 module.exports = function(grunt) {
+	var pkg, taskName, name;
 	pkg = grunt.file.readJSON('package.json');
+	name = pkg.name.toLowerCase();
 	grunt.initConfig({
 		// bannerの調整
 		replace: {
@@ -98,7 +100,7 @@ module.exports = function(grunt) {
 		compress: {
 			main: {
 				options: {
-					archive: 'data/bootstrap-honoka-'+ pkg.version +'-dist.zip'
+					archive: 'data/bootstrap-'+ name +'-'+ pkg.version +'-dist.zip'
 				},
 				files: [
 					{
@@ -106,33 +108,33 @@ module.exports = function(grunt) {
 						expand: true,
 						cwd: "dist/css/",
 						src: ["bootstrap**.css"],
-						dest: "honoka/css"
+						dest: name +"/css"
 					},
 					{
 						// Font
 						expand: true,
 						cwd: "dist/fonts/",
 						src: ["**/*"],
-						dest: "honoka/fonts"
+						dest: name +"/fonts"
 					},
 					{
 						// JavaScript
 						expand: true,
 						cwd: "dist/js/",
 						src: ["bootstrap.**js"],
-						dest: "honoka/js"
+						dest: name +"/js"
 					},
 					{
 						// Sample html
 						expand: true,
 						cwd: "dist/",
 						src: ["bootstrap.html"],
-						dest: "honoka"
+						dest: name
 					},
 					{
 						// README
 						src: ["README.md"],
-						dest: "honoka"
+						dest: name
 					}
 				]
 			},
