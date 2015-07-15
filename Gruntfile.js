@@ -1,22 +1,59 @@
 'use strict';
 
 module.exports = function(grunt) {
-	var pkg, taskName, ect_var;
+	var pkg, taskName, name;
 	pkg = grunt.file.readJSON('package.json');
+	name = pkg.name.toLowerCase();
 	grunt.initConfig({
 		// bannerの調整
 		replace: {
+			// バージョン表記
+			version: {
+				src: ['dist/css/bootstrap.**css'],
+				dest: 'dist/css/',
+				replacements: [
+					{
+						from: '{%version%}',
+						to: pkg.version
+					},
+					{
+						from: '{%website%}',
+						to: pkg.website
+					},
+					{
+						from: '{%year%}',
+						to: new Date().getFullYear()
+					},
+					{
+						from: '{%author%}',
+						to: pkg.author
+					}
+				]
+			},
+			// minifyファイルの改行の追加
 			banner: {
 				src: ['dist/css/bootstrap.min.css'],
 				dest: 'dist/css/bootstrap.min.css',
-				replacements: [{
-					from: '@charset "UTF-8";/*!',
-					to: '@charset "UTF-8";\n/*!',
-				},
-				{
-					from: 'Based on Bootstrap\n */',
-					to: 'Based on Bootstrap\n */\n'
-				}]
+				replacements: [
+					{
+						from: '@charset "UTF-8";/*!',
+						to: '@charset "UTF-8";\n/*!'
+					},
+					{
+						from: /Based on Bootstrap v([\d\.]+)\n \*\//g,
+						to: 'Based on Bootstrap v$1\n */\n'
+					}
+				]
+			},
+			basedon: {
+				src: ['dist/css/bootstrap.**css'],
+				dest: 'dist/css/',
+				replacements: [
+					{
+						from: '{%version%}',
+						to: pkg.version
+					}
+				]
 			}
 		},
 		// cssmin
@@ -69,7 +106,7 @@ module.exports = function(grunt) {
 			// compassの自動コンパイル
 			compass: {
 				files: ['src/compass/**/*.scss'],
-				tasks: ['compass:dist'],
+				tasks: ['compass:dist', 'replace:version'],
 			}
 		},
 		// テストサーバ
@@ -85,7 +122,7 @@ module.exports = function(grunt) {
 		compress: {
 			main: {
 				options: {
-					archive: 'data/bootstrap-honoka-'+ pkg.version +'-dist.zip'
+					archive: 'data/bootstrap-'+ name +'-'+ pkg.version +'-dist.zip'
 				},
 				files: [
 					{
@@ -93,33 +130,33 @@ module.exports = function(grunt) {
 						expand: true,
 						cwd: "dist/css/",
 						src: ["bootstrap**.css"],
-						dest: "honoka/css"
+						dest: name +"/css"
 					},
 					{
 						// Font
 						expand: true,
 						cwd: "dist/fonts/",
 						src: ["**/*"],
-						dest: "honoka/fonts"
+						dest: name +"/fonts"
 					},
 					{
 						// JavaScript
 						expand: true,
 						cwd: "dist/js/",
 						src: ["bootstrap.**js"],
-						dest: "honoka/js"
+						dest: name +"/js"
 					},
 					{
 						// Sample html
 						expand: true,
 						cwd: "dist/",
 						src: ["bootstrap.html"],
-						dest: "honoka"
+						dest: name
 					},
 					{
 						// README
 						src: ["README.md"],
-						dest: "honoka"
+						dest: name
 					}
 				]
 			},
@@ -137,7 +174,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('server', ['compass:dist', 'connect', 'watch']);
 
 	// ミニファイ
-	grunt.registerTask('build', ['clean:build', 'copy:build', 'compass:dist', 'cssmin:minify', 'replace:banner']);
+	grunt.registerTask('build', ['clean:build', 'copy:build', 'compass:dist', 'cssmin:minify', 'replace:banner', 'replace:version']);
 
 	// 配布用パッケージ作成
 	grunt.registerTask('package', ['build', 'compress:main']);

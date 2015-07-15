@@ -2,11 +2,11 @@
 
 @import "honoka/variables";
 /*!
- * Honoka v#{$bootstrap-version}
- * Website: http://honokak.osaka/
- * Copyright 2015 windyakin
+ * Honoka v{%version%}
+ * Website: {%website%}
+ * Copyright {%year%} {%author%}
  * The MIT License
- * Based on Bootstrap
+ * Based on Bootstrap v#{$bootstrap-version}
  */
 // Core variables and mixins
 @import "bootstrap/mixins";
