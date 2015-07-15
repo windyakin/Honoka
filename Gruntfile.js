@@ -15,6 +15,18 @@ module.exports = function(grunt) {
 					{
 						from: '{%version%}',
 						to: pkg.version
+					},
+					{
+						from: '{%website%}',
+						to: pkg.website
+					},
+					{
+						from: '{%year%}',
+						to: new Date().getFullYear()
+					},
+					{
+						from: '{%author%}',
+						to: pkg.author
 					}
 				]
 			},
@@ -30,6 +42,16 @@ module.exports = function(grunt) {
 					{
 						from: /Based on Bootstrap v([\d\.]+)\n \*\//g,
 						to: 'Based on Bootstrap v$1\n */\n'
+					}
+				]
+			},
+			basedon: {
+				src: ['dist/css/bootstrap.**css'],
+				dest: 'dist/css/',
+				replacements: [
+					{
+						from: '{%version%}',
+						to: pkg.version
 					}
 				]
 			}
