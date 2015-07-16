@@ -1,6 +1,7 @@
 # Honoka
 
 [![Build Status](https://travis-ci.org/windyakin/Honoka.svg?branch=master)](https://travis-ci.org/windyakin/Honoka)
+[![devDependency Status](https://david-dm.org/windyakin/Honoka/dev-status.svg)](https://david-dm.org/windyakin/Honoka#info=devDependencies)
 
 [http://honokak.osaka/](http://honokak.osaka/)
 
