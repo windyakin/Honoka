@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
- * Honoka v3.3.5a
+ * Honoka v3.3.5b
  * Website: http://honokak.osaka/
  * Copyright 2015 windyakin
  * The MIT License
@@ -5953,7 +5953,7 @@ tbody.collapse.in {
   background-color: transparent;
 }
 .navbar-default .navbar-text {
-  color: #fff;
+  color: #222222;
 }
 .navbar-default .navbar-nav > li > a {
   color: #333333;
@@ -6032,7 +6032,7 @@ tbody.collapse.in {
   background-color: transparent;
 }
 .navbar-inverse .navbar-text {
-  color: #222222;
+  color: #fff;
 }
 .navbar-inverse .navbar-nav > li > a {
   color: #eeeeee;
