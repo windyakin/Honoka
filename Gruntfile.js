@@ -44,16 +44,6 @@ module.exports = function(grunt) {
 						to: 'Based on Bootstrap v$1\n */\n'
 					}
 				]
-			},
-			basedon: {
-				src: ['dist/css/bootstrap.**css'],
-				dest: 'dist/css/',
-				replacements: [
-					{
-						from: '{%version%}',
-						to: pkg.version
-					}
-				]
 			}
 		},
 		// cssmin
@@ -159,7 +149,7 @@ module.exports = function(grunt) {
 						dest: name
 					}
 				]
-			},
+			}
 		}
 	});
 
