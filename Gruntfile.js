@@ -7,29 +7,6 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		// bannerの調整
 		replace: {
-			// バージョン表記
-			version: {
-				src: ['dist/css/bootstrap.**css'],
-				dest: 'dist/css/',
-				replacements: [
-					{
-						from: '{%version%}',
-						to: pkg.version
-					},
-					{
-						from: '{%website%}',
-						to: pkg.website
-					},
-					{
-						from: '{%year%}',
-						to: new Date().getFullYear()
-					},
-					{
-						from: '{%author%}',
-						to: pkg.author
-					}
-				]
-			},
 			// minifyファイルの改行の追加
 			banner: {
 				src: ['dist/css/bootstrap.min.css'],
@@ -91,12 +68,28 @@ module.exports = function(grunt) {
 				]
 			}
 		},
+		ect: {
+			version: {
+				options: {
+					root: 'src/compass/css/honoka/',
+					variables: {
+						version: pkg.version,
+						website: pkg.website,
+						year: new Date().getFullYear(),
+						author: pkg.author,
+					},
+				},
+				files: {
+					'<%= ect.version.options.root %>_info.scss': '_info.scss.ect'
+				}
+			}
+		},
 		// ファイル更新監視
 		watch: {
 			// compassの自動コンパイル
 			compass: {
 				files: ['src/compass/**/*.scss'],
-				tasks: ['compass:dist', 'replace:version'],
+				tasks: ['compass:dist'],
 			}
 		},
 		// テストサーバ
@@ -161,10 +154,10 @@ module.exports = function(grunt) {
 	}
 
 	// 通常 (compass/connect/watch)
-	grunt.registerTask('server', ['compass:dist', 'connect', 'watch']);
+	grunt.registerTask('server', ['ect:version', 'compass:dist', 'connect', 'watch']);
 
 	// ミニファイ
-	grunt.registerTask('build', ['clean:build', 'copy:build', 'compass:dist', 'cssmin:minify', 'replace:banner', 'replace:version']);
+	grunt.registerTask('build', ['clean:build', 'copy:build', 'ect:version', 'compass:dist', 'cssmin:minify', 'replace:banner']);
 
 	// 配布用パッケージ作成
 	grunt.registerTask('package', ['build', 'compress:main']);

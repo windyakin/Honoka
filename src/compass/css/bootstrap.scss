@@ -1,10 +1,11 @@
 @charset "UTF-8";
 
 @import "honoka/variables";
+@import "honoka/info";
 /*!
- * Honoka v{%version%}
- * Website: {%website%}
- * Copyright {%year%} {%author%}
+ * Honoka v#{$version}
+ * Website: #{$website}
+ * Copyright #{$year} #{$author}
  * The MIT License
  * Based on Bootstrap v#{$bootstrap-version}
  */
