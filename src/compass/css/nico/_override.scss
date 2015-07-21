@@ -1,5 +1,5 @@
 // font
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 @import "compass";
 @import "compass/css3";
@@ -33,13 +33,27 @@ a {
 				border-radius:  $border-radius-large;
 			}
 			> .dropdown-menu {
-				margin-top: -$navbar-padding-vertical/4*3;	
+				margin-top: -$navbar-padding-vertical/4*3;
 			}
 		}
 		> li:not(:last-child) {
 			margin-right: $navbar-padding-horizontal/3;
 		}
 	}
+}
+
+.navbar-default {
+    background-color: #f3d4df;
+}
+
+.navbar-inverse {
+    background-color: #ff50ac;
+}
+
+.navbar-inverse .navbar-nav > li > a:focus,
+.navbar-inverse .navbar-nav > li > a:hover {
+    background-color: #ff92cb;
+    color: #fff;
 }
 
 .navbar-brand {

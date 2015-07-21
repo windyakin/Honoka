@@ -2,11 +2,11 @@
 
 @import "nico/variables";
 /*!
- * Nico v#{$bootstrap-version}
- * Website: kubosho.github.io/Nico
- * Copyright 2015 windyakin, Editor: kubosho
- * The MIT License
- * Based on Bootstrap, Honoka
+ * Nico v{%version%}
+ * Website: {%website%}
+ * Copyright {%year%} {%author%}
+ * The {%license%} License
+ * Based on Bootstrap v#{$bootstrap-version}, Honoka
  */
 // Core variables and mixins
 @import "bootstrap/mixins";
