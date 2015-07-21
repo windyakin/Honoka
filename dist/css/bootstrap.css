@@ -1,13 +1,13 @@
 @charset "UTF-8";
 /*!
- * Nico v3.3.5
- * Website: kubosho.github.io/Nico
- * Copyright 2015 windyakin, Editor: kubosho
+ * Nico v3.3.5b
+ * Website: http://kubosho.github.io/Nico
+ * Copyright 2015 kubosho
  * The MIT License
- * Based on Bootstrap, Honoka
+ * Based on Bootstrap v3.3.5, Honoka
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -5953,7 +5953,7 @@ tbody.collapse.in {
   background-color: transparent;
 }
 .navbar-default .navbar-text {
-  color: #fff;
+  color: #222222;
 }
 .navbar-default .navbar-nav > li > a {
   color: #333333;
@@ -6032,7 +6032,7 @@ tbody.collapse.in {
   background-color: transparent;
 }
 .navbar-inverse .navbar-text {
-  color: #222222;
+  color: #fff;
 }
 .navbar-inverse .navbar-nav > li > a {
   color: #eeeeee;
@@ -8292,6 +8292,20 @@ a {
   .navbar-nav > li:not(:last-child) {
     margin-right: 5px;
   }
+}
+
+.navbar-default {
+  background-color: #f3d4df;
+}
+
+.navbar-inverse {
+  background-color: #ff50ac;
+}
+
+.navbar-inverse .navbar-nav > li > a:focus,
+.navbar-inverse .navbar-nav > li > a:hover {
+  background-color: #ff92cb;
+  color: #fff;
 }
 
 .navbar-brand {
