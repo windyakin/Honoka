@@ -73,6 +73,7 @@ module.exports = function(grunt) {
 				options: {
 					root: 'src/compass/css/honoka/',
 					variables: {
+						name: pkg.name,
 						version: pkg.version,
 						website: pkg.website,
 						year: new Date().getFullYear(),
