@@ -9,7 +9,6 @@ git:
   submodules: false
 
 before_install:
-- bower install
 - gem install compass
 
 script:
