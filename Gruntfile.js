@@ -38,10 +38,14 @@ module.exports = function(grunt) {
 		},
 		// compassのコンパイル
 		compass: {
-			dist: {
+			bootstrap: {
 				options: {
-					sassDir: 'src/compass',
-					config: 'src/config.rb'
+					config: 'config.rb'
+				}
+			},
+			assets: {
+				options: {
+					config: 'src/scss/config.rb'
 				}
 			}
 		},
@@ -50,28 +54,40 @@ module.exports = function(grunt) {
 				src: ['dist/css/**/*', 'dist/js/**/*', 'dist/fonts/**/*']
 			}
 		},
+		// bowerのインストール
+		bower: {
+			install: {
+				options: {
+					targetDir: 'dist/',
+					layout: function(type, component, source) {
+						return type;
+					}
+				}
+			}
+		},
 		copy: {
 			build: {
 				files: [
 					{
 						expand: true,
-						cwd: 'src/bootstrap/assets/fonts/bootstrap/',
+						cwd: 'bower_components/bootstrap-sass-official/assets/fonts/bootstrap/',
 						src: ["**/*"],
 						dest: 'dist/fonts'
 					},
 					{
 						expand: true,
-						cwd: "src/bootstrap/assets/javascripts/",
+						cwd: "bower_components/bootstrap-sass-official/assets/javascripts/",
 						src: ["bootstrap.**js"],
 						dest: "dist/js"
 					}
 				]
 			}
 		},
+		// バージョン情報の出力
 		ect: {
 			version: {
 				options: {
-					root: 'src/compass/css/honoka/',
+					root: 'scss/honoka/',
 					variables: {
 						name: pkg.name,
 						version: pkg.version,
@@ -87,10 +103,15 @@ module.exports = function(grunt) {
 		},
 		// ファイル更新監視
 		watch: {
-			// compassの自動コンパイル
-			compass: {
-				files: ['src/compass/**/*.scss'],
+			// 自動コンパイル
+			bootstrap: {
+				files: ['scss/**/*.scss'],
 				tasks: ['compass:dist'],
+			},
+			// 自動コンパイル
+			assets: {
+				files: ['src/scss/**/*.scss'],
+				tasks: ['compass:assets'],
 			}
 		},
 		// テストサーバ
@@ -155,10 +176,10 @@ module.exports = function(grunt) {
 	}
 
 	// 通常 (compass/connect/watch)
-	grunt.registerTask('server', ['ect:version', 'compass:dist', 'connect', 'watch']);
+	grunt.registerTask('server', ['bower:install', 'ect:version', 'compass', 'connect', 'watch']);
 
 	// ミニファイ
-	grunt.registerTask('build', ['clean:build', 'copy:build', 'ect:version', 'compass:dist', 'cssmin:minify', 'replace:banner']);
+	grunt.registerTask('build', ['clean:build', 'bower:install', 'ect:version', 'compass:bootstrap', 'cssmin:minify', 'replace:banner']);
 
 	// 配布用パッケージ作成
 	grunt.registerTask('package', ['build', 'compress:main']);

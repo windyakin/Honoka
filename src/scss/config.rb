@@ -3,15 +3,13 @@
 # Set this to the root of your project when deployed:
 
 http_path       = "/"
-css_dir         = "dist/"
-sass_dir        = "src/compass/"
-images_dir		  = "dist/img/"
-javascripts_dir	= "dist/js/"
+css_dir         = "dist/assets/css/"
+sass_dir        = "src/scss/"
 line_comments	  = false
 output_style	  = :expanded
 
 additional_import_paths = [
 	# Bootstrap Core
-	"src/bootstrap/assets/stylesheets/",
-	"src/compass/css/"
+	"bower_components/bootstrap-sass-official/assets/stylesheets/",
+	"scss/"
 ]
