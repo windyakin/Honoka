@@ -65,24 +65,6 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		copy: {
-			build: {
-				files: [
-					{
-						expand: true,
-						cwd: 'bower_components/bootstrap-sass-official/assets/fonts/bootstrap/',
-						src: ["**/*"],
-						dest: 'dist/fonts'
-					},
-					{
-						expand: true,
-						cwd: "bower_components/bootstrap-sass-official/assets/javascripts/",
-						src: ["bootstrap.**js"],
-						dest: "dist/js"
-					}
-				]
-			}
-		},
 		// バージョン情報の出力
 		ect: {
 			version: {
