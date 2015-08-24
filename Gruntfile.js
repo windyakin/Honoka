@@ -33,7 +33,9 @@ module.exports = function(grunt) {
 				dest: 'dist/css/',
 				ext: '.min.css',
 				options: {
-					noAdvanced: true
+					advanced: false,
+					keepSpecialComments: '*',
+					compatibility: 'ie8',
 				}
 			}
 		},
