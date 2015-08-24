@@ -9,7 +9,8 @@ git:
   submodules: false
 
 before_install:
-- gem install compass
+- npm install -g bower
+- bower install
 
 script:
 - npm start
