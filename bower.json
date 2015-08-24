@@ -1,23 +1,23 @@
 {
-	"name": "Honoka",
-	"description": "Honoka is one of the Bootstrap original theme.",
-	"author": "windyakin",
-	"homepage": "http://honokak.osaka/",
-	"repository": {
-		"type": "git",
-		"url": "git://github.com/windyakin/Honoka.git"
-	},
-	"license": "MIT",
-	"devDependencies": {
-		"bootstrap-sass-official": "~3.3.5"
-	},
-	"exportsOverride": {
-		"bootstrap-sass-official": {
-			"js": "assets/javascripts/bootstrap.**js",
-			"fonts": "assets/fonts/bootstrap/**/*"
-		},
-		"jquery": {
-			"assets/js": "dist/jquery.min.js"
-		}
-	}
+  "name": "Honoka",
+  "description": "Honoka is one of the Bootstrap original theme.",
+  "author": "windyakin",
+  "homepage": "http://honokak.osaka/",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/windyakin/Honoka.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "bootstrap-sass-official": "~3.3.5",
+    "bootstrap": "~3.3.5"
+  },
+  "exportsOverride": {
+    "bootstrap-sass-official": {
+      "js": "assets/javascripts/bootstrap.**js",
+      "fonts": "assets/fonts/bootstrap/**/*"
+    },
+    "bootstrap": {},
+    "jquery": {}
+  }
 }
