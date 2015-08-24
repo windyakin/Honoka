@@ -9,7 +9,8 @@ git:
   submodules: false
 
 before_install:
-- npm install -g bower
+- gem install sass
+- npm install bower
 - bower install
 
 script:
