@@ -38,13 +38,13 @@ module.exports = function(grunt) {
 		},
 		// SCSSのコンパイル
 		sass: {
+			options: {
+				sourcemap: 'none',
+				unixNewlines: true,
+				style: 'expanded',
+				loadPath: ['bower_components/bootstrap-sass-official/assets/stylesheets/']
+			},
 			bootstrap: {
-				options: {
-					sourcemap: 'none',
-					unixNewlines: true,
-					style: 'expanded',
-					loadPath: ['bower_components/bootstrap-sass-official/assets/stylesheets/']
-				},
 				files: [{
 					expand: true,
 					cwd: 'scss',
@@ -55,10 +55,7 @@ module.exports = function(grunt) {
 			},
 			assets: {
 				options: {
-					sourcemap: 'none',
-					unixNewlines: true,
-					style: 'expanded',
-					loadPath: ['bower_components/bootstrap-sass-official/assets/stylesheets/', 'scss/']
+					loadPath: ['scss/']
 				},
 				files: [{
 					expand: true,
