@@ -1,8 +1,9 @@
 'use strict';
 
 module.exports = function(grunt) {
-	var pkg, taskName, name;
+	var pkg, taskName, name, configBridge;
 	pkg = grunt.file.readJSON('package.json');
+	configBridge = grunt.file.readJSON('bower_components/bootstrap/grunt/configBridge.json');
 	name = pkg.name.toLowerCase();
 	grunt.initConfig({
 		// bannerの調整
@@ -64,6 +65,40 @@ module.exports = function(grunt) {
 					dest: 'dist/assets/css/',
 					ext: '.css'
 				}]
+			}
+		},
+		csscomb: {
+			options: {
+				config: 'bower_components/bootstrap/less/.csscomb.json'
+			},
+			bootstrap: {
+				files: {
+					'dist/css/bootstrap.css': ['dist/css/bootstrap.css']
+				}
+			},
+			assets: {
+				expand: true,
+				cwd: 'dist/assets/css/',
+				src: ['**/*.css'],
+				dest: 'dist/assets/css',
+				ext: '.css'
+			}
+		},
+		autoprefixer: {
+			options: {
+				browsers: configBridge.config.autoprefixerBrowsers
+			},
+			bootstrap: {
+				files: {
+					'dist/css/bootstrap.css': ['dist/css/bootstrap.css']
+				}
+			},
+			assets: {
+				expand: true,
+				cwd: 'dist/assets/css/',
+				src: ['**/*.css'],
+				dest: 'dist/assets/css',
+				ext: '.css'
 			}
 		},
 		// clean
@@ -179,7 +214,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('server', ['bower:install', 'ect:version', 'sass', 'connect', 'watch']);
 
 	// ミニファイ
-	grunt.registerTask('build', ['clean:build', 'bower:install', 'ect:version', 'sass', 'cssmin:minify', 'replace:banner']);
+	grunt.registerTask('build', ['clean:build', 'bower:install', 'ect:version', 'sass', 'autoprefixer', 'csscomb', 'cssmin:minify', 'replace:banner']);
 
 	// 配布用パッケージ作成
 	grunt.registerTask('package', ['build', 'compress:main']);
