@@ -36,19 +36,40 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		// compassのコンパイル
-		compass: {
+		// SCSSのコンパイル
+		sass: {
 			bootstrap: {
 				options: {
-					config: 'config.rb'
-				}
+					sourcemap: 'none',
+					unixNewlines: true,
+					style: 'expanded',
+					loadPath: ['bower_components/bootstrap-sass-official/assets/stylesheets/']
+				},
+				files: [{
+					expand: true,
+					cwd: 'scss',
+					src: ['**/*.scss'],
+					dest: 'dist/css/',
+					ext: '.css'
+				}]
 			},
 			assets: {
 				options: {
-					config: 'src/scss/config.rb'
-				}
+					sourcemap: 'none',
+					unixNewlines: true,
+					style: 'expanded',
+					loadPath: ['bower_components/bootstrap-sass-official/assets/stylesheets/', 'scss/']
+				},
+				files: [{
+					expand: true,
+					cwd: 'src/scss',
+					src: ['**/*.scss'],
+					dest: 'dist/assets/css/',
+					ext: '.css'
+				}]
 			}
 		},
+		// clean
 		clean: {
 			build: {
 				src: ['dist/css/**/*', 'dist/js/**/*', 'dist/fonts/**/*']
@@ -88,12 +109,12 @@ module.exports = function(grunt) {
 			// 自動コンパイル
 			bootstrap: {
 				files: ['scss/**/*.scss'],
-				tasks: ['compass:dist'],
+				tasks: ['sass:bootstrap'],
 			},
 			// 自動コンパイル
 			assets: {
 				files: ['src/scss/**/*.scss'],
-				tasks: ['compass:assets'],
+				tasks: ['sass:assets'],
 			}
 		},
 		// テストサーバ
@@ -157,11 +178,11 @@ module.exports = function(grunt) {
 		}
 	}
 
-	// 通常 (compass/connect/watch)
-	grunt.registerTask('server', ['bower:install', 'ect:version', 'compass', 'connect', 'watch']);
+	// 通常 (sass/connect/watch)
+	grunt.registerTask('server', ['bower:install', 'ect:version', 'sass', 'connect', 'watch']);
 
 	// ミニファイ
-	grunt.registerTask('build', ['clean:build', 'bower:install', 'ect:version', 'compass:bootstrap', 'cssmin:minify', 'replace:banner']);
+	grunt.registerTask('build', ['clean:build', 'bower:install', 'ect:version', 'sass', 'cssmin:minify', 'replace:banner']);
 
 	// 配布用パッケージ作成
 	grunt.registerTask('package', ['build', 'compress:main']);
