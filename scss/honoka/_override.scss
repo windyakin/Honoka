@@ -1,14 +1,11 @@
 // font
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
-@import "compass";
-@import "compass/css3";
-
 // animation
 a {
-	@include transition-property(all);
-	@include transition-duration(0.3s);
-	@include transition-timing-function(ease);
+	transition-property: all;
+	transition-duration: 0.3s;
+	transition-timing-function: ease;
 }
 
 // buttons
