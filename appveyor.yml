@@ -8,6 +8,10 @@ environment:
     - nodejs_version: 0.12
 
 install:
+  - SET PATH=C:\Ruby%ruby_version%\bin;%PATH%
+  - ruby --version
+  - gem --version
+  - gem install sass
   - ps: Install-Product node $env:nodejs_version
   - npm install
 
