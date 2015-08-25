@@ -18,6 +18,13 @@
  * [http://honokak.osaka/bootstrap-ja.html](http://honokak.osaka/bootstrap-ja.html) (日本語レイアウト)
  * [http://honokak.osaka/bootstrap.html](http://honokak.osaka/bootstrap.html) (英語レイアウト)
 
+## Getting Started
+
+### Download
+
+[Relases](https://github.com/windyakin/Honoka/releases)から最新版をダウンロードしてください
+
+
 ## Usage
 
 Honokaは単なるBootstrapテーマにしか過ぎないため，基本的な使い方は本家Bootstrapとほとんど変わりません。よって以下に書くことは[本家Bootstrap](http://getbootstrap.com/getting-started/)からの引用，もしくはその一部を変更したものです。用意されたCSSクラスやコンポーネントなど，より詳細な使い方のドキュメントは本家Bootstrapの各種リファレンスページをご覧になることを推奨します。
@@ -43,8 +50,8 @@ honoka/
 │   ├─ glyphicons-halflings-regular.woff
 │   └─ glyphicons-halflings-regular.woff2
 └─ js/
-    ├─ bootstrap.js
-    └─ bootstrap.min.js
+     ├─ bootstrap.js
+     └─ bootstrap.min.js
 ```
 
 ### Basic Template
@@ -90,27 +97,15 @@ Bootstrapをつかってウェブページを作成する際に基本となるHT
 
 ## Grunt
 
-このリポジトリはGruntを使った自動タスクによって，テストや配布用パッケージを生成することができます。
+このリポジトリは[Grunt](http://gruntjs.com/)を使った自動タスクによって，テストや配布用パッケージを生成することができます。
 
 ### Attention
 
-#### Using Git Submodule
+#### Using Bower
 
-``src/bootstrap/``以下についてはGitの[Submodule機能](https://git-scm.com/book/en/v2/Git-Tools-Submodules)を使って[twbs/bootstra-sass](https://github.com/twbs/bootstrap-sass/)(BootstrapのSass版コード)を読み込んでいるため，ReleaseページでダウンロードできるSource Codeというアーカイブの中に含まれていません。よって[twbs/bootstra-sass](https://github.com/twbs/bootstrap-sass/)を直接ダウンロードしてファイルを配置する必要があります。
+``v3.3.5-c``からそれまでGit Submoduleを使用していたBootstrapのSass版ソースコードの取り込みに，[Bower](http://bower.io/)を使用するようになりました。
 
-一番いいのは，Honokaのリポジトリ自体を``git clone``し，以下のコマンドを実行することです。
-
-```
-% git submodule update --init src/bootstrap
-```
-
-#### Using Compass
-
-Sassコードのコンパイルに[Compass](http://compass-style.org/)の機能の一部を使用しています。よってSassとは別にコンピュータへCompassがインストールされているする必要があります。
-
-```
-% gem install compass
-```
+``bower install``などのコマンドについては，[grunt-bower-task](https://www.npmjs.com/package/grunt-bower-task)でGruntタスク化されているため事前に実行する必要はありません。
 
 ### Test
 
