@@ -1,44 +1,41 @@
 @charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 .btn-twitter .fa.fa-lg, .btn-facebook .fa.fa-lg {
-  vertical-align: -1px;
   margin-right: 2px;
+  vertical-align: -1px;
 }
 
 .btn-twitter {
-  color: #FFF;
-  background-color: #55ACEE;
+  color: #fff;
+  background-color: #55acee;
   border-color: #4ca7ed;
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  -webkit-transition-property: all;
-  transition-property: all;
-  -moz-transition-duration: 0.3s;
-  -o-transition-duration: 0.3s;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -moz-transition-timing-function: ease;
-  -o-transition-timing-function: ease;
   -webkit-transition-timing-function: ease;
-  transition-timing-function: ease;
+       -o-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-transition-duration: .3s;
+       -o-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-property: all;
+       -o-transition-property: all;
+          transition-property: all;
 }
 .btn-twitter:focus, .btn-twitter.focus {
-  color: #FFF;
+  color: #fff;
   background-color: #2795e9;
   border-color: #1167a8;
 }
 .btn-twitter:hover {
-  color: #FFF;
+  color: #fff;
   background-color: #2795e9;
   border-color: #178ce5;
 }
 .btn-twitter.active, .btn-twitter.active, .open > .btn-twitter.dropdown-toggle {
-  color: #FFF;
+  color: #fff;
   background-color: #3ea1ec;
   border-color: #309aea;
 }
 .btn-twitter.active:hover, .btn-twitter.active:focus, .btn-twitter.active.focus, .btn-twitter.active:hover, .btn-twitter.active:focus, .btn-twitter.active.focus, .open > .btn-twitter.dropdown-toggle:hover, .open > .btn-twitter.dropdown-toggle:focus, .open > .btn-twitter.dropdown-toggle.focus {
-  color: #FFF;
+  color: #fff;
   background-color: #1583d7;
   border-color: #1167a8;
 }
@@ -46,48 +43,45 @@
   background-image: none;
 }
 .btn-twitter.disabled, .btn-twitter.disabled:hover, .btn-twitter.disabled:focus, .btn-twitter.disabled.focus, .btn-twitter.disabled:active, .btn-twitter.disabled.active, .btn-twitter[disabled], .btn-twitter[disabled]:hover, .btn-twitter[disabled]:focus, .btn-twitter[disabled].focus, .btn-twitter[disabled]:active, .btn-twitter[disabled].active, fieldset[disabled] .btn-twitter, fieldset[disabled] .btn-twitter:hover, fieldset[disabled] .btn-twitter:focus, fieldset[disabled] .btn-twitter.focus, fieldset[disabled] .btn-twitter:active, fieldset[disabled] .btn-twitter.active {
-  background-color: #55ACEE;
+  background-color: #55acee;
   border-color: #4ca7ed;
 }
 .btn-twitter .badge {
-  color: #55ACEE;
-  background-color: #FFF;
+  color: #55acee;
+  background-color: #fff;
 }
 
 .btn-facebook {
-  color: #FFF;
-  background-color: #3B5998;
+  color: #fff;
+  background-color: #3b5998;
   border-color: #385591;
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  -webkit-transition-property: all;
-  transition-property: all;
-  -moz-transition-duration: 0.3s;
-  -o-transition-duration: 0.3s;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -moz-transition-timing-function: ease;
-  -o-transition-timing-function: ease;
   -webkit-transition-timing-function: ease;
-  transition-timing-function: ease;
+       -o-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-transition-duration: .3s;
+       -o-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-property: all;
+       -o-transition-property: all;
+          transition-property: all;
 }
 .btn-facebook:focus, .btn-facebook.focus {
-  color: #FFF;
+  color: #fff;
   background-color: #2d4373;
   border-color: #141f35;
 }
 .btn-facebook:hover {
-  color: #FFF;
+  color: #fff;
   background-color: #2d4373;
   border-color: #273b65;
 }
 .btn-facebook.active, .btn-facebook.active, .open > .btn-facebook.dropdown-toggle {
-  color: #FFF;
+  color: #fff;
   background-color: #344e86;
   border-color: #30487b;
 }
 .btn-facebook.active:hover, .btn-facebook.active:focus, .btn-facebook.active.focus, .btn-facebook.active:hover, .btn-facebook.active:focus, .btn-facebook.active.focus, .open > .btn-facebook.dropdown-toggle:hover, .open > .btn-facebook.dropdown-toggle:focus, .open > .btn-facebook.dropdown-toggle.focus {
-  color: #FFF;
+  color: #fff;
   background-color: #23345a;
   border-color: #141f35;
 }
@@ -95,48 +89,45 @@
   background-image: none;
 }
 .btn-facebook.disabled, .btn-facebook.disabled:hover, .btn-facebook.disabled:focus, .btn-facebook.disabled.focus, .btn-facebook.disabled:active, .btn-facebook.disabled.active, .btn-facebook[disabled], .btn-facebook[disabled]:hover, .btn-facebook[disabled]:focus, .btn-facebook[disabled].focus, .btn-facebook[disabled]:active, .btn-facebook[disabled].active, fieldset[disabled] .btn-facebook, fieldset[disabled] .btn-facebook:hover, fieldset[disabled] .btn-facebook:focus, fieldset[disabled] .btn-facebook.focus, fieldset[disabled] .btn-facebook:active, fieldset[disabled] .btn-facebook.active {
-  background-color: #3B5998;
+  background-color: #3b5998;
   border-color: #385591;
 }
 .btn-facebook .badge {
-  color: #3B5998;
-  background-color: #FFF;
+  color: #3b5998;
+  background-color: #fff;
 }
 
 .btn-hatebu {
-  color: #FFF;
+  color: #fff;
   background-color: #178fde;
   border-color: #1689d5;
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  -webkit-transition-property: all;
-  transition-property: all;
-  -moz-transition-duration: 0.3s;
-  -o-transition-duration: 0.3s;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -moz-transition-timing-function: ease;
-  -o-transition-timing-function: ease;
   -webkit-transition-timing-function: ease;
-  transition-timing-function: ease;
+       -o-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-transition-duration: .3s;
+       -o-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-property: all;
+       -o-transition-property: all;
+          transition-property: all;
 }
 .btn-hatebu:focus, .btn-hatebu.focus {
-  color: #FFF;
+  color: #fff;
   background-color: #1271b0;
   border-color: #0a3f61;
 }
 .btn-hatebu:hover {
-  color: #FFF;
+  color: #fff;
   background-color: #1271b0;
   border-color: #10659d;
 }
 .btn-hatebu.active, .btn-hatebu.active, .open > .btn-hatebu.dropdown-toggle {
-  color: #FFF;
+  color: #fff;
   background-color: #1580c7;
   border-color: #1377b9;
 }
 .btn-hatebu.active:hover, .btn-hatebu.active:focus, .btn-hatebu.active.focus, .btn-hatebu.active:hover, .btn-hatebu.active:focus, .btn-hatebu.active.focus, .open > .btn-hatebu.dropdown-toggle:hover, .open > .btn-hatebu.dropdown-toggle:focus, .open > .btn-hatebu.dropdown-toggle.focus {
-  color: #FFF;
+  color: #fff;
   background-color: #0f5c8f;
   border-color: #0a3f61;
 }
@@ -149,13 +140,13 @@
 }
 .btn-hatebu .badge {
   color: #178fde;
-  background-color: #FFF;
+  background-color: #fff;
 }
 
 .fa.fa-hatebu:before {
-  content: "B!";
   font-family: Verdana;
   font-weight: bold;
+  content: "B!";
 }
 
 body {
@@ -164,22 +155,23 @@ body {
 
 .jumbotron.special {
   position: relative;
-  overflow: hidden;
   min-height: 530px;
   margin-bottom: 0;
+  overflow: hidden;
   text-align: center;
-  background-color: #FDCEA0;
+  background-color: #fdcea0;
   background-image: url(../img/circle.png);
   background-repeat: no-repeat;
   background-position: -35% center;
-  background-size: 70%;
+  -webkit-background-size: 70% 70%;
+          background-size: 70%;
 }
 .jumbotron.special .honoka {
   position: absolute;
   bottom: -20px;
   left: 0;
-  height: 530px;
   width: 400px;
+  height: 530px;
   background-image: url(../img/honoka.png);
   background-repeat: no-repeat;
 }
@@ -194,8 +186,8 @@ body {
   margin: 40px auto 20px;
 }
 .jumbotron.special .basedon {
-  color: #777777;
-  text-shadow: #FFF 0 1px 2px;
+  color: #777;
+  text-shadow: #fff 0 1px 2px;
 }
 
 section.section {
@@ -205,8 +197,8 @@ section.section.section-inverse {
   background-color: #fff5eb;
 }
 section.section .subtitle {
-  text-align: center;
   margin-bottom: 20px;
+  text-align: center;
 }
 section.section .subtitle h2 {
   margin-top: 0;
@@ -216,9 +208,9 @@ section.section .subtitle h2 {
   text-align: center;
 }
 .point .point-box .point-circle {
-  margin: 0 auto;
   width: 100px;
   height: 100px;
+  margin: 0 auto;
   font-size: 60px;
   line-height: 100px;
   color: #fff;
@@ -237,8 +229,8 @@ section.section .subtitle h2 {
   background-color: #f44336;
 }
 .point .point-box .point-circle.japanese span.icon-jp:before {
-  content: "あ";
   font-weight: bold;
+  content: "あ";
 }
 .point .point-box .point-description h4 {
   text-align: center;
@@ -259,47 +251,47 @@ section.section .subtitle h2 {
   font-size: 24px;
 }
 .featured ul.featured-list a {
-  opacity: 0.7;
+  opacity: .7;
 }
 .featured ul.featured-list a:hover, .featured ul.featured-list a:active, .featured ul.featured-list a:focus {
-  opacity: 0.5;
+  opacity: .5;
 }
 .featured ul.featured-list li {
   margin: 6px 20px;
 }
 
 .thumbnail {
-  background: #FFF;
+  background: #fff;
 }
 .thumbnail > a:hover, .thumbnail > a:active, .thumbnail > a:focus {
-  opacity: 0.7;
+  opacity: .7;
 }
 
 footer {
-  padding: 40px 0px;
-  color: #eeeeee;
-  background-color: #333333;
+  padding: 40px 0;
+  color: #eee;
+  background-color: #333;
 }
 footer .social-button {
   position: relative;
-  overflow: hidden;
-  margin: 0px auto !important;
   padding: 10px 0;
+  margin: 0 auto !important;
+  overflow: hidden;
 }
 footer .social-button > ul {
   position: relative;
   left: 50%;
   float: left;
-  margin: 0px;
-  padding: 0px;
+  padding: 0;
+  margin: 0;
   list-style: outside none none;
 }
 footer .social-button > ul > li {
   position: relative;
   left: -50%;
   float: left;
-  margin: 0px 10px;
-  padding: 0px;
+  padding: 0;
+  margin: 0 10px;
 }
 footer .social-button > ul > li .fb-like > span {
   vertical-align: 0 !important;
