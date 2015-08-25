@@ -1,35 +1,15 @@
 'use strict';
 
 module.exports = function(grunt) {
+
 	var pkg, taskName, name;
+
 	pkg = grunt.file.readJSON('package.json');
 	name = pkg.name.toLowerCase();
+
 	grunt.initConfig({
 		// bannerの調整
 		replace: {
-			// バージョン表記
-			version: {
-				src: ['dist/css/bootstrap.**css'],
-				dest: 'dist/css/',
-				replacements: [
-					{
-						from: '{%version%}',
-						to: pkg.version
-					},
-					{
-						from: '{%website%}',
-						to: pkg.website
-					},
-					{
-						from: '{%year%}',
-						to: new Date().getFullYear()
-					},
-					{
-						from: '{%author%}',
-						to: pkg.author
-					}
-				]
-			},
 			// minifyファイルの改行の追加
 			banner: {
 				src: ['dist/css/bootstrap.min.css'],
@@ -44,16 +24,6 @@ module.exports = function(grunt) {
 						to: 'Based on Bootstrap v$1\n */\n'
 					}
 				]
-			},
-			basedon: {
-				src: ['dist/css/bootstrap.**css'],
-				dest: 'dist/css/',
-				replacements: [
-					{
-						from: '{%version%}',
-						to: pkg.version
-					}
-				]
 			}
 		},
 		// cssmin
@@ -65,48 +35,119 @@ module.exports = function(grunt) {
 				dest: 'dist/css/',
 				ext: '.min.css',
 				options: {
-					noAdvanced: true
+					advanced: false,
+					keepSpecialComments: '*',
+					compatibility: 'ie8',
 				}
 			}
 		},
-		// compassのコンパイル
-		compass: {
-			dist: {
+		// SCSSのコンパイル
+		sass: {
+			options: {
+				sourcemap: 'none',
+				unixNewlines: true,
+				style: 'expanded',
+				loadPath: ['bower_components/bootstrap-sass-official/assets/stylesheets/']
+			},
+			bootstrap: {
+				files: [{
+					expand: true,
+					cwd: 'scss',
+					src: ['**/*.scss'],
+					dest: 'dist/css/',
+					ext: '.css'
+				}]
+			},
+			assets: {
 				options: {
-					sassDir: 'src/compass',
-					config: 'src/config.rb'
-				}
+					loadPath: ['scss/']
+				},
+				files: [{
+					expand: true,
+					cwd: 'src/scss',
+					src: ['**/*.scss'],
+					dest: 'dist/assets/css/',
+					ext: '.css'
+				}]
 			}
 		},
+		csscomb: {
+			options: {
+				config: 'bower_components/bootstrap/less/.csscomb.json'
+			},
+			bootstrap: {
+				files: {
+					'dist/css/bootstrap.css': ['dist/css/bootstrap.css']
+				}
+			},
+			assets: {
+				expand: true,
+				cwd: 'dist/assets/css/',
+				src: ['**/*.css'],
+				dest: 'dist/assets/css',
+				ext: '.css'
+			}
+		},
+		autoprefixer: {
+			bootstrap: {
+				files: {
+					'dist/css/bootstrap.css': ['dist/css/bootstrap.css']
+				}
+			},
+			assets: {
+				expand: true,
+				cwd: 'dist/assets/css/',
+				src: ['**/*.css'],
+				dest: 'dist/assets/css',
+				ext: '.css'
+			}
+		},
+		// clean
 		clean: {
 			build: {
 				src: ['dist/css/**/*', 'dist/js/**/*', 'dist/fonts/**/*']
 			}
 		},
-		copy: {
-			build: {
-				files: [
-					{
-						expand: true,
-						cwd: 'src/bootstrap/assets/fonts/bootstrap/',
-						src: ["**/*"],
-						dest: 'dist/fonts'
-					},
-					{
-						expand: true,
-						cwd: "src/bootstrap/assets/javascripts/",
-						src: ["bootstrap.**js"],
-						dest: "dist/js"
+		// bowerのインストール
+		bower: {
+			install: {
+				options: {
+					targetDir: 'dist/',
+					layout: function(type, component, source) {
+						return type;
 					}
-				]
+				}
+			}
+		},
+		// バージョン情報の出力
+		ect: {
+			version: {
+				options: {
+					root: 'scss/honoka/',
+					variables: {
+						name: pkg.name,
+						version: pkg.version,
+						website: pkg.website,
+						year: new Date().getFullYear(),
+						author: pkg.author,
+					},
+				},
+				files: {
+					'<%= ect.version.options.root %>_info.scss': '_info.scss.ect'
+				}
 			}
 		},
 		// ファイル更新監視
 		watch: {
-			// compassの自動コンパイル
-			compass: {
-				files: ['src/compass/**/*.scss'],
-				tasks: ['compass:dist', 'replace:version'],
+			// 自動コンパイル
+			bootstrap: {
+				files: ['scss/**/*.scss'],
+				tasks: ['sass:bootstrap'],
+			},
+			// 自動コンパイル
+			assets: {
+				files: ['src/scss/**/*.scss'],
+				tasks: ['sass:assets'],
 			}
 		},
 		// テストサーバ
@@ -159,7 +200,7 @@ module.exports = function(grunt) {
 						dest: name
 					}
 				]
-			},
+			}
 		}
 	});
 
@@ -170,11 +211,27 @@ module.exports = function(grunt) {
 		}
 	}
 
-	// 通常 (compass/connect/watch)
-	grunt.registerTask('server', ['compass:dist', 'connect', 'watch']);
+	// 本家Bootstrapのautoprefixerの設定を読み込む
+	grunt.task.registerTask('setAutoPrefixerConfig', 'Get autoprefixer config from bootstrap', function() {
+		var fs = require('fs');
+		if ( fs.existsSync('bower_components/bootstrap/grunt/configBridge.json') ) {
+			var configBridge = grunt.file.readJSON('bower_components/bootstrap/grunt/configBridge.json');
+			var prefixConfig = configBridge.config.autoprefixerBrowsers;
+			grunt.config.merge({
+				autoprefixer: {
+					options: {
+						browsers: prefixConfig
+					}
+				}
+			});
+		}
+	});
+
+	// 通常 (sass/connect/watch)
+	grunt.registerTask('server', ['bower:install', 'ect:version', 'sass', 'connect', 'watch']);
 
 	// ミニファイ
-	grunt.registerTask('build', ['clean:build', 'copy:build', 'compass:dist', 'cssmin:minify', 'replace:banner', 'replace:version']);
+	grunt.registerTask('build', ['clean:build', 'bower:install', 'ect:version', 'sass', 'setAutoPrefixerConfig', 'autoprefixer', 'csscomb', 'cssmin:minify', 'replace:banner']);
 
 	// 配布用パッケージ作成
 	grunt.registerTask('package', ['build', 'compress:main']);

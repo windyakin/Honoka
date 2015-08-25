@@ -9,9 +9,7 @@ git:
   submodules: false
 
 before_install:
-- sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
-- git submodule update --init src/bootstrap
-- gem install compass
+- gem install sass
 
 script:
 - npm start
