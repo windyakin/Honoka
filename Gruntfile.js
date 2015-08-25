@@ -1,10 +1,18 @@
 'use strict';
 
 module.exports = function(grunt) {
+
+	var fs = require('fs');
 	var pkg, taskName, name, configBridge;
 	pkg = grunt.file.readJSON('package.json');
-	configBridge = grunt.file.readJSON('bower_components/bootstrap/grunt/configBridge.json');
 	name = pkg.name.toLowerCase();
+	configBridge = function() {
+		if ( fs.existsSync('bower_components/bootstrap/grunt/configBridge.json') ) {
+			return grunt.file.readJSON('bower_components/bootstrap/grunt/configBridge.json');
+		}
+		return null;
+	};
+
 	grunt.initConfig({
 		// bannerの調整
 		replace: {
@@ -88,7 +96,7 @@ module.exports = function(grunt) {
 		},
 		autoprefixer: {
 			options: {
-				browsers: configBridge.config.autoprefixerBrowsers
+				browsers: configBridge().config.autoprefixerBrowsers
 			},
 			bootstrap: {
 				files: {

@@ -10,8 +10,6 @@ git:
 
 before_install:
 - gem install sass
-- npm install bower
-- bower install
 
 script:
 - npm start
