@@ -2,16 +2,10 @@
 
 module.exports = function(grunt) {
 
-	var fs = require('fs');
-	var pkg, taskName, name, configBridge;
+	var pkg, taskName, name;
+
 	pkg = grunt.file.readJSON('package.json');
 	name = pkg.name.toLowerCase();
-	configBridge = function() {
-		if ( fs.existsSync('bower_components/bootstrap/grunt/configBridge.json') ) {
-			return grunt.file.readJSON('bower_components/bootstrap/grunt/configBridge.json');
-		}
-		return null;
-	};
 
 	grunt.initConfig({
 		// bannerの調整
@@ -95,9 +89,6 @@ module.exports = function(grunt) {
 			}
 		},
 		autoprefixer: {
-			options: {
-				browsers: configBridge().config.autoprefixerBrowsers
-			},
 			bootstrap: {
 				files: {
 					'dist/css/bootstrap.css': ['dist/css/bootstrap.css']
@@ -220,11 +211,27 @@ module.exports = function(grunt) {
 		}
 	}
 
+	// 本家Bootstrapのautoprefixerの設定を読み込む
+	grunt.task.registerTask('setAutoPrefixerConfig', 'Get autoprefixer config from bootstrap', function() {
+		var fs = require('fs');
+		if ( fs.existsSync('bower_components/bootstrap/grunt/configBridge.json') ) {
+			var configBridge = grunt.file.readJSON('bower_components/bootstrap/grunt/configBridge.json');
+			var prefixConfig = configBridge.config.autoprefixerBrowsers;
+			grunt.config.merge({
+				autoprefixer: {
+					options: {
+						browsers: prefixConfig
+					}
+				}
+			});
+		}
+	});
+
 	// 通常 (sass/connect/watch)
 	grunt.registerTask('server', ['bower:install', 'ect:version', 'sass', 'connect', 'watch']);
 
 	// ミニファイ
-	grunt.registerTask('build', ['clean:build', 'bower:install', 'ect:version', 'sass', 'autoprefixer', 'csscomb', 'cssmin:minify', 'replace:banner']);
+	grunt.registerTask('build', ['clean:build', 'bower:install', 'ect:version', 'sass', 'setAutoPrefixerConfig', 'autoprefixer', 'csscomb', 'cssmin:minify', 'replace:banner']);
 
 	// 配布用パッケージ作成
 	grunt.registerTask('package', ['build', 'compress:main']);
