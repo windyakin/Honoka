@@ -1,9 +1,9 @@
 @charset "UTF-8";
 /*!
- * Nico v3.3.5b
- * Website: http://kubosho.github.io/Nico
- * Copyright 2015 kubosho
- * The MIT License
+ * Nico v{%version%}
+ * Website: {%website%}
+ * Copyright {%year%} {%author%}
+ * The {%license%} License
  * Based on Bootstrap v3.3.5, Honoka
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -4598,11 +4598,8 @@ a.btn.disabled, fieldset[disabled] a.btn {
   color: #333;
   background-color: #fff;
   border-color: #ccc;
-  -webkit-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
 }
 .btn-default:focus, .btn-default.focus {
@@ -4641,11 +4638,8 @@ a.btn.disabled, fieldset[disabled] a.btn {
   color: #fff;
   background-color: #ff50ac;
   border-color: #ff46a7;
-  -webkit-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
 }
 .btn-primary:focus, .btn-primary.focus {
@@ -4684,11 +4678,8 @@ a.btn.disabled, fieldset[disabled] a.btn {
   color: #fff;
   background-color: #4caf50;
   border-color: #49a84d;
-  -webkit-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
 }
 .btn-success:focus, .btn-success.focus {
@@ -4727,11 +4718,8 @@ a.btn.disabled, fieldset[disabled] a.btn {
   color: #fff;
   background-color: #5cfaf9;
   border-color: #52faf9;
-  -webkit-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
 }
 .btn-info:focus, .btn-info.focus {
@@ -4770,11 +4758,8 @@ a.btn.disabled, fieldset[disabled] a.btn {
   color: #fff;
   background-color: #ff5052;
   border-color: #ff4648;
-  -webkit-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
 }
 .btn-warning:focus, .btn-warning.focus {
@@ -4813,11 +4798,8 @@ a.btn.disabled, fieldset[disabled] a.btn {
   color: #fff;
   background-color: #ac62ff;
   border-color: #a758ff;
-  -webkit-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
 }
 .btn-danger:focus, .btn-danger.focus {
@@ -8256,23 +8238,12 @@ button.close {
   }
 }
 a {
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  -webkit-transition-property: all;
   transition-property: all;
-  -moz-transition-duration: 0.3s;
-  -o-transition-duration: 0.3s;
-  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
-  -moz-transition-timing-function: ease;
-  -o-transition-timing-function: ease;
-  -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
 }
 
 .btn:active, .btn.active {
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
