@@ -1,6 +1,8 @@
 @charset "UTF-8";
 
+// Core variables
 @import "honoka/variables";
+
 @import "honoka/info";
 /*!
  * #{$name} v#{$version}
@@ -9,7 +11,8 @@
  * The MIT License
  * Based on Bootstrap v#{$bootstrap-version}
  */
-// Core variables and mixins
+
+// Core mixins
 @import "bootstrap/mixins";
 @import "honoka/mixins";
 
