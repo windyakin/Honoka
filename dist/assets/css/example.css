@@ -9,17 +9,8 @@
   color: #FFF;
   background-color: #55ACEE;
   border-color: #4ca7ed;
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  -webkit-transition-property: all;
   transition-property: all;
-  -moz-transition-duration: 0.3s;
-  -o-transition-duration: 0.3s;
-  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
-  -moz-transition-timing-function: ease;
-  -o-transition-timing-function: ease;
-  -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
 }
 .btn-twitter:focus, .btn-twitter.focus {
@@ -58,17 +49,8 @@
   color: #FFF;
   background-color: #3B5998;
   border-color: #385591;
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  -webkit-transition-property: all;
   transition-property: all;
-  -moz-transition-duration: 0.3s;
-  -o-transition-duration: 0.3s;
-  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
-  -moz-transition-timing-function: ease;
-  -o-transition-timing-function: ease;
-  -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
 }
 .btn-facebook:focus, .btn-facebook.focus {
@@ -107,17 +89,8 @@
   color: #FFF;
   background-color: #178fde;
   border-color: #1689d5;
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  -webkit-transition-property: all;
   transition-property: all;
-  -moz-transition-duration: 0.3s;
-  -o-transition-duration: 0.3s;
-  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
-  -moz-transition-timing-function: ease;
-  -o-transition-timing-function: ease;
-  -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
 }
 .btn-hatebu:focus, .btn-hatebu.focus {
@@ -228,13 +201,13 @@ section.section .subtitle h2 {
   background-color: #4caf50;
 }
 .point .point-box .point-circle.replace {
-  background-color: #5cfaf9;
+  background-color: #9c27b0;
 }
 .point .point-box .point-circle.compass {
-  background-color: #ff50ac;
+  background-color: #2196f3;
 }
 .point .point-box .point-circle.japanese {
-  background-color: #ac62ff;
+  background-color: #f44336;
 }
 .point .point-box .point-circle.japanese span.icon-jp:before {
   content: "あ";

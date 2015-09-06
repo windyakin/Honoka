@@ -1,6 +1,13 @@
 @charset "UTF-8";
 
+// Core variables
 @import "nico/variables";
+@import "nico/info";
+
+// Core mixins
+@import "bootstrap/mixins";
+@import "nico/mixins";
+
 /*!
  * Nico v{%version%}
  * Website: {%website%}
@@ -8,9 +15,6 @@
  * The {%license%} License
  * Based on Bootstrap v#{$bootstrap-version}, Honoka
  */
-// Core variables and mixins
-@import "bootstrap/mixins";
-@import "nico/mixins";
 
 @import "bootstrap/normalize";
 @import "bootstrap/grid";

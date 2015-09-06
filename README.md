@@ -1,6 +1,7 @@
 # Nico
 
 [![Build Status](https://travis-ci.org/kubosho/Nico.svg?branch=master)](https://travis-ci.org/kubosho/Nico)
+[![devDependency Status](https://david-dm.org/kubosho/Nico/dev-status.svg)](https://david-dm.org/kubosho/Nico#info=devDependencies)
 
 "Nico"は"[Honoka](https://github.com/windyakin/Honoka)"を元にした、日本語も美しく表示できるBootstrapテーマです。
 
@@ -14,6 +15,13 @@
 
  * [Nico/bootstrap-ja.html](//kubosho.github.io/Nico/bootstrap-ja.html) (日本語レイアウト)
  * [Nico/bootstrap.html](//kubosho.github.io/Nico/bootstrap.html) (英語レイアウト)
+
+## Getting Started
+
+### Download
+
+[Relases](https://github.com/windyakin/Honoka/releases)から最新版をダウンロードしてください
+
 
 ## Usage
 
@@ -40,8 +48,8 @@ nico/
 │   ├─ glyphicons-halflings-regular.woff
 │   └─ glyphicons-halflings-regular.woff2
 └─ js/
-    ├─ bootstrap.js
-    └─ bootstrap.min.js
+     ├─ bootstrap.js
+     └─ bootstrap.min.js
 ```
 
 ### Basic Template
@@ -87,23 +95,15 @@ Bootstrapをつかってウェブページを作成する際に基本となるHT
 
 ## Grunt
 
-このリポジトリはGruntを使った自動タスクによって，テストや配布用パッケージを生成することができます。
-
-なお、事前に[Compass](http://compass-style.org/)のインストールが必要です。インストールしていない方は以下のコマンドを実行してください。
-
-```bash
-gem install compass
-```
+このリポジトリは[Grunt](http://gruntjs.com/)を使った自動タスクによって，テストや配布用パッケージを生成することができます。
 
 ### Attention
-``src/bootstrap/``以下についてはGitの[Submodule機能](//git-scm.com/book/en/v2/Git-Tools-Submodules)を使って[twbs/bootstra-sass](//github.com/twbs/bootstrap-sass/)(BootstrapのSASS版コード)を読み込んでいるため，ReleaseページでダウンロードできるSource Codeというアーカイブの
-中に含まれていません。よって[twbs/bootstra-sass](//github.com/twbs/bootstrap-sass/)を直接ダウンロードしてファイルを配置する必要があります。
 
-一番いいのは，Nicoのリポジトリ自体を``git clone``し，以下のコマンドを実行することです。
+#### Using Bower
 
-```
-% git submodule update --init src/bootstrap
-```
+``v3.3.5-c``からそれまでGit Submoduleを使用していたBootstrapのSass版ソースコードの取り込みに，[Bower](http://bower.io/)を使用するようになりました。
+
+``bower install``などのコマンドについては，[grunt-bower-task](https://www.npmjs.com/package/grunt-bower-task)でGruntタスク化されているため事前に実行する必要はありません。
 
 ### Test
 
