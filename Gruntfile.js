@@ -105,7 +105,7 @@ module.exports = function(grunt) {
 		// clean
 		clean: {
 			build: {
-				src: ['dist/css/**/*', 'dist/js/**/*', 'dist/fonts/**/*']
+				src: ['bower_components/**/*', 'dist/css/**/*', 'dist/js/**/*', 'dist/fonts/**/*']
 			}
 		},
 		// bowerのインストール
