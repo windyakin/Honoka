@@ -213,18 +213,21 @@ module.exports = function(grunt) {
 
 	// 本家Bootstrapのautoprefixerの設定を読み込む
 	grunt.task.registerTask('setAutoPrefixerConfig', 'Get autoprefixer config from bootstrap', function() {
-		var fs = require('fs');
-		if ( fs.existsSync('bower_components/bootstrap/grunt/configBridge.json') ) {
+		try {
 			var configBridge = grunt.file.readJSON('bower_components/bootstrap/grunt/configBridge.json');
-			var prefixConfig = configBridge.config.autoprefixerBrowsers;
-			grunt.config.merge({
-				autoprefixer: {
-					options: {
-						browsers: prefixConfig
-					}
-				}
-			});
+			grunt.verbose.ok();
+		} catch (e) {
+			grunt.verbose.or.write("Loading Bootstrap configBridge...").error().error(e.message);
+			grunt.fail.fatal('Do you install bower component? Try "grunt bower:install"');
 		}
+		var prefixConfig = configBridge.config.autoprefixerBrowsers;
+		grunt.config.merge({
+			autoprefixer: {
+				options: {
+					browsers: prefixConfig
+				}
+			}
+		});
 	});
 
 	// 通常 (sass/connect/watch)
