@@ -198,16 +198,16 @@ section.section .subtitle h2 {
   border-radius: 100%;
 }
 .point .point-box .point-circle.start {
-  background-color: #4caf50;
+  background-color: #0faf20;
 }
 .point .point-box .point-circle.replace {
-  background-color: #9c27b0;
+  background-color: #a683b0;
 }
 .point .point-box .point-circle.compass {
-  background-color: #2196f3;
+  background-color: #ff64b1;
 }
 .point .point-box .point-circle.japanese {
-  background-color: #f44336;
+  background-color: #f45042;
 }
 .point .point-box .point-circle.japanese span.icon-jp:before {
   content: "あ";
