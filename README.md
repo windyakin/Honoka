@@ -1,5 +1,6 @@
 # Nico
 
+![owner status](https://img.shields.io/badge/owner-busy-red.svg)
 [![Build Status](https://travis-ci.org/kubosho/Nico.svg?branch=master)](https://travis-ci.org/kubosho/Nico)
 [![devDependency Status](https://david-dm.org/kubosho/Nico/dev-status.svg)](https://david-dm.org/kubosho/Nico#info=devDependencies)
 
