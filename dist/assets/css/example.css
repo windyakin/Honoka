@@ -160,7 +160,7 @@ body {
   overflow: hidden;
   text-align: center;
   background-color: #fdcea0;
-  background-image: url(../img/circle.png);
+  background-image: url("../img/circle.png");
   background-repeat: no-repeat;
   background-position: -35% center;
   -webkit-background-size: 70% 70%;
@@ -172,7 +172,7 @@ body {
   left: 0;
   width: 400px;
   height: 530px;
-  background-image: url(../img/honoka.png);
+  background-image: url("../img/honoka.png");
   background-repeat: no-repeat;
 }
 .jumbotron.special .outline {
@@ -192,6 +192,9 @@ body {
 
 section.section {
   padding: 150px 0;
+}
+section.section.section-default {
+  background-color: #f9f9f9;
 }
 section.section.section-inverse {
   background-color: #fff5eb;

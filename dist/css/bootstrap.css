@@ -8325,9 +8325,7 @@ a {
 
 @media (min-width: 768px) {
   .navbar-nav > li > a {
-    padding-top: 0;
     padding-top: 7.25px;
-    padding-bottom: 0;
     padding-bottom: 7.25px;
     margin-top: 21.75px;
     margin-bottom: 21.75px;
