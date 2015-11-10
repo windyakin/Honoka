@@ -1,15 +1,29 @@
 language: node_js
+
 node_js:
-- '0.12'
+  - '4.2'
 
 sudo: false
-cache: node_modules
+
+cache:
+  directories:
+    - node_modules
+    - vendor/bundle
 
 git:
   submodules: false
 
 before_install:
-- gem install sass
+  - rvm install 2.2.3
+  - rvm use 2.2.3 --fuzzy
+  - export GEMDIR=$(rvm gemdir)
+  - ruby --version
+  - gem --version
+  - gem install bundler --quiet --no-ri --no-rdoc
+  - bundle --version
+  - bundle install --without documentation --path vendor/bundle
+  - npm install -g grunt-cli
+  - grunt --version
 
 script:
-- npm start
+  - npm start
