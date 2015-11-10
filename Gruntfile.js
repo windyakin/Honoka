@@ -103,6 +103,17 @@ module.exports = function(grunt) {
 				ext: '.css'
 			}
 		},
+		// SCSSのLinter
+		scsslint: {
+			options: {
+				bundleExec: true,
+				config: 'scss/.scss-lint.yml',
+				reporterOutput: null,
+				colorizeOutput: true
+			},
+			bootstrap: ['scss/**/*.scss'],
+			assets: ['src/scss/**/*.scss']
+		},
 		// clean
 		clean: {
 			build: {

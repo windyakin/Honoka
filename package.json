@@ -32,6 +32,7 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-csscomb": "^3.1.0",
     "grunt-ect": "^0.1.2",
+    "grunt-scss-lint": "^0.3.8",
     "grunt-text-replace": "^0.4.0"
   }
 }
