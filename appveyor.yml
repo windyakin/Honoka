@@ -4,27 +4,30 @@ init:
   - git config --global core.autocrlf true
 
 environment:
-  matrix:
-    - nodejs_version: 0.12
+  nodejs_version: 4.2.2
+  ruby_verison: 22-x64
 
 install:
   - SET PATH=C:\Ruby%ruby_version%\bin;%PATH%
   - ruby --version
   - gem --version
-  - gem install sass
+  - gem install bundler --quiet --no-ri --no-rdoc
+  - bundler --version
+  - bundle install --without documentation --path vendor/bundle
   - ps: Install-Product node $env:nodejs_version
-  - npm install
-  - bower install
-
-test_script:
-  - node --version && npm --version
-  - npm start
+  - npm install --force
 
 build: off
+
+test_script:
+  - node --version
+  - npm --version
+  - npm start
 
 matrix:
   fast_finish: true
 
 cache:
-  - C:\Users\appveyor\AppData\Roaming\npm-cache -> package.json # npm cache
-  - node_modules -> package.json                                # local npm modules
+  - C:\Users\appveyor\AppData\Roaming\npm-cache -> package.json
+  - node_modules -> package.json
+  - vendor
