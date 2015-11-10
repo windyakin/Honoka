@@ -5,31 +5,31 @@
 @import "honoka/variables";
 @import "honoka/mixins";
 
-$brand-honoka: #FDCEA0;
-$brand-twitter: #55ACEE;
-$brand-facebook: #3B5998;
+$brand-honoka: #fdcea0;
+$brand-twitter: #55acee;
+$brand-facebook: #3b5998;
 $brand-hatena: #178fde;
 
 .btn-twitter,.btn-facebook {
 	.fa.fa-lg {
-		vertical-align: -1px;
 		margin-right: 2px;
+		vertical-align: -1px;
 	}
 }
 .btn-twitter {
-	@include button-variant(#FFF, $brand-twitter, darken($brand-twitter, 2%));
+	@include button-variant(#fff, $brand-twitter, darken($brand-twitter, 2%));
 }
 .btn-facebook {
-	@include button-variant(#FFF, $brand-facebook, darken($brand-facebook, 2%));
+	@include button-variant(#fff, $brand-facebook, darken($brand-facebook, 2%));
 }
 .btn-hatebu {
-	@include button-variant(#FFF, $brand-hatena, darken($brand-hatena, 2%));
+	@include button-variant(#fff, $brand-hatena, darken($brand-hatena, 2%));
 }
 
 .fa.fa-hatebu:before {
-	content: "B!";
 	font-family: Verdana;
 	font-weight: bold;
+	content: "B!";
 }
 
 body {
@@ -38,12 +38,12 @@ body {
 
 .jumbotron.special {
 	position: relative;
-	overflow: hidden;
 	min-height: 530px;
 	margin-bottom: 0;
+	overflow: hidden;
 	text-align: center;
 	background-color: $brand-honoka;
-	background-image: url(../img/circle.png);
+	background-image: url("../img/circle.png");
 	background-repeat: no-repeat;
 	background-position: -35% center;
 	background-size: 70%;
@@ -51,9 +51,9 @@ body {
 		position: absolute;
 		bottom: -20px;
 		left: 0;
-		height: 530px;
 		width: 400px;
-		background-image: url(../img/honoka.png);
+		height: 530px;
+		background-image: url("../img/honoka.png");
 		background-repeat: no-repeat;
 	}
 	.outline {
@@ -64,23 +64,25 @@ body {
 		font-family: Montserrat, sans-serif;
 	}
 	.download {
-		margin: $padding-large-vertical*4 auto $padding-large-vertical*2;
+		margin: $padding-large-vertical * 4 auto $padding-large-vertical * 2;
 	}
 	.basedon {
 		color: $gray-light;
-		text-shadow: #FFF 0 1px 2px;
+		text-shadow: #fff 0 1px 2px;
 	}
 }
 
 section.section {
 	padding: ($padding-large-vertical * 15) 0;
-	&.section-default {}
+	&.section-default {
+		background-color: $body-bg;
+	}
 	&.section-inverse {
 		background-color: lighten($brand-honoka, 15%);
 	}
 	.subtitle {
-		text-align: center;
 		margin-bottom: $padding-large-vertical * 2;
+		text-align: center;
 		h2 {
 			margin-top: 0;
 		}
@@ -92,9 +94,9 @@ section.section {
 		text-align: center;
 		.point-circle {
 			$point-circle-size: 100px;
-			margin: 0 auto;
 			width: $point-circle-size;
 			height: $point-circle-size;
+			margin: 0 auto;
 			font-size: $point-circle-size * 0.6;
 			line-height: $point-circle-size;
 			color: #fff;
@@ -111,8 +113,8 @@ section.section {
 			&.japanese {
 				background-color: $brand-danger;
 				span.icon-jp:before {
-					content: "あ";
 					font-weight: bold;
+					content: "あ";
 				}
 			}
 		}
@@ -161,7 +163,7 @@ section.section {
 }
 
 .thumbnail {
-	background: #FFF;
+	background: #fff;
 	> a {
 		&:hover, &:active, &:focus {
 			opacity: 0.7;
@@ -170,27 +172,27 @@ section.section {
 }
 
 footer {
-	padding: $padding-large-vertical*4 0px;
+	padding: $padding-large-vertical * 4 0;
 	color: $gray-lighter;
 	background-color: $gray-dark;
 	.social-button {
 		position: relative;
-		overflow: hidden;
-		margin: 0px auto !important;
 		padding: $padding-large-vertical 0;
+		margin: 0 auto !important;
+		overflow: hidden;
 		> ul {
 			position: relative;
 			left: 50%;
 			float: left;
-			margin: 0px;
-			padding: 0px;
+			padding: 0;
+			margin: 0;
 			list-style: outside none none;
 			> li {
 				position: relative;
 				left: -50%;
 				float: left;
-				margin: 0px 10px;
-				padding: 0px;
+				padding: 0;
+				margin: 0 10px;
 
 				.fb-like {
 					> span {

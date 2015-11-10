@@ -1,11 +1,13 @@
+@charset "UTF-8";
+
 // font
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 // animation
 a {
-	transition-property: all;
-	transition-duration: 0.3s;
 	transition-timing-function: ease;
+	transition-duration: 0.3s;
+	transition-property: all;
 }
 
 // buttons
@@ -21,27 +23,25 @@ a {
 	@media (min-width: $grid-float-breakpoint) {
 		> li {
 			> a {
-				padding-top:    0;
-				padding-bottom: 0;
-				margin-top:     $navbar-padding-vertical/4*3;
-				margin-bottom:  $navbar-padding-vertical/4*3;
-				padding-top:    $navbar-padding-vertical/4;
-				padding-bottom: $navbar-padding-vertical/4;
+				padding-top:    ($navbar-padding-vertical / 4);
+				padding-bottom: ($navbar-padding-vertical / 4);
+				margin-top:     ($navbar-padding-vertical / 4 * 3);
+				margin-bottom:  ($navbar-padding-vertical / 4 * 3);
 				border-radius:  $border-radius-large;
 			}
 			> .dropdown-menu {
-				margin-top: -$navbar-padding-vertical/4*3;
+				margin-top: (-$navbar-padding-vertical / 4 * 3);
 			}
 		}
 		> li:not(:last-child) {
-			margin-right: $navbar-padding-horizontal/3;
+			margin-right: ($navbar-padding-horizontal / 3);
 		}
 	}
 }
 
 .navbar-brand {
+	margin-right: ($navbar-padding-horizontal / 3);
 	font-size: $font-size-large;
-	margin-right: $navbar-padding-horizontal/3;
 }
 
 // label
@@ -68,7 +68,6 @@ a {
 .panel-heading,
 .lead,
 .tooltip,
-.popover
-{
+.popover {
 	font-family: $font-family-sans-serif;
 }
