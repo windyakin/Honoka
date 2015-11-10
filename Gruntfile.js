@@ -107,7 +107,7 @@ module.exports = function(grunt) {
 		scsslint: {
 			options: {
 				bundleExec: true,
-				config: 'scss/.scss-lint.yml',
+				config: '.scss-lint.yml',
 				reporterOutput: null,
 				colorizeOutput: true
 			},
@@ -154,7 +154,7 @@ module.exports = function(grunt) {
 			// 自動コンパイル
 			bootstrap: {
 				files: ['scss/**/*.scss','src/scss/**/*.scss'],
-				tasks: ['css'],
+				tasks: ['scsslint', 'css'],
 			}
 		},
 		// テストサーバ
@@ -237,14 +237,17 @@ module.exports = function(grunt) {
 		});
 	});
 
+	// テスト
+	grunt.registerTask('test', ['scsslint']);
+
 	// CSSビルド
-	grunt.registerTask('css', ['ect:version', 'sass', 'setAutoPrefixerConfig', 'autoprefixer', 'csscomb']);
+	grunt.registerTask('css', ['scsslint', 'ect:version', 'sass', 'setAutoPrefixerConfig', 'autoprefixer', 'csscomb']);
 
 	// 通常 (sass/connect/watch)
-	grunt.registerTask('server', ['bower:install', 'css', 'connect', 'watch']);
+	grunt.registerTask('server', ['bower:install', 'test', 'css', 'connect', 'watch']);
 
 	// ミニファイ
-	grunt.registerTask('build', ['clean:build', 'bower:install', 'css', 'cssmin:minify', 'replace:banner']);
+	grunt.registerTask('build', ['clean:build', 'bower:install', 'test', 'css', 'cssmin:minify', 'replace:banner']);
 
 	// 配布用パッケージ作成
 	grunt.registerTask('package', ['build', 'compress:main']);
