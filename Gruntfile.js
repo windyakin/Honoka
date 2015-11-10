@@ -142,13 +142,8 @@ module.exports = function(grunt) {
 		watch: {
 			// 自動コンパイル
 			bootstrap: {
-				files: ['scss/**/*.scss'],
-				tasks: ['sass:bootstrap'],
-			},
-			// 自動コンパイル
-			assets: {
-				files: ['src/scss/**/*.scss'],
-				tasks: ['sass:assets'],
+				files: ['scss/**/*.scss','src/scss/**/*.scss'],
+				tasks: ['css'],
 			}
 		},
 		// テストサーバ
@@ -231,11 +226,14 @@ module.exports = function(grunt) {
 		});
 	});
 
+	// CSSビルド
+	grunt.registerTask('css', ['ect:version', 'sass', 'setAutoPrefixerConfig', 'autoprefixer', 'csscomb']);
+
 	// 通常 (sass/connect/watch)
-	grunt.registerTask('server', ['bower:install', 'ect:version', 'sass', 'connect', 'watch']);
+	grunt.registerTask('server', ['bower:install', 'css', 'connect', 'watch']);
 
 	// ミニファイ
-	grunt.registerTask('build', ['clean:build', 'bower:install', 'ect:version', 'sass', 'setAutoPrefixerConfig', 'autoprefixer', 'csscomb', 'cssmin:minify', 'replace:banner']);
+	grunt.registerTask('build', ['clean:build', 'bower:install', 'css', 'cssmin:minify', 'replace:banner']);
 
 	// 配布用パッケージ作成
 	grunt.registerTask('package', ['build', 'compress:main']);
