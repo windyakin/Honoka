@@ -4,7 +4,7 @@
 // When there no function is defined, `fn('')` is parsed as string that equals the right hand side
 // NB: in Sass 3.3 there is a native function: function-exists(twbs-font-path)
 $bootstrap-sass-asset-helper: (twbs-font-path("") != unquote('twbs-font-path("")')) !default;
-$bootstrap-version: "3.3.5";
+$bootstrap-version: "3.3.6";
 
 //
 // Variables
@@ -870,5 +870,7 @@ $blockquote-border-color:     $gray-lighter !default;
 $page-header-border-color:    $gray-lighter !default;
 //** Width of horizontal description list titles
 $dl-horizontal-offset:        $component-offset-horizontal !default;
+//** Point at which .dl-horizontal becomes horizontal
+$dl-horizontal-breakpoint:    $grid-float-breakpoint !default;
 //** Horizontal line color.
 $hr-border:                   $gray-lighter !default;
