@@ -24,8 +24,17 @@
 
 ### Download
 
-[Relases](https://github.com/windyakin/Honoka/releases)から最新版をダウンロードしてください
+[Relases](https://github.com/windyakin/Honoka/releases)から最新版をダウンロードしてください。
 
+### Bower
+
+[Bower](http://bower.io/)からインストールすることができます。
+
+```
+bower install --save-dev Honoka#(version)
+```
+
+``(version)``にはバージョン番号を指定します(ex. ``Honoka#3.3.5-c``)。Honokaの最新バージョン番号は[Relases](https://github.com/windyakin/Honoka/releases)から確認してください。
 
 ## Usage
 
@@ -97,41 +106,9 @@ Bootstrapをつかってウェブページを作成する際に基本となるHT
 
 例えばページ全体に対して游ゴシックを用いたくない場合は，``<body>``に対して``.no-thank-yu``を指定(``<body class="no-thank-yu">``)することで，ページ全体で游ゴシックは使用されなくなります。
 
-## Grunt
+## Build
 
-このリポジトリは[Grunt](http://gruntjs.com/)を使った自動タスクによって，テストや配布用パッケージを生成することができます。
-
-### Attention
-
-#### Using Bower
-
-``v3.3.5-c``からそれまでGit Submoduleを使用していたBootstrapのSass版ソースコードの取り込みに，[Bower](http://bower.io/)を使用するようになりました。
-
-``bower install``などのコマンドについては，[grunt-bower-task](https://www.npmjs.com/package/grunt-bower-task)でGruntタスク化されているため事前に実行する必要はありません。
-
-### Test
-
-```
-grunt server
-```
-
-テスト用サーバを起動します。``localhost:8000``に接続することで``dist/``以下のディレクトリをプレビューすることができます。また起動中にscssファイルを更新した場合，自動的にビルドされます(だがLive Reloadはされない)。
-
-### Build
-
-```
-grunt build
-```
-
-Bootstrapに関連するファイルのビルドを行います。
-
-### Package
-
-```
-grunt package
-```
-
-配布用パッケージを作成します。作成したファイルは``data/``ディレクトリ(``.gitignore``で無視ディレクトリに指定)の``bootstrap-honoka-dist.zip``へ出力されます。
+ビルドの方法については [Wiki](https://github.com/windyakin/Honoka/wiki) をご覧ください。
 
 ## License
 
