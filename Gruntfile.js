@@ -137,24 +137,6 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		// バージョン情報の出力
-		ect: {
-			version: {
-				options: {
-					root: 'scss/honoka/',
-					variables: {
-						name: pkg.name,
-						version: pkg.version,
-						website: pkg.website,
-						year: new Date().getFullYear(),
-						author: pkg.author,
-					},
-				},
-				files: {
-					'<%= ect.version.options.root %>_info.scss': '_info.scss.ect'
-				}
-			}
-		},
 		// ファイル更新監視
 		watch: {
 			// 自動コンパイル
