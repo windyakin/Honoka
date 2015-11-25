@@ -241,7 +241,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('test', ['scsslint']);
 
 	// CSSビルド
-	grunt.registerTask('css', ['scsslint', 'ect:version', 'sass', 'setAutoPrefixerConfig', 'autoprefixer', 'csscomb']);
+	grunt.registerTask('css', ['sass', 'setAutoPrefixerConfig', 'autoprefixer', 'csscomb']);
 
 	// 通常 (sass/connect/watch)
 	grunt.registerTask('server', ['bower:install', 'test', 'css', 'connect', 'watch']);
