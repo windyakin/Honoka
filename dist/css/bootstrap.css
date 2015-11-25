@@ -1,10 +1,10 @@
 @charset "UTF-8";
 /*!
- * Honoka v3.3.5d
- * Website: http://honokak.osaka/
+ * Honoka v3.3.6
+ * Website http://honokak.osaka/
  * Copyright 2015 windyakin
  * The MIT License
- * Based on Bootstrap v3.3.5
+ * Based on Bootstrap v3.3.6 (http://getbootstrap.com)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
@@ -1236,11 +1236,11 @@ th {
 }
 
 .glyphicon-asterisk:before {
-  content: "\2a";
+  content: "\002a";
 }
 
 .glyphicon-plus:before {
-  content: "\2b";
+  content: "\002b";
 }
 
 .glyphicon-euro:before,
@@ -4079,6 +4079,10 @@ output {
 .form-control::-webkit-input-placeholder {
   color: #999;
 }
+.form-control::-ms-expand {
+  background-color: transparent;
+  border: 0;
+}
 .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
   background-color: #eee;
   opacity: 1;
@@ -4549,7 +4553,7 @@ select[multiple].input-lg,
 }
 @media (min-width: 768px) {
   .form-horizontal .form-group-lg .control-label {
-    padding-top: 14.3px;
+    padding-top: 11px;
     font-size: 20px;
   }
 }
@@ -5285,6 +5289,7 @@ tbody.collapse.in {
   border-radius: 0;
 }
 .btn-group-vertical > .btn:first-child:not(:last-child) {
+  border-top-left-radius: 2px;
   border-top-right-radius: 2px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
@@ -5292,6 +5297,7 @@ tbody.collapse.in {
 .btn-group-vertical > .btn:last-child:not(:first-child) {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+  border-bottom-right-radius: 2px;
   border-bottom-left-radius: 2px;
 }
 
@@ -5354,6 +5360,9 @@ tbody.collapse.in {
   float: left;
   width: 100%;
   margin-bottom: 0;
+}
+.input-group .form-control:focus {
+  z-index: 3;
 }
 
 .input-group-addon,
@@ -6198,7 +6207,7 @@ tbody.collapse.in {
 .pagination > li > a:hover, .pagination > li > a:focus,
 .pagination > li > span:hover,
 .pagination > li > span:focus {
-  z-index: 3;
+  z-index: 2;
   color: #0a6ebd;
   background-color: #eee;
   border-color: #ddd;
@@ -6207,7 +6216,7 @@ tbody.collapse.in {
 .pagination > .active > span,
 .pagination > .active > span:hover,
 .pagination > .active > span:focus {
-  z-index: 2;
+  z-index: 3;
   color: #fff;
   cursor: default;
   background-color: #2196f3;
@@ -6438,6 +6447,8 @@ a.badge:hover, a.badge:focus {
   border-top-color: #d5d5d5;
 }
 .container .jumbotron, .container-fluid .jumbotron {
+  padding-right: 15px;
+  padding-left: 15px;
   border-radius: 4px;
 }
 .jumbotron .container {
@@ -7448,9 +7459,15 @@ button.close {
 }
 
 .modal-header {
-  min-height: 16.42857px;
   padding: 15px;
   border-bottom: 1px solid transparent;
+}
+.modal-header:before, .modal-header:after {
+  display: table;
+  content: " ";
+}
+.modal-header:after {
+  clear: both;
 }
 
 .modal-header .close {
@@ -7867,6 +7884,7 @@ button.close {
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+  background-color: transparent;
   filter: alpha(opacity=50);
   opacity: .5;
 }
@@ -7982,16 +8000,16 @@ button.close {
   .carousel-control .icon-next {
     width: 30px;
     height: 30px;
-    margin-top: -15px;
+    margin-top: -10px;
     font-size: 30px;
   }
   .carousel-control .glyphicon-chevron-left,
   .carousel-control .icon-prev {
-    margin-left: -15px;
+    margin-left: -10px;
   }
   .carousel-control .glyphicon-chevron-right,
   .carousel-control .icon-next {
-    margin-right: -15px;
+    margin-right: -10px;
   }
 
   .carousel-caption {
