@@ -2,26 +2,32 @@
 
 module.exports = function(grunt) {
 
-	var pkg, taskName, name;
+	var pkg, bower, taskName, name;
 
 	pkg = grunt.file.readJSON('package.json');
+	bower = grunt.file.readJSON('bower.json');
 	name = pkg.name.toLowerCase();
 
 	grunt.initConfig({
+		pkg: pkg,
+		bowerJSON: bower,
+		banner:	'/*!\n' +
+						' * <%= pkg.name %> v<%= pkg.version %>\n' +
+						' * Website <%= pkg.website %>\n' +
+						' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
+						' * The <%= pkg.license %> License\n' +
+						' * Based on Bootstrap v<%= bowerJSON.devDependencies.bootstrap %> (http://getbootstrap.com)\n' +
+						' */',
 		// bannerの調整
 		replace: {
-			// minifyファイルの改行の追加
+			// バナーの追加
 			banner: {
-				src: ['dist/css/bootstrap.min.css'],
-				dest: 'dist/css/bootstrap.min.css',
+				src: ['dist/css/bootstrap**.css'],
+				dest: 'dist/css/',
 				replacements: [
 					{
-						from: '@charset "UTF-8";/*!',
-						to: '@charset "UTF-8";\n/*!'
-					},
-					{
-						from: /Based on Bootstrap v([\d\.]+)\n \*\//g,
-						to: 'Based on Bootstrap v$1\n */\n'
+						from: '@charset "UTF-8";',
+						to: '@charset "UTF-8";\n<%= banner %>'
 					}
 				]
 			}
