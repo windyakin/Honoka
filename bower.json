@@ -31,14 +31,13 @@
     "src",
     "CNAME"
   ],
-  "dependencies": {
-    "bootstrap": "~3.3.5"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "bootstrap-sass-official": "~3.3.5"
+    "bootstrap": "3.3.6",
+    "bootstrap-sass": "3.3.6"
   },
   "exportsOverride": {
-    "bootstrap-sass-official": {},
+    "bootstrap-sass": {},
     "bootstrap": {
       "js": "dist/js/bootstrap.**js",
       "fonts": "dist/fonts/**/*"
