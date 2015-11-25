@@ -235,7 +235,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('optimize', ['csscomb', 'cssmin:minify']);
 
 	// 開発用
-	grunt.registerTask('server', ['bower:install', 'setAutoPrefixerConfig' 'test', 'css', 'connect', 'watch']);
+	grunt.registerTask('server', ['bower:install', 'setAutoPrefixerConfig', 'test', 'css', 'connect', 'watch']);
 
 	// ビルドタスク
 	grunt.registerTask('build', ['clean:build', 'bower:install', 'setAutoPrefixerConfig', 'test', 'css', 'optimize', 'replace:banner']);
