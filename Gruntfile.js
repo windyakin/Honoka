@@ -241,13 +241,16 @@ module.exports = function(grunt) {
 	grunt.registerTask('test', ['scsslint']);
 
 	// CSSビルド
-	grunt.registerTask('css', ['sass', 'setAutoPrefixerConfig', 'autoprefixer', 'csscomb']);
+	grunt.registerTask('css', ['sass', 'autoprefixer']);
 
-	// 通常 (sass/connect/watch)
-	grunt.registerTask('server', ['bower:install', 'test', 'css', 'connect', 'watch']);
+	// 最適化
+	grunt.registerTask('optimize', ['csscomb', 'cssmin:minify']);
 
-	// ミニファイ
-	grunt.registerTask('build', ['clean:build', 'bower:install', 'test', 'css', 'cssmin:minify', 'replace:banner']);
+	// 開発用
+	grunt.registerTask('server', ['bower:install', 'setAutoPrefixerConfig' 'test', 'css', 'connect', 'watch']);
+
+	// ビルドタスク
+	grunt.registerTask('build', ['clean:build', 'bower:install', 'setAutoPrefixerConfig', 'test', 'css', 'optimize', 'replace:banner']);
 
 	// 配布用パッケージ作成
 	grunt.registerTask('package', ['build', 'compress:main']);
