@@ -48,7 +48,7 @@ module.exports = function(grunt) {
 				unixNewlines: true,
 				style: 'expanded',
 				bundleExec: true,
-				loadPath: ['bower_components/bootstrap-sass-official/assets/stylesheets/']
+				loadPath: ['bower_components/bootstrap-sass/assets/stylesheets/']
 			},
 			bootstrap: {
 				files: [{
