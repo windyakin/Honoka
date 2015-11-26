@@ -84,12 +84,23 @@
           <a href="/bootstrap-ja.html" class="btn btn-primary btn-lg"><i class="fa fa-play"></i> Watch Demo</a>
         </div>
         <div class="basedon small">
-          Based on <a href="http://getbootstrap.com/">Bootstrap</a> v3.3.5
+          Last version v<span class="last-version"></span> ・ Based on <a href="http://getbootstrap.com/">Bootstrap</a> v3.3.6
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<aside class="social">
+  <div class="social-button">
+    <ul>
+      <li><iframe src="https://ghbtns.com/github-btn.html?user=windyakin&repo=Honoka&type=star&count=true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe></li>
+      <li><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-dnt="true">ツイート</a></li>
+      <li><div class="fb-like" data-href="http://honokak.osaka/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div></li>
+      <li><a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;"></a></li>
+    </ul>
+  </div>
+</aside>
 
 <section class="section section-default point">
   <div class="container">
@@ -187,15 +198,33 @@
       <div class="col-md-12 text-center">
         <div class="form-group">
           <a href="//github.com/windyakin/Honoka/releases" class="btn btn-primary btn-lg"><i class="fa fa-github-alt"></i> Download from GitHub</a>
-          <p class="help-block">Version 3.3.5 ・ MIT License</p>
+          <p class="help-block">Last version v<span class="last-version"></span> ・ <a href="//github.com/windyakin/Honoka/blob/master/LICENSE">MIT License</a></p>
         </div>
-        <p>使い方やファイルの説明など，詳しくは<a href="//github.com/windyakin/Honoka#readme">README.md</a>をご確認ください</p>
+        <p>使い方やファイルの説明など、詳しくは <a href="//github.com/windyakin/Honoka#readme">README</a> または <a href="//github.com/windyakin/Honoka/wiki">Wiki</a> をご確認ください</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section section-inverse used-by">
+<section class="section section-inverse available-bower">
+  <div class="bower-logo"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 subtitle">
+        <h2>Available on the Bower</h2>
+        <p>Honokaは<a href="http://bower.io/">Bower</a>からも利用できます</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 col-xs-12 text-center">
+        <pre>bower install --save-dev Honoka#<span class="last-version"></span></pre>
+        <p class="help-block">v3.3.5-c 以降から対応</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-default used-by">
   <div class="container">
     <div class="row">
       <div class="col-xs-12 subtitle">
@@ -232,7 +261,7 @@
   </div>
 </section>
 
-<section class="section section fork">
+<section class="section section-inverse fork">
   <div class="container">
     <div class="row">
       <div class="col-xs-12 subtitle">
@@ -271,7 +300,7 @@
   </div>
 </section>
 
-<section class="section section-inverse featured">
+<section class="section section-default featured">
   <div class="container">
     <div class="row">
       <div class="col-xs-12 subtitle">
@@ -322,6 +351,18 @@
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(e) {
+  $.ajax({
+    url: 'https://api.github.com/repos/windyakin/Honoka/releases/latest',
+    type: 'get',
+    dataType: 'json'
+  })
+  .done(function(data) {
+    $('.last-version').text(data.tag_name.split('v')[1]);
+  });
+});
+</script>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=238369762859730&version=v2.3";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script>
