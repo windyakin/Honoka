@@ -141,8 +141,8 @@ module.exports = function(grunt) {
 		watch: {
 			// 自動コンパイル
 			bootstrap: {
-				files: ['scss/**/*.scss','src/scss/**/*.scss'],
-				tasks: ['scsslint', 'css'],
+				files: ['scss/**/*.scss', 'src/scss/**/*.scss'],
+				tasks: ['scsslint', 'css']
 			}
 		},
 		// テストサーバ
