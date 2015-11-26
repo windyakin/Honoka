@@ -116,7 +116,7 @@ section.section {
 		background-color: lighten($brand-honoka, 15%);
 	}
 	.subtitle {
-		margin-bottom: $padding-large-vertical * 2;
+		margin-bottom: $line-height-computed;
 		text-align: center;
 		h2 {
 			margin-top: 0;
@@ -173,7 +173,7 @@ section.section {
 .japanese-font {
 	.well {
 		> h3 {
-			margin-top: $padding-large-vertical;
+			margin-top: $line-height-computed;
 		}
 	}
 }
@@ -209,7 +209,7 @@ section.section {
 			}
 		}
 		li {
-			margin: $padding-base-vertical $padding-large-horizontal;
+			padding: $padding-base-vertical $padding-large-horizontal;
 		}
 	}
 }
