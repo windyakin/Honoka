@@ -153,6 +153,36 @@ body {
   margin-top: 80px;
 }
 
+.social-button {
+  position: relative;
+  padding: 10px 0;
+  margin: 0 auto !important;
+  overflow: hidden;
+}
+.social-button > ul {
+  position: relative;
+  left: 50%;
+  float: left;
+  padding: 0;
+  margin: 0;
+  list-style: outside none none;
+}
+.social-button > ul > li {
+  position: relative;
+  left: -50%;
+  float: left;
+  padding: 0;
+  margin: 0 10px;
+}
+.social-button > ul > li .fb-like > span {
+  vertical-align: 0 !important;
+}
+
+.social {
+  padding: 10px 0;
+  background: #eee;
+}
+
 .jumbotron.special {
   position: relative;
   min-height: 530px;
@@ -183,15 +213,16 @@ body {
   font-family: Montserrat, sans-serif;
 }
 .jumbotron.special .download {
-  margin: 40px auto 20px;
+  margin: 22px auto 11px;
 }
 .jumbotron.special .basedon {
+  margin: 11px auto;
   color: #777;
   text-shadow: #fff 0 1px 2px;
 }
 
 section.section {
-  padding: 150px 0;
+  padding: 100px 0;
 }
 section.section.section-default {
   background-color: #f9f9f9;
@@ -200,7 +231,7 @@ section.section.section-inverse {
   background-color: #fff5eb;
 }
 section.section .subtitle {
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   text-align: center;
 }
 section.section .subtitle h2 {
@@ -247,7 +278,25 @@ section.section .subtitle h2 {
 }
 
 .japanese-font .well > h3 {
-  margin-top: 10px;
+  margin-top: 22px;
+}
+
+.available-bower {
+  position: relative;
+  overflow: hidden;
+}
+.available-bower .bower-logo {
+  position: absolute;
+  right: 40px;
+  bottom: 0;
+  width: 300px;
+  height: 300px;
+  background-image: url("../img/bower-logo.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: contain;
+          background-size: contain;
+  opacity: .3;
 }
 
 .featured .subtitle h2 {
@@ -260,7 +309,7 @@ section.section .subtitle h2 {
   opacity: .5;
 }
 .featured ul.featured-list li {
-  margin: 6px 20px;
+  padding: 6px 20px;
 }
 
 .thumbnail {
@@ -274,30 +323,6 @@ footer {
   padding: 40px 0;
   color: #eee;
   background-color: #333;
-}
-footer .social-button {
-  position: relative;
-  padding: 10px 0;
-  margin: 0 auto !important;
-  overflow: hidden;
-}
-footer .social-button > ul {
-  position: relative;
-  left: 50%;
-  float: left;
-  padding: 0;
-  margin: 0;
-  list-style: outside none none;
-}
-footer .social-button > ul > li {
-  position: relative;
-  left: -50%;
-  float: left;
-  padding: 0;
-  margin: 0 10px;
-}
-footer .social-button > ul > li .fb-like > span {
-  vertical-align: 0 !important;
 }
 footer .copyright {
   padding-top: 10px;
