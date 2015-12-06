@@ -5,55 +5,87 @@
 @import "nico/variables";
 @import "nico/mixins";
 
-$brand-nico: #FEC4D8;
-$brand-twitter: #55ACEE;
-$brand-facebook: #3B5998;
+$brand-nico: #fec4d8;
+$brand-twitter: #55acee;
+$brand-facebook: #3b5998;
 $brand-hatena: #178fde;
 
 .btn-twitter,.btn-facebook {
 	.fa.fa-lg {
-		vertical-align: -1px;
 		margin-right: 2px;
+		vertical-align: -1px;
 	}
 }
 .btn-twitter {
-	@include button-variant(#FFF, $brand-twitter, darken($brand-twitter, 2%));
+	@include button-variant(#fff, $brand-twitter, darken($brand-twitter, 2%));
 }
 .btn-facebook {
-	@include button-variant(#FFF, $brand-facebook, darken($brand-facebook, 2%));
+	@include button-variant(#fff, $brand-facebook, darken($brand-facebook, 2%));
 }
 .btn-hatebu {
-	@include button-variant(#FFF, $brand-hatena, darken($brand-hatena, 2%));
+	@include button-variant(#fff, $brand-hatena, darken($brand-hatena, 2%));
 }
 
 .fa.fa-hatebu:before {
-	content: "B!";
 	font-family: Verdana;
 	font-weight: bold;
+	content: "B!";
 }
 
 body {
 	margin-top: $navbar-height;
 }
 
+.social-button {
+	position: relative;
+	padding: $padding-large-vertical 0;
+	margin: 0 auto !important;
+	overflow: hidden;
+	> ul {
+		position: relative;
+		left: 50%;
+		float: left;
+		padding: 0;
+		margin: 0;
+		list-style: outside none none;
+		> li {
+			position: relative;
+			left: -50%;
+			float: left;
+			padding: 0;
+			margin: 0 10px;
+			.fb-like {
+				> span {
+					vertical-align: 0 !important;
+				}
+			}
+		}
+	}
+}
+
+.social {
+	padding: $padding-large-vertical 0;
+	background: $gray-lighter;
+}
+
 .jumbotron.special {
 	position: relative;
-	overflow: hidden;
 	min-height: 530px;
 	margin-bottom: 0;
+	overflow: hidden;
 	text-align: center;
 	background-color: $brand-nico;
-	background-image: url(../img/circle.png);
+	background-image: url("../img/circle.png");
 	background-repeat: no-repeat;
 	background-position: -35% center;
 	background-size: 70%;
+
 	.nico {
 		position: absolute;
 		bottom: -20px;
 		left: 0;
-		height: 530px;
 		width: 400px;
-		background-image: url(../img/nico.png);
+		background-image: url("../img/nico.png");
 		background-repeat: no-repeat;
 	}
 	.outline {
@@ -64,23 +96,28 @@ body {
 		font-family: Montserrat, sans-serif;
 	}
 	.download {
-		margin: $padding-large-vertical*4 auto $padding-large-vertical*2;
+		margin: $line-height-computed auto ($line-height-computed * 0.5);
 	}
 	.basedon {
+		margin: ($line-height-computed * 0.5) auto;
 		color: $gray-light;
-		text-shadow: #FFF 0 1px 2px;
+		text-shadow: #fff 0 1px 2px;
 	}
 }
 
+
+
 section.section {
-	padding: ($padding-large-vertical * 15) 0;
-	&.section-default {}
+	padding: ($padding-large-vertical * 10) 0;
+	&.section-default {
+		background-color: $body-bg;
+	}
 	&.section-inverse {
 		background-color: lighten($brand-nico, 15%);
 	}
 	.subtitle {
+		margin-bottom: $line-height-computed;
 		text-align: center;
-		margin-bottom: $padding-large-vertical * 2;
 		h2 {
 			margin-top: 0;
 		}
@@ -92,9 +129,9 @@ section.section {
 		text-align: center;
 		.point-circle {
 			$point-circle-size: 100px;
-			margin: 0 auto;
 			width: $point-circle-size;
 			height: $point-circle-size;
+			margin: 0 auto;
 			font-size: $point-circle-size * 0.6;
 			line-height: $point-circle-size;
 			color: #fff;
@@ -111,8 +148,8 @@ section.section {
 			&.japanese {
 				background-color: $brand-danger;
 				span.icon-jp:before {
-					content: "あ";
 					font-weight: bold;
+					content: "あ";
 				}
 			}
 		}
@@ -136,8 +173,25 @@ section.section {
 .japanese-font {
 	.well {
 		> h3 {
-			margin-top: $padding-large-vertical;
+			margin-top: $line-height-computed;
 		}
+	}
+}
+
+.available-bower {
+	position: relative;
+	overflow: hidden;
+	.bower-logo {
+		position: absolute;
+		right: 40px;
+		bottom: 0;
+		width: 300px;
+		height: 300px;
+		background-image: url("../img/bower-logo.png");
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: contain;
+		opacity: 0.3;
 	}
 }
 
@@ -155,43 +209,24 @@ section.section {
 			}
 		}
 		li {
-			margin: $padding-base-vertical $padding-large-horizontal;
+			padding: $padding-base-vertical $padding-large-horizontal;
 		}
 	}
 }
 
-
-footer {
-	padding: $padding-large-vertical*4 0px;
-	color: $gray-lighter;
-	background-color: $gray-dark;
-	.social-button {
-		position: relative;
-		overflow: hidden;
-		margin: 0px auto !important;
-		padding: $padding-large-vertical 0;
-		> ul {
-			position: relative;
-			left: 50%;
-			float: left;
-			margin: 0px;
-			padding: 0px;
-			list-style: outside none none;
-			> li {
-				position: relative;
-				left: -50%;
-				float: left;
-				margin: 0px 10px;
-				padding: 0px;
-
-				.fb-like {
-					> span {
-						vertical-align: 0 !important;
-					}
-				}
-			}
+.thumbnail {
+	background: #fff;
+	> a {
+		&:hover, &:active, &:focus {
+			opacity: 0.7;
 		}
 	}
+}
+
+footer {
+	padding: $padding-large-vertical * 4 0;
+	color: $gray-lighter;
+	background-color: $gray-dark;
 	.copyright {
 		padding-top: $padding-large-vertical;
 		padding-bottom: $padding-large-vertical;
