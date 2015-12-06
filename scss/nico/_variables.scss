@@ -1,8 +1,10 @@
+@charset "UTF-8";
+
 // When true, asset path helpers are used, otherwise the regular CSS `url()` is used.
 // When there no function is defined, `fn('')` is parsed as string that equals the right hand side
 // NB: in Sass 3.3 there is a native function: function-exists(twbs-font-path)
 $bootstrap-sass-asset-helper: (twbs-font-path("") != unquote('twbs-font-path("")')) !default;
-$bootstrap-version: "3.3.5";
+$bootstrap-version: "3.3.6";
 
 //
 // Variables
@@ -31,7 +33,7 @@ $brand-danger:          #f45042 !default;
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:               #F9F9F9 !default;
+$body-bg:               #f9f9f9 !default;
 //** Global text color on `<body>`.
 $text-color:            $gray-dark !default;
 
@@ -868,5 +870,7 @@ $blockquote-border-color:     $gray-lighter !default;
 $page-header-border-color:    $gray-lighter !default;
 //** Width of horizontal description list titles
 $dl-horizontal-offset:        $component-offset-horizontal !default;
+//** Point at which .dl-horizontal becomes horizontal
+$dl-horizontal-breakpoint:    $grid-float-breakpoint !default;
 //** Horizontal line color.
 $hr-border:                   $gray-lighter !default;

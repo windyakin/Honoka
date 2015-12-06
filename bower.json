@@ -1,6 +1,6 @@
 {
-  "name": "Honoka",
-  "description": "Honoka is one of the Bootstrap original theme.",
+  "name": "Nico",
+  "description": "Nico a fork of Honoka which is a Bootstrap theme.",
   "keywords": [
     "css",
     "sass",
@@ -13,11 +13,11 @@
     "web",
     "lovelive"
   ],
-  "author": "windyakin",
-  "homepage": "http://honokak.osaka/",
+  "author": "kubosho",
+  "homepage": "http://kubosho.github.io/Nico",
   "repository": {
     "type": "git",
-    "url": "git://github.com/windyakin/Honoka.git"
+    "url": "git://github.com/kubosho/Nico.git"
   },
   "license": "MIT",
   "moduleType": "globals",
@@ -31,14 +31,13 @@
     "src",
     "CNAME"
   ],
-  "dependencies": {
-    "bootstrap": "~3.3.5"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "bootstrap-sass-official": "~3.3.5"
+    "bootstrap": "3.3.6",
+    "bootstrap-sass": "3.3.6"
   },
   "exportsOverride": {
-    "bootstrap-sass-official": {},
+    "bootstrap-sass": {},
     "bootstrap": {
       "js": "dist/js/bootstrap.**js",
       "fonts": "dist/fonts/**/*"

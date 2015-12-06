@@ -2,26 +2,32 @@
 
 module.exports = function(grunt) {
 
-	var pkg, taskName, name;
+	var pkg, bower, taskName, name;
 
 	pkg = grunt.file.readJSON('package.json');
+	bower = grunt.file.readJSON('bower.json');
 	name = pkg.name.toLowerCase();
 
 	grunt.initConfig({
+		pkg: pkg,
+		bowerJSON: bower,
+		banner:	'/*!\n' +
+						' * <%= pkg.name %> v<%= pkg.version %>\n' +
+						' * Website <%= pkg.website %>\n' +
+						' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
+						' * The <%= pkg.license %> License\n' +
+						' * Based on Bootstrap v<%= bowerJSON.devDependencies.bootstrap %> (http://getbootstrap.com)\n' +
+						' */',
 		// bannerの調整
 		replace: {
-			// minifyファイルの改行の追加
+			// バナーの追加
 			banner: {
-				src: ['dist/css/bootstrap.min.css'],
-				dest: 'dist/css/bootstrap.min.css',
+				src: ['dist/css/bootstrap**.css'],
+				dest: 'dist/css/',
 				replacements: [
 					{
-						from: '@charset "UTF-8";/*!',
-						to: '@charset "UTF-8";\n/*!'
-					},
-					{
-						from: /Based on Bootstrap v([\d\.]+)\n \*\//g,
-						to: 'Based on Bootstrap v$1\n */\n'
+						from: '@charset "UTF-8";',
+						to: '@charset "UTF-8";\n<%= banner %>'
 					}
 				]
 			}
@@ -47,7 +53,8 @@ module.exports = function(grunt) {
 				sourcemap: 'none',
 				unixNewlines: true,
 				style: 'expanded',
-				loadPath: ['bower_components/bootstrap-sass-official/assets/stylesheets/']
+				bundleExec: true,
+				loadPath: ['bower_components/bootstrap-sass/assets/stylesheets/']
 			},
 			bootstrap: {
 				files: [{
@@ -102,10 +109,21 @@ module.exports = function(grunt) {
 				ext: '.css'
 			}
 		},
+		// SCSSのLinter
+		scsslint: {
+			options: {
+				bundleExec: true,
+				config: '.scss-lint.yml',
+				reporterOutput: null,
+				colorizeOutput: true
+			},
+			bootstrap: ['scss/**/*.scss'],
+			assets: ['src/scss/**/*.scss']
+		},
 		// clean
 		clean: {
 			build: {
-				src: ['dist/css/**/*', 'dist/js/**/*', 'dist/fonts/**/*']
+				src: ['bower_components/**/*', 'dist/css/**/*', 'dist/js/**/*', 'dist/fonts/**/*']
 			}
 		},
 		// bowerのインストール
@@ -119,35 +137,12 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		// バージョン情報の出力
-		ect: {
-			version: {
-				options: {
-					root: 'scss/nico/',
-					variables: {
-						name: pkg.name,
-						version: pkg.version,
-						website: pkg.website,
-						year: new Date().getFullYear(),
-						author: pkg.author,
-					},
-				},
-				files: {
-					'<%= ect.version.options.root %>_info.scss': '_info.scss.ect'
-				}
-			}
-		},
 		// ファイル更新監視
 		watch: {
 			// 自動コンパイル
 			bootstrap: {
-				files: ['scss/**/*.scss'],
-				tasks: ['sass:bootstrap'],
-			},
-			// 自動コンパイル
-			assets: {
-				files: ['src/scss/**/*.scss'],
-				tasks: ['sass:assets'],
+				files: ['scss/**/*.scss', 'src/scss/**/*.scss'],
+				tasks: ['scsslint', 'css']
 			}
 		},
 		// テストサーバ
@@ -213,25 +208,37 @@ module.exports = function(grunt) {
 
 	// 本家Bootstrapのautoprefixerの設定を読み込む
 	grunt.task.registerTask('setAutoPrefixerConfig', 'Get autoprefixer config from bootstrap', function() {
-		var fs = require('fs');
-		if ( fs.existsSync('bower_components/bootstrap/grunt/configBridge.json') ) {
+		try {
 			var configBridge = grunt.file.readJSON('bower_components/bootstrap/grunt/configBridge.json');
-			var prefixConfig = configBridge.config.autoprefixerBrowsers;
-			grunt.config.merge({
-				autoprefixer: {
-					options: {
-						browsers: prefixConfig
-					}
-				}
-			});
+			grunt.verbose.ok();
+		} catch (e) {
+			grunt.verbose.or.write("Loading Bootstrap configBridge...").error().error(e.message);
+			grunt.fail.fatal('Do you install bower component? Try "grunt bower:install"');
 		}
+		var prefixConfig = configBridge.config.autoprefixerBrowsers;
+		grunt.config.merge({
+			autoprefixer: {
+				options: {
+					browsers: prefixConfig
+				}
+			}
+		});
 	});
 
-	// 通常 (sass/connect/watch)
-	grunt.registerTask('server', ['bower:install', 'ect:version', 'sass', 'connect', 'watch']);
+	// テスト
+	grunt.registerTask('test', ['scsslint']);
 
-	// ミニファイ
-	grunt.registerTask('build', ['clean:build', 'bower:install', 'ect:version', 'sass', 'setAutoPrefixerConfig', 'autoprefixer', 'csscomb', 'cssmin:minify', 'replace:banner']);
+	// CSSビルド
+	grunt.registerTask('css', ['sass', 'autoprefixer']);
+
+	// 最適化
+	grunt.registerTask('optimize', ['csscomb', 'cssmin:minify']);
+
+	// 開発用
+	grunt.registerTask('server', ['bower:install', 'setAutoPrefixerConfig', 'test', 'css', 'connect', 'watch']);
+
+	// ビルドタスク
+	grunt.registerTask('build', ['clean:build', 'bower:install', 'setAutoPrefixerConfig', 'test', 'css', 'optimize', 'replace:banner']);
 
 	// 配布用パッケージ作成
 	grunt.registerTask('package', ['build', 'compress:main']);
@@ -241,5 +248,4 @@ module.exports = function(grunt) {
 			grunt.log.error(warning);
 		};
 	});
-
 };
