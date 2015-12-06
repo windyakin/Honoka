@@ -14,8 +14,8 @@
 
 ## Live Demo
 
- * [Nico/bootstrap-ja.html](//kubosho.github.io/Nico/bootstrap-ja.html) (日本語レイアウト)
- * [Nico/bootstrap.html](//kubosho.github.io/Nico/bootstrap.html) (英語レイアウト)
+ * [Nico/bootstrap-ja.html](http://nico.kubosho.com/bootstrap-ja.html) (日本語レイアウト)
+ * [Nico/bootstrap.html](http://nico.kubosho.com/bootstrap.html) (英語レイアウト)
 
 ## Getting Started
 
