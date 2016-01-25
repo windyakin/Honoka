@@ -14,7 +14,7 @@ module.exports = function(grunt) {
 		banner:	'/*!\n' +
 						' * <%= pkg.name %> v<%= pkg.version %>\n' +
 						' * Website <%= pkg.website %>\n' +
-						' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
+						' * Copyright 2015 <%= pkg.author %>\n' +
 						' * The <%= pkg.license %> License\n' +
 						' * Based on Bootstrap v<%= bowerJSON.devDependencies.bootstrap %> (http://getbootstrap.com)\n' +
 						' */',
