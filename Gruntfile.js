@@ -16,6 +16,12 @@ module.exports = function(grunt) {
 						' * Website <%= pkg.website %>\n' +
 						' * Copyright 2015 <%= pkg.author %>\n' +
 						' * The <%= pkg.license %> License\n' +
+						(
+							pkg.name !== "Honoka" ?
+								' * Based on Honoka (http://honokak.osaka/) by windyakin\n'
+							:
+								''
+						) +
 						' */\n' +
 						'/*!\n' +
 						' * Bootstrap v<%= twbs.version %> (<%= twbs.homepage %>)\n' +
