@@ -84,7 +84,7 @@
           <a href="/bootstrap-ja.html" class="btn btn-primary btn-lg"><i class="fa fa-play"></i> Watch Demo</a>
         </div>
         <div class="basedon small">
-          Last version v<span class="last-version"></span> ・ Based on <a href="http://getbootstrap.com/">Bootstrap</a> v3.3.6
+          Last version v<span class="last-version"></span> ・ Based on <a href="http://getbootstrap.com/">Bootstrap</a> v<span class="base-version"></span>
         </div>
       </div>
     </div>
@@ -353,14 +353,22 @@
 <script src="js/bootstrap.min.js"></script>
 <script>
 $(document).ready(function(e) {
-  $.ajax({
-    url: 'https://api.github.com/repos/windyakin/Honoka/releases/latest',
-    type: 'get',
-    dataType: 'json'
-  })
-  .done(function(data) {
-    $('.last-version').text(data.tag_name.split('v')[1]);
-  });
+	$.when(
+		$.ajax({
+			url: 'https://api.github.com/repos/windyakin/Honoka/releases/latest',
+			type: 'get',
+			dataType: 'json'
+		}),
+		$.ajax({
+			url: 'https://cdn.rawgit.com/windyakin/Honoka/master/bower.json',
+			type: 'get',
+			dataType: 'json'
+		})
+	)
+	.done(function(last, base) {
+		$('.last-version').text(last[0].tag_name.split('v')[1]);
+		$('.base-version').text(base[0].devDependencies.bootstrap);
+	});
 });
 </script>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
