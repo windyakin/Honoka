@@ -33,7 +33,7 @@
 最新版をインストールするには以下のコマンドを実行してください。
 
 ```
-bower install --save-dev $(node -e "$(curl -fsSL http://cdn.honokak.osaka/last.js)" windyakin Honoka)
+bower install --save-dev $(node -e "$(curl -fsSL https://cdn.honokak.osaka/last.js)" windyakin Honoka)
 ```
 
 もしcURLが入っていない環境の場合には、
