@@ -30,6 +30,14 @@
 
 [Bower](http://bower.io/)からインストールすることができます。
 
+最新版をインストールするには以下のコマンドを実行してください。
+
+```
+bower install --save-dev $(node -e "$(curl -fsSL http://cdn.honokak.osaka/last.js)" windyakin Honoka)
+```
+
+もしcURLが入っていない環境の場合には、
+
 ```
 bower install --save-dev Honoka#(version)
 ```
