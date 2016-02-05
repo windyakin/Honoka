@@ -24,7 +24,7 @@
 
 ### Download
 
-[Relases](https://github.com/windyakin/Honoka/releases)から最新版をダウンロードしてください。
+[Releases](https://github.com/windyakin/Honoka/releases)から最新版をダウンロードしてください。
 
 ### Bower
 
@@ -34,7 +34,7 @@
 bower install --save-dev Honoka#(version)
 ```
 
-``(version)``にはバージョン番号を指定します(ex. ``Honoka#3.3.5-c``)。Honokaの最新バージョン番号は[Relases](https://github.com/windyakin/Honoka/releases)から確認してください。
+``(version)``にはバージョン番号を指定します(ex. ``Honoka#3.3.5-c``)。Honokaの最新バージョン番号は[Releases](https://github.com/windyakin/Honoka/releases)から確認してください。
 
 ## Usage
 
