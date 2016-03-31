@@ -9,15 +9,15 @@
   color: #fff;
   background-color: #55acee;
   border-color: #4ca7ed;
-  -webkit-transition-timing-function: ease;
-       -o-transition-timing-function: ease;
-          transition-timing-function: ease;
-  -webkit-transition-duration: .3s;
-       -o-transition-duration: .3s;
-          transition-duration: .3s;
   -webkit-transition-property: all;
        -o-transition-property: all;
           transition-property: all;
+  -webkit-transition-duration: 0.3s;
+       -o-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease;
+       -o-transition-timing-function: ease;
+          transition-timing-function: ease;
 }
 .btn-twitter:focus, .btn-twitter.focus {
   color: #fff;
@@ -29,12 +29,12 @@
   background-color: #2795e9;
   border-color: #178ce5;
 }
-.btn-twitter.active, .btn-twitter.active, .open > .btn-twitter.dropdown-toggle {
+.btn-twitter:active, .btn-twitter.active, .open > .btn-twitter.dropdown-toggle {
   color: #fff;
   background-color: #3ea1ec;
   border-color: #309aea;
 }
-.btn-twitter.active:hover, .btn-twitter.active:focus, .btn-twitter.active.focus, .btn-twitter.active:hover, .btn-twitter.active:focus, .btn-twitter.active.focus, .open > .btn-twitter.dropdown-toggle:hover, .open > .btn-twitter.dropdown-toggle:focus, .open > .btn-twitter.dropdown-toggle.focus {
+.btn-twitter:active:hover, .btn-twitter:active:focus, .btn-twitter:active.focus, .btn-twitter.active:hover, .btn-twitter.active:focus, .btn-twitter.active.focus, .open > .btn-twitter.dropdown-toggle:hover, .open > .btn-twitter.dropdown-toggle:focus, .open > .btn-twitter.dropdown-toggle.focus {
   color: #fff;
   background-color: #1583d7;
   border-color: #1167a8;
@@ -55,15 +55,15 @@
   color: #fff;
   background-color: #3b5998;
   border-color: #385591;
-  -webkit-transition-timing-function: ease;
-       -o-transition-timing-function: ease;
-          transition-timing-function: ease;
-  -webkit-transition-duration: .3s;
-       -o-transition-duration: .3s;
-          transition-duration: .3s;
   -webkit-transition-property: all;
        -o-transition-property: all;
           transition-property: all;
+  -webkit-transition-duration: 0.3s;
+       -o-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease;
+       -o-transition-timing-function: ease;
+          transition-timing-function: ease;
 }
 .btn-facebook:focus, .btn-facebook.focus {
   color: #fff;
@@ -75,12 +75,12 @@
   background-color: #2d4373;
   border-color: #273b65;
 }
-.btn-facebook.active, .btn-facebook.active, .open > .btn-facebook.dropdown-toggle {
+.btn-facebook:active, .btn-facebook.active, .open > .btn-facebook.dropdown-toggle {
   color: #fff;
   background-color: #344e86;
   border-color: #30487b;
 }
-.btn-facebook.active:hover, .btn-facebook.active:focus, .btn-facebook.active.focus, .btn-facebook.active:hover, .btn-facebook.active:focus, .btn-facebook.active.focus, .open > .btn-facebook.dropdown-toggle:hover, .open > .btn-facebook.dropdown-toggle:focus, .open > .btn-facebook.dropdown-toggle.focus {
+.btn-facebook:active:hover, .btn-facebook:active:focus, .btn-facebook:active.focus, .btn-facebook.active:hover, .btn-facebook.active:focus, .btn-facebook.active.focus, .open > .btn-facebook.dropdown-toggle:hover, .open > .btn-facebook.dropdown-toggle:focus, .open > .btn-facebook.dropdown-toggle.focus {
   color: #fff;
   background-color: #23345a;
   border-color: #141f35;
@@ -101,15 +101,15 @@
   color: #fff;
   background-color: #178fde;
   border-color: #1689d5;
-  -webkit-transition-timing-function: ease;
-       -o-transition-timing-function: ease;
-          transition-timing-function: ease;
-  -webkit-transition-duration: .3s;
-       -o-transition-duration: .3s;
-          transition-duration: .3s;
   -webkit-transition-property: all;
        -o-transition-property: all;
           transition-property: all;
+  -webkit-transition-duration: 0.3s;
+       -o-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease;
+       -o-transition-timing-function: ease;
+          transition-timing-function: ease;
 }
 .btn-hatebu:focus, .btn-hatebu.focus {
   color: #fff;
@@ -121,12 +121,12 @@
   background-color: #1271b0;
   border-color: #10659d;
 }
-.btn-hatebu.active, .btn-hatebu.active, .open > .btn-hatebu.dropdown-toggle {
+.btn-hatebu:active, .btn-hatebu.active, .open > .btn-hatebu.dropdown-toggle {
   color: #fff;
   background-color: #1580c7;
   border-color: #1377b9;
 }
-.btn-hatebu.active:hover, .btn-hatebu.active:focus, .btn-hatebu.active.focus, .btn-hatebu.active:hover, .btn-hatebu.active:focus, .btn-hatebu.active.focus, .open > .btn-hatebu.dropdown-toggle:hover, .open > .btn-hatebu.dropdown-toggle:focus, .open > .btn-hatebu.dropdown-toggle.focus {
+.btn-hatebu:active:hover, .btn-hatebu:active:focus, .btn-hatebu:active.focus, .btn-hatebu.active:hover, .btn-hatebu.active:focus, .btn-hatebu.active.focus, .open > .btn-hatebu.dropdown-toggle:hover, .open > .btn-hatebu.dropdown-toggle:focus, .open > .btn-hatebu.dropdown-toggle.focus {
   color: #fff;
   background-color: #0f5c8f;
   border-color: #0a3f61;
@@ -180,7 +180,7 @@ body {
 
 .social {
   padding: 10px 0;
-  background: #eee;
+  background: #eeeeee;
 }
 
 .jumbotron.special {
@@ -216,7 +216,7 @@ body {
 }
 .jumbotron.special .basedon {
   margin: 11px auto;
-  color: #777;
+  color: #777777;
   text-shadow: #fff 0 1px 2px;
 }
 
@@ -295,17 +295,17 @@ section.section .subtitle h2 {
   background-position: center center;
   -webkit-background-size: contain;
           background-size: contain;
-  opacity: .3;
+  opacity: 0.3;
 }
 
 .featured .subtitle h2 {
   font-size: 24px;
 }
 .featured ul.featured-list a {
-  opacity: .7;
+  opacity: 0.7;
 }
 .featured ul.featured-list a:hover, .featured ul.featured-list a:active, .featured ul.featured-list a:focus {
-  opacity: .5;
+  opacity: 0.5;
 }
 .featured ul.featured-list li {
   padding: 6px 20px;
@@ -315,13 +315,13 @@ section.section .subtitle h2 {
   background: #fff;
 }
 .thumbnail > a:hover, .thumbnail > a:active, .thumbnail > a:focus {
-  opacity: .7;
+  opacity: 0.7;
 }
 
 footer {
   padding: 40px 0;
-  color: #eee;
-  background-color: #333;
+  color: #eeeeee;
+  background-color: #333333;
 }
 footer .copyright {
   padding-top: 10px;

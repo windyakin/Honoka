@@ -21,11 +21,19 @@
 
 ### Download
 
-[Relases](https://github.com/windyakin/Honoka/releases)から最新版をダウンロードしてください。
+[Releases](https://github.com/windyakin/Honoka/releases)から最新版をダウンロードしてください。
 
 ### Bower
 
 [Bower](http://bower.io/)からインストールすることができます。
+
+最新版をインストールするには以下のコマンドを実行してください。
+
+```
+bower install --save-dev $(node -e "$(curl -fsSL https://cdn.honokak.osaka/last.js)" windyakin Honoka)
+```
+
+もしcURLが入っていない環境の場合には、
 
 ```
 bower install --save-dev Nico#(version)

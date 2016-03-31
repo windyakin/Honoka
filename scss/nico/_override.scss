@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 // font
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(#{$font-family-open-sans-import-path});
 
 // animation
 a {

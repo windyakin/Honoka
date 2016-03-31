@@ -82,7 +82,7 @@
           <a href="bootstrap-ja.html" class="btn btn-warning btn-lg"><i class="fa fa-play"></i> Watch Demo</a>
         </div>
         <div class="basedon small">
-          Last version v<span class="last-version"></span> ・ Based on <a href="http://getbootstrap.com/">Bootstrap</a> v3.3.6
+          Last version v<span class="last-version"></span> ・ Based on <a href="http://getbootstrap.com/">Bootstrap</a> v<span class="base-version"></span>
         </div>
       </div>
     </div>
@@ -214,9 +214,53 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-6 col-md-offset-3 col-xs-12 text-center">
-        <pre>bower install --save-dev Nico#<span class="last-version"></span></pre>
+      <div class="col-md-8 col-md-offset-2 col-xs-12 text-center">
+        <div class="input-group">
+          <input type="text" class="form-control input-lg" id="command" value="bower install --save-dev $(node -e &#34;$(curl -fsSL https://cdn.honokak.osaka/last.js)&#34; kubosho Nico)" onclick="this.select();" readonly="readonly">
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-default btn-lg" data-clipboard-target="#command"><i class="fa fa-clipboard"></i></button>
+          </span>
+        </div>
         <p class="help-block">v3.3.6-1.1.0 以降から対応</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-inverse fork">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 subtitle">
+        <h2>HonokaのForkテーマ</h2>
+        <p>Honokaをベースにして作られた他のBootstrapテーマ</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="thumbnail">
+          <a href="//nkmr6194.github.io/Umi/"><img src="//cdn.honokak.osaka/assets/img/umi.png"></a>
+          <div class="caption text-center">
+            <h4>Umi</h4>
+            <p>"Umi"は"Honoka"に<a href="https://bootswatch.com/flatly/">Bootswatch Flatly</a>の配色を適応したテーマです。</p>
+            <div>
+              <a href="//nkmr6194.github.io/Umi/" class="btn btn-primary">Umiの特設ページ <i class="fa fa-external-link"></i></a>
+              <a href="//github.com/NKMR6194/Umi" class="btn btn-default">Umi on GitHub <i class="fa fa-github-alt"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="thumbnail">
+          <a href="http://nico.kubosho.com/"><img src="//cdn.honokak.osaka/assets/img/nico.png"></a>
+          <div class="caption text-center">
+            <h4>Nico</h4>
+            <p>"Nico"は"Honoka"にピンク系の配色を適応したテーマです。</p>
+            <div>
+              <a href="http://nico.kubosho.com/" class="btn btn-primary">Nicoの特設ページ <i class="fa fa-external-link"></i></a>
+              <a href="//github.com/kubosho/Nico" class="btn btn-default">Nico on GitHub <i class="fa fa-github-alt"></i></a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -240,18 +284,28 @@
   </div>
 </footer>
 
+<script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.5/clipboard.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script>
+new Clipboard('.btn');
 $(document).ready(function(e) {
-  $.ajax({
-    url: 'https://api.github.com/repos/kubosho/Nico/releases/latest',
-    type: 'get',
-    dataType: 'json'
-  })
-  .done(function(data) {
-    $('.last-version').text(data.tag_name);
-  });
+	$.when(
+		$.ajax({
+			url: 'https://api.github.com/repos/windyakin/Honoka/releases/latest',
+			type: 'get',
+			dataType: 'json'
+		}),
+		$.ajax({
+			url: 'https://cdn.rawgit.com/windyakin/Honoka/master/bower.json',
+			type: 'get',
+			dataType: 'json'
+		})
+	)
+	.done(function(last, base) {
+		$('.last-version').text(last[0].tag_name.split('v')[1]);
+		$('.base-version').text(base[0].devDependencies.bootstrap);
+	});
 });
 </script>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
