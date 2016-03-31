@@ -14,10 +14,20 @@ module.exports = function(grunt) {
 		banner:	'/*!\n' +
 						' * <%= pkg.name %> v<%= pkg.version %>\n' +
 						' * Website <%= pkg.website %>\n' +
-						' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
+						' * Copyright 2015 <%= pkg.author %>\n' +
 						' * The <%= pkg.license %> License\n' +
-						' * Based on Bootstrap v<%= bowerJSON.devDependencies.bootstrap %> (http://getbootstrap.com)\n' +
-						' */',
+						(
+							pkg.name !== "Honoka" ?
+								' * Based on Honoka (http://honokak.osaka/) by windyakin\n'
+							:
+								''
+						) +
+						' */\n' +
+						'/*!\n' +
+						' * Bootstrap v<%= twbs.version %> (<%= twbs.homepage %>)\n' +
+						' * Copyright 2011-<%= grunt.template.today("yyyy") %> <%= twbs.author %>\n' +
+						' * Licensed under the <%= twbs.license %> license\n' +
+						' */\n',
 		// bannerの調整
 		replace: {
 			// バナーの追加
@@ -207,19 +217,20 @@ module.exports = function(grunt) {
 	}
 
 	// 本家Bootstrapのautoprefixerの設定を読み込む
-	grunt.task.registerTask('setAutoPrefixerConfig', 'Get autoprefixer config from bootstrap', function() {
+	grunt.task.registerTask('getTwbsConfig', 'Get config from bootstrap', function() {
 		try {
 			var configBridge = grunt.file.readJSON('bower_components/bootstrap/grunt/configBridge.json');
+			var twbsPkg = grunt.file.readJSON('bower_components/bootstrap/package.json');
 			grunt.verbose.ok();
 		} catch (e) {
-			grunt.verbose.or.write("Loading Bootstrap configBridge...").error().error(e.message);
+			grunt.verbose.or.write("Loading Bootstrap config...").error().error(e.message);
 			grunt.fail.fatal('Do you install bower component? Try "grunt bower:install"');
 		}
-		var prefixConfig = configBridge.config.autoprefixerBrowsers;
 		grunt.config.merge({
+			twbs: twbsPkg,
 			autoprefixer: {
 				options: {
-					browsers: prefixConfig
+					browsers: configBridge.config.autoprefixerBrowsers
 				}
 			}
 		});
@@ -235,10 +246,10 @@ module.exports = function(grunt) {
 	grunt.registerTask('optimize', ['csscomb', 'cssmin:minify']);
 
 	// 開発用
-	grunt.registerTask('server', ['bower:install', 'setAutoPrefixerConfig', 'test', 'css', 'connect', 'watch']);
+	grunt.registerTask('server', ['bower:install', 'getTwbsConfig', 'test', 'css', 'connect', 'watch']);
 
 	// ビルドタスク
-	grunt.registerTask('build', ['clean:build', 'bower:install', 'setAutoPrefixerConfig', 'test', 'css', 'optimize', 'replace:banner']);
+	grunt.registerTask('build', ['clean:build', 'bower:install', 'getTwbsConfig', 'test', 'css', 'optimize', 'replace:banner']);
 
 	// 配布用パッケージ作成
 	grunt.registerTask('package', ['build', 'compress:main']);
