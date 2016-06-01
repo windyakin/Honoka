@@ -189,7 +189,7 @@ body {
   margin-bottom: 0;
   overflow: hidden;
   text-align: center;
-  background-color: #fdcea0;
+  background-color: #f0e68c;
   background-image: url("../img/circle.png");
   background-repeat: no-repeat;
   background-position: -35% center;
@@ -202,7 +202,6 @@ body {
   left: 0;
   width: 400px;
   height: 530px;
-  background-image: url("../img/honoka.png");
   background-repeat: no-repeat;
 }
 .jumbotron.special .outline {
@@ -228,7 +227,7 @@ section.section.section-default {
   background-color: #f9f9f9;
 }
 section.section.section-inverse {
-  background-color: #fff5eb;
+  background-color: #f9f5d0;
 }
 section.section .subtitle {
   margin-bottom: 22px;
@@ -251,16 +250,16 @@ section.section .subtitle h2 {
   border-radius: 100%;
 }
 .point .point-box .point-circle.start {
-  background-color: #4caf50;
+  background-color: #b2cf3e;
 }
 .point .point-box .point-circle.replace {
-  background-color: #ff9800;
+  background-color: #f0ba32;
 }
 .point .point-box .point-circle.compass {
-  background-color: #2196f3;
+  background-color: #3b9ae0;
 }
 .point .point-box .point-circle.japanese {
-  background-color: #f44336;
+  background-color: #df81a2;
 }
 .point .point-box .point-circle.japanese span.icon-jp:before {
   font-weight: bold;

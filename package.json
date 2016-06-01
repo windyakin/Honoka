@@ -1,9 +1,9 @@
 {
-  "name": "Honoka",
+  "name": "Rin",
   "version": "3.3.6-a",
-  "description": "Honoka is one of the Bootstrap original theme.",
-  "author": "windyakin",
-  "website": "http://honokak.osaka/",
+  "description": "Rin is one of the Bootstrap original theme (based on Honoka).",
+  "author": "Hagihara Ryosuke",
+  "website": "http://raryosu.github.com/Rin/",
   "license": "MIT",
   "main": "Gruntfile.js",
   "scripts": {
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/windyakin/honoka.git"
+    "url": "https://github.com/raryosu/Rin.git"
   },
   "devDependencies": {
     "bower": "^1.7.7",
