@@ -2314,7 +2314,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: #333;
-  background-color: #f9f9f9;
+  background-color: #fff;
 }
 
 input,
@@ -2364,7 +2364,7 @@ img {
   height: auto;
   padding: 4px;
   line-height: 1.5;
-  background-color: #f9f9f9;
+  background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 2px;
   -webkit-transition: all .2s ease-in-out;
@@ -3793,7 +3793,7 @@ th {
   border-top: 2px solid #ddd;
 }
 .table .table {
-  background-color: #f9f9f9;
+  background-color: #fff;
 }
 
 .table-condensed > thead > tr > th,
@@ -5540,7 +5540,7 @@ tbody.collapse.in {
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
   color: #555;
   cursor: default;
-  background-color: #f9f9f9;
+  background-color: #fff;
   border: 1px solid #ddd;
   border-bottom-color: transparent;
 }
@@ -5615,7 +5615,7 @@ tbody.collapse.in {
   .nav-tabs.nav-justified > .active > a:hover,
   .nav-tabs-justified > .active > a:focus,
   .nav-tabs.nav-justified > .active > a:focus {
-    border-bottom-color: #f9f9f9;
+    border-bottom-color: #fff;
   }
 }
 
@@ -6480,7 +6480,7 @@ a.badge:hover, a.badge:focus {
   padding: 4px;
   margin-bottom: 24px;
   line-height: 1.5;
-  background-color: #f9f9f9;
+  background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 2px;
   -webkit-transition: border .2s ease-in-out;
@@ -8366,6 +8366,11 @@ a {
           transform: translate(-50%, -50%);
 }
 .btn.active, .btn:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.btn.btn-link {
+  background-color: transparent;
   -webkit-box-shadow: none;
           box-shadow: none;
 }

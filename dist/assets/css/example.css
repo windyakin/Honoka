@@ -224,7 +224,7 @@ section.section {
   padding: 100px 0;
 }
 section.section.section-default {
-  background-color: #f9f9f9;
+  background-color: #fff;
 }
 section.section.section-inverse {
   background-color: #f9f5d0;

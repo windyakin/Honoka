@@ -41,6 +41,10 @@ a {
 	&:active {
 		box-shadow: none;
 	}
+	&.btn-link {
+		background-color: transparent;
+		box-shadow: none;
+	}
 }
 .dropdown-menu {
 	margin: 0;
