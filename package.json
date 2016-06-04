@@ -1,9 +1,9 @@
 {
   "name": "Rin",
-  "version": "3.3.6-a",
+  "version": "3.3.6-b",
   "description": "Rin is one of the Bootstrap original theme (based on Honoka).",
   "author": "Hagihara Ryosuke",
-  "website": "http://raryosu.github.com/Rin/",
+  "website": "http://rinhoshizo.la/",
   "license": "MIT",
   "main": "Gruntfile.js",
   "scripts": {

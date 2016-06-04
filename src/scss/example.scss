@@ -26,9 +26,7 @@ $brand-hatena: #178fde;
 	@include button-variant(#fff, $brand-hatena, darken($brand-hatena, 2%));
 }
 
-
-
-.fa.fa-hatebu:before {
+.fa.fa-hatebu::before {
 	font-family: Verdana;
 	font-weight: bold;
 	content: "B!";
@@ -148,7 +146,7 @@ section.section {
 			}
 			&.japanese {
 				background-color: $brand-danger;
-				span.icon-jp:before {
+				span.icon-jp::before {
 					font-weight: bold;
 					content: "あ";
 				}
