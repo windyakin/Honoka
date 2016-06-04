@@ -237,6 +237,17 @@ a {
 [class*="has-"] {
 	.form-control {
 		box-shadow: none;
+		&:focus {
+			box-shadow: none;
+		}
+	}
+	.input-group {
+		.input-group-btn {
+			.btn {
+				border-width: 1px;
+				box-shadow: none;
+			}
+		}
 	}
 }
 
