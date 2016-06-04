@@ -20,23 +20,26 @@ a {
 
 // buttons
 .btn {
-	@each $type, $color in $brand-colors {
-		&.btn-#{$type} {
-			color: darken($color, 15%);
-			&:hover {
-				color: #fff;
-			}
-		}
+	position: relative;
+	border-width: 0;
+	border-radius: 2px;
+	outline: none;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, .2);
+	&::before {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		display: block;
+		width: 0;
+		padding-top: 0;
+		content: "";
+		background-color: rgba(236, 240, 241, .3);
+		border-radius: 100%;
+		transform: translate(-50%, -50%);
 	}
-	background-color: transparent;
-	border-width: 1.5px;
-	border-radius: 0;
-	&:active,
-	&.active {
+	&.active,
+	&:active {
 		box-shadow: none;
-	}
-	&.disabled {
-		background-color: transparent;
 	}
 }
 .dropdown-menu {
@@ -203,7 +206,9 @@ a {
 			}
 		}
 		.btn {
-			color: $gray-lighter;
+			&:hover {
+				color: $gray-lighter;
+			}
 			&.btn-default {
 				&:hover {
 					background-color: $gray-darker;
