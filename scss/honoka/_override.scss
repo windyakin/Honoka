@@ -22,13 +22,13 @@ a {
 .btn {
 	@each $type, $color in $brand-colors {
 		&.btn-#{$type} {
-			color: $color;
+			color: darken($color, 15%);
 			&:hover {
 				color: #fff;
 			}
 		}
 	}
-	background-color: rgba(#fff, .5);
+	background-color: transparent;
 	border-width: 1.5px;
 	border-radius: 0;
 	&:active,
@@ -48,7 +48,8 @@ a {
 
 // navbar
 .navbar {
-	&.navbar-default {
+	&.navbar-default,
+	&.navbar-inverse {
 		background-color: rgba(#fff, .9);
 		border: 0;
 		border-bottom: 1px solid $brand-primary;
@@ -58,33 +59,15 @@ a {
 					background-color: transparent;
 				}
 			}
-			> .active {
-				> a {
-					color: $text-color;
-					background-color: transparent;
-					&::after {
-						position: absolute;
-						bottom: 0;
-						left: 0;
-						width: 100%;
-						height: 1px;
-						content: "";
-						background-color: $brand-primary;
-						transform: scaleX(1);
-					}
-					&:hover {
-						color: $text-color;
+			@media (min-width: $grid-float-breakpoint) {
+				> li {
+					> a {
+						padding-top:    ($navbar-padding-vertical / 4);
+						padding-bottom: ($navbar-padding-vertical / 4);
+						margin-top:     ($navbar-padding-vertical / 4 * 3);
+						margin-bottom:  ($navbar-padding-vertical / 4 * 3);
 						background-color: transparent;
-					}
-				}
-			}
-			> .open {
-				> a {
-					color: $text-color;
-					background-color: transparent;
-					&:focus {
-						color: $text-color;
-						background-color: transparent;
+						// underbar(hover animation)
 						&::after {
 							position: absolute;
 							bottom: 0;
@@ -93,7 +76,80 @@ a {
 							height: 1px;
 							content: "";
 							background-color: $brand-primary;
-							transform: scaleX(1);
+							transition: all .3s ease;
+							transform: scaleX(0);
+						}
+						&:hover {
+							&::after {
+								transform: scaleX(1);
+							}
+						}
+					}
+					> .dropdown-menu {
+						margin-top: (-$navbar-padding-vertical / 4 * 3);
+						li {
+							a {
+								&:hover {
+									color: $brand-primary;
+									background-color: transparent;
+								}
+							}
+						}
+					}
+					// active nav
+					&.active {
+						> a {
+							color: $text-color;
+							background-color: transparent;
+							&::after {
+								position: absolute;
+								bottom: 0;
+								left: 0;
+								width: 100%;
+								height: 1px;
+								content: "";
+								background-color: $brand-primary;
+								transform: scaleX(1);
+							}
+							&:hover {
+								color: $text-color;
+								background-color: transparent;
+							}
+						}
+					}
+					&.open {
+						> a {
+							color: $text-color;
+							background-color: transparent;
+							&:focus {
+								color: $text-color;
+								background-color: transparent;
+								&::after {
+									position: absolute;
+									bottom: 0;
+									left: 0;
+									width: 100%;
+									height: 1px;
+									content: "";
+									background-color: $brand-primary;
+									transform: scaleX(1);
+								}
+							}
+						}
+					}
+				}
+				> li:not(:last-child) {
+					margin-right: ($navbar-padding-horizontal / 3);
+				}
+			}
+			// smartphones
+			@media (max-width: $screen-sm) {
+				> li {
+					&.open,
+					&.active {
+						> a {
+							color: $brand-primary;
+							background-color: transparent;
 						}
 					}
 				}
@@ -104,10 +160,45 @@ a {
 		background-color: rgba($gray-darker, .8);
 		border: 0;
 		border-bottom: 1px solid $brand-primary;
-		> li {
-			> a {
-				&:hover {
-					background-color: transparent;
+		@media (min-width: $grid-float-breakpoint) {
+			.navbar-nav {
+				li {
+					&.active {
+						> a {
+							color: $gray-lighter;
+						}
+					}
+					&.open {
+						> a {
+							color: $gray-lighter;
+							background-color: transparent;
+							&:focus {
+								color: $text-color;
+								background-color: transparent;
+								&::after {
+									position: absolute;
+									bottom: 0;
+									left: 0;
+									width: 100%;
+									height: 1px;
+									content: "";
+									background-color: $brand-primary;
+									transform: scaleX(1);
+								}
+							}
+							&:focus {
+								color: $gray-lighter;
+							}
+						}
+					}
+					> .dropdown-menu {
+						li {
+							a {
+								color: $gray-lighter;
+							}
+						}
+						background-color: rgba($gray-darker, .9);
+					}
 				}
 			}
 		}
@@ -117,41 +208,6 @@ a {
 				&:hover {
 					background-color: $gray-darker;
 				}
-			}
-		}
-	}
-	.navbar-nav {
-		@media (min-width: $grid-float-breakpoint) {
-			> li {
-				> a {
-					padding-top:    ($navbar-padding-vertical / 4);
-					padding-bottom: ($navbar-padding-vertical / 4);
-					margin-top:     ($navbar-padding-vertical / 4 * 3);
-					margin-bottom:  ($navbar-padding-vertical / 4 * 3);
-					background-color: transparent;
-					&::after {
-						position: absolute;
-						bottom: 0;
-						left: 0;
-						width: 100%;
-						height: 1px;
-						content: "";
-						background-color: $brand-primary;
-						transition: all .3s ease;
-						transform: scaleX(0);
-					}
-					&:hover {
-						&::after {
-							transform: scaleX(1);
-						}
-					}
-				}
-				> .dropdown-menu {
-					margin-top: (-$navbar-padding-vertical / 4 * 3);
-				}
-			}
-			> li:not(:last-child) {
-				margin-right: ($navbar-padding-horizontal / 3);
 			}
 		}
 	}
