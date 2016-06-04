@@ -26,6 +26,24 @@
 
 [Releases](https://github.com/raryosu/Rin/releases)から最新版をダウンロードしてください。
 
+### Bower
+
+[Bower](http://bower.io/)からインストールすることができます。
+
+最新版をインストールするには以下のコマンドを実行してください。
+
+```
+bower install --save-dev $(node -e "$(curl -fsSL https://cdn.honokak.osaka/last.js)" raryosu Rin)
+```
+
+もしcURLが入っていない環境の場合には、
+
+```
+bower install --save-dev Rin#(version)
+```
+
+``(version)``にはバージョン番号を指定します(ex. ``Rin#3.3.6-3``)。Umiの最新バージョン番号は[Releases](https://github.com/raryosu/Rin/releases)から確認してください。
+
 ## Usage
 
 Rinは単なるBootstrapテーマにしか過ぎないため，基本的な使い方は本家Bootstrapとほとんど変わりません。よって以下に書くことは[本家Bootstrap](http://getbootstrap.com/getting-started/)からの引用，もしくはその一部を変更したものです。用意されたCSSクラスやコンポーネントなど，より詳細な使い方のドキュメントは本家Bootstrapの各種リファレンスページをご覧になることを推奨します。
