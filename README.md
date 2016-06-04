@@ -2,7 +2,7 @@
 
 [![Build Status by Travis CI](https://travis-ci.org/raryosu/Rin.svg?branch=master)](https://travis-ci.org/raryosu/Rin)
 [![Build status by AppVeyor](https://ci.appveyor.com/api/projects/status/kly8aqr2ovqwg92p/branch/master?svg=true)](https://ci.appveyor.com/project/windyakin/honoka/branch/master)
-[![devDependency Status](https://david-dm.org/raryosy/Rin/dev-status.svg)](https://david-dm.org/raryosu/Rin#info=devDependencies)
+[![devDependency Status](https://david-dm.org/raryosu/Rin/dev-status.svg)](https://david-dm.org/raryosu/Rin#info=devDependencies)
 [![The MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 [http://rinhoshizo.la/](http://rinhoshizo.la/)
@@ -108,6 +108,6 @@ Bootstrapをつかってウェブページを作成する際に基本となるHT
 
  * windyakin ([windyakin.net](http://windyakin.net/))
 
-## Editor of "Umi"
+## Editor of "Rin"
 
  * Hagihara Ryosuke ([Raryosu.info](http://raryosu.info/))
