@@ -8489,6 +8489,12 @@ a {
   .navbar.navbar-inverse .navbar-nav li.active > a {
     color: #eee;
   }
+  .navbar.navbar-inverse .navbar-nav li.active > a:hover {
+    color: #fff;
+  }
+  .navbar.navbar-inverse .navbar-nav li.active > a:hover::after {
+    background-color: #fff;
+  }
   .navbar.navbar-inverse .navbar-nav li.open > a {
     color: #eee;
     background-color: transparent;

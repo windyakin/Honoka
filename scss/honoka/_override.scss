@@ -173,6 +173,12 @@ a {
 					&.active {
 						> a {
 							color: $gray-lighter;
+							&:hover {
+								color: #fff;
+								&::after {
+									background-color: #fff;
+								}
+							}
 						}
 					}
 					&.open {
