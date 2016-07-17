@@ -9,12 +9,15 @@
   color: #fff;
   background-color: #55acee;
   border-color: #4ca7ed;
-  -webkit-transition-property: all;
-          transition-property: all;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
   -webkit-transition-timing-function: ease;
+       -o-transition-timing-function: ease;
           transition-timing-function: ease;
+  -webkit-transition-duration: .3s;
+       -o-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-property: all;
+       -o-transition-property: all;
+          transition-property: all;
 }
 .btn-twitter:focus, .btn-twitter.focus {
   color: #fff;
@@ -52,12 +55,15 @@
   color: #fff;
   background-color: #3b5998;
   border-color: #385591;
-  -webkit-transition-property: all;
-          transition-property: all;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
   -webkit-transition-timing-function: ease;
+       -o-transition-timing-function: ease;
           transition-timing-function: ease;
+  -webkit-transition-duration: .3s;
+       -o-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-property: all;
+       -o-transition-property: all;
+          transition-property: all;
 }
 .btn-facebook:focus, .btn-facebook.focus {
   color: #fff;
@@ -95,12 +101,15 @@
   color: #fff;
   background-color: #178fde;
   border-color: #1689d5;
-  -webkit-transition-property: all;
-          transition-property: all;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
   -webkit-transition-timing-function: ease;
+       -o-transition-timing-function: ease;
           transition-timing-function: ease;
+  -webkit-transition-duration: .3s;
+       -o-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-property: all;
+       -o-transition-property: all;
+          transition-property: all;
 }
 .btn-hatebu:focus, .btn-hatebu.focus {
   color: #fff;
@@ -171,7 +180,7 @@ body {
 
 .social {
   padding: 10px 0;
-  background: #eeeeee;
+  background: #eee;
 }
 
 .jumbotron.special {
@@ -184,7 +193,8 @@ body {
   background-image: url("../img/circle.png");
   background-repeat: no-repeat;
   background-position: -35% center;
-  background-size: 70%;
+  -webkit-background-size: 70% 70%;
+          background-size: 70%;
 }
 .jumbotron.special .honoka {
   position: absolute;
@@ -206,7 +216,7 @@ body {
 }
 .jumbotron.special .basedon {
   margin: 12px auto;
-  color: #777777;
+  color: #777;
   text-shadow: #fff 0 1px 2px;
 }
 
@@ -283,18 +293,19 @@ section.section .subtitle h2 {
   background-image: url("../img/bower-logo.png");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: contain;
-  opacity: 0.3;
+  -webkit-background-size: contain;
+          background-size: contain;
+  opacity: .3;
 }
 
 .featured .subtitle h2 {
   font-size: 24px;
 }
 .featured ul.featured-list a {
-  opacity: 0.7;
+  opacity: .7;
 }
 .featured ul.featured-list a:hover, .featured ul.featured-list a:active, .featured ul.featured-list a:focus {
-  opacity: 0.5;
+  opacity: .5;
 }
 .featured ul.featured-list li {
   padding: 6px 20px;
@@ -304,13 +315,13 @@ section.section .subtitle h2 {
   background: #fff;
 }
 .thumbnail > a:hover, .thumbnail > a:active, .thumbnail > a:focus {
-  opacity: 0.7;
+  opacity: .7;
 }
 
 footer {
   padding: 40px 0;
-  color: #eeeeee;
-  background-color: #333333;
+  color: #eee;
+  background-color: #333;
 }
 footer .copyright {
   padding-top: 10px;
