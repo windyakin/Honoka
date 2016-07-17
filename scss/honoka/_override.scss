@@ -53,6 +53,17 @@ a {
 	box-shadow: none;
 }
 
+.btn-group,
+.dropdown-toggle,
+.btn-group-vertical {
+	box-shadow: 0 1px 4px rgba(0, 0, 0, .2);
+	.btn-group,
+	.btn {
+		border-left: 1px solid $gray-lighter;
+		box-shadow: none;
+	}
+}
+
 // navbar
 .navbar {
 	&.navbar-default,
