@@ -8281,6 +8281,9 @@ a {
 .navbar.navbar-default .navbar-nav > li:not(.active) > a:hover, .navbar.navbar-inverse .navbar-nav > li:not(.active) > a:hover {
   background-color: transparent;
 }
+.navbar.navbar-default .navbar-nav .dropdown-toggle, .navbar.navbar-inverse .navbar-nav .dropdown-toggle {
+  box-shadow: none;
+}
 @media (min-width: 768px) {
   .navbar.navbar-default .navbar-nav > li > a, .navbar.navbar-inverse .navbar-nav > li > a {
     padding-top: 7px;

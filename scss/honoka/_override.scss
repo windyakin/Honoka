@@ -77,6 +77,9 @@ a {
 					background-color: transparent;
 				}
 			}
+			.dropdown-toggle {
+				box-shadow: none;
+			}
 			@media (min-width: $grid-float-breakpoint) {
 				> li {
 					> a {
