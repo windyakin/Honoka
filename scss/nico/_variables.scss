@@ -68,9 +68,9 @@ $font-size-h5:            $font-size-base !default;
 $font-size-h6:            ceil(($font-size-base * 0.75)) !default; // ~12px
 
 //** Unit-less `line-height` for use in components like buttons.
-$line-height-base:        1.428571429 !default; // 20/14
+$line-height-base:        1.5 !default; // 24/16
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
-$line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
+$line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~24px
 
 //** By default, this inherits from the `<body>`.
 $headings-font-family:    $font-family-sans-serif !default;
@@ -140,7 +140,7 @@ $table-condensed-cell-padding:  5px !default;
 //** Default background color used for all tables.
 $table-bg:                      transparent !default;
 //** Background color used for `.table-striped`.
-$table-bg-accent:               #f9f9f9 !default;
+$table-bg-accent:               #fff !default;
 //** Background color used for `.table-hover`.
 $table-bg-hover:                #f5f5f5 !default;
 $table-bg-active:               $table-bg-hover !default;
@@ -214,7 +214,7 @@ $input-border-focus:             #66afe9 !default;
 $input-color-placeholder:        #999 !default;
 
 //** Default `.form-control` height
-$input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 3) !default;
+$input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;
 //** Large `.form-control` height
 $input-height-large:             (ceil($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 2) !default;
 //** Small `.form-control` height
