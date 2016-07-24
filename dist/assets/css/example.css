@@ -332,6 +332,7 @@ footer .copyright {
 .bootstrap-default {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
+  line-height: 1.4285;
 }
 .bootstrap-default > h3 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
