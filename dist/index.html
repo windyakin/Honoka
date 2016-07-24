@@ -293,18 +293,18 @@ new Clipboard('.btn');
 $(document).ready(function(e) {
 	$.when(
 		$.ajax({
-			url: 'https://api.github.com/repos/windyakin/Honoka/releases/latest',
+			url: 'https://api.github.com/repos/kubosho/Nico/releases/latest',
 			type: 'get',
 			dataType: 'json'
 		}),
 		$.ajax({
-			url: 'https://cdn.rawgit.com/windyakin/Honoka/master/bower.json',
+			url: 'https://cdn.rawgit.com/kubosho/Nico/master/bower.json',
 			type: 'get',
 			dataType: 'json'
 		})
 	)
 	.done(function(last, base) {
-		$('.last-version').text(last[0].tag_name.split('v')[1]);
+		$('.last-version').text(last[0].tag_name);
 		$('.base-version').text(base[0].devDependencies.bootstrap);
 	});
 });
