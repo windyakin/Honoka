@@ -1,9 +1,9 @@
 {
-  "name": "Honoka",
-  "version": "3.3.7",
-  "description": "Honoka is one of the Bootstrap original theme.",
-  "author": "windyakin",
-  "website": "http://honokak.osaka/",
+  "name": "Nico",
+  "version": "3.3.7-1.2.0",
+  "description": "Nico a fork of Honoka which is a Bootstrap theme.",
+  "author": "kubosho",
+  "website": "http:http://nico.kubosho.com",
   "license": "MIT",
   "main": "Gruntfile.js",
   "scripts": {
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/windyakin/honoka.git"
+    "url": "https://github.com/kubosho/Nico.git"
   },
   "devDependencies": {
     "bower": "^1.7.7",

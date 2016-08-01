@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
 .btn-twitter .fa.fa-lg, .btn-facebook .fa.fa-lg {
   margin-right: 2px;
   vertical-align: -1px;
@@ -189,20 +189,19 @@ body {
   margin-bottom: 0;
   overflow: hidden;
   text-align: center;
-  background-color: #fdcea0;
+  background-color: #fec4d8;
   background-image: url("../img/circle.png");
   background-repeat: no-repeat;
   background-position: -35% center;
   -webkit-background-size: 70% 70%;
           background-size: 70%;
 }
-.jumbotron.special .honoka {
+.jumbotron.special .nico {
   position: absolute;
   bottom: -20px;
   left: 0;
   width: 400px;
-  height: 530px;
-  background-image: url("../img/honoka.png");
+  background-image: url("../img/nico.png");
   background-repeat: no-repeat;
 }
 .jumbotron.special .outline {
@@ -228,7 +227,7 @@ section.section.section-default {
   background-color: #f9f9f9;
 }
 section.section.section-inverse {
-  background-color: #fff5eb;
+  background-color: white;
 }
 section.section .subtitle {
   margin-bottom: 24px;
@@ -251,16 +250,16 @@ section.section .subtitle h2 {
   border-radius: 100%;
 }
 .point .point-box .point-circle.start {
-  background-color: #4caf50;
+  background-color: #0faf20;
 }
 .point .point-box .point-circle.replace {
-  background-color: #ff9800;
+  background-color: #a683b0;
 }
 .point .point-box .point-circle.compass {
-  background-color: #2196f3;
+  background-color: #ff64b1;
 }
 .point .point-box .point-circle.japanese {
-  background-color: #f44336;
+  background-color: #f45042;
 }
 .point .point-box .point-circle.japanese span.icon-jp::before {
   font-weight: bold;

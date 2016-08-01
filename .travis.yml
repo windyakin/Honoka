@@ -10,6 +10,15 @@ cache:
     - node_modules
     - vendor/bundle
 
+env:
+  global:
+  - export LC_CTYPE=ja_JP.UTF-8
+  - GIT_COMMITTER_NAME=kubosho_
+  - GIT_COMMITTER_EMAIL=ta2@o2p.jp
+  - GIT_AUTHOR_NAME=kubosho_
+  - GIT_AUTHOR_EMAIL=ta2@o2p.jp
+  - secure: DxwLNpAg132iMSEYeBehynsY5lgpckk/bJx6L1btA6VbTW3lVymx02r6vRaUKM+XZmwSgoBvocBWHTcnBxtOE1JED6dj/x0wv42FXi9w/FGBt4AZehr1e+flVzJGcedmocYkUgF8fwl+zxGZl5kdyVOOQCCcFqp4JK7Fh4Fh/MzJIQJeokSJ0wjCo6doPAAwdeh9rfKCReIJ8AZ3Z8OLqm1r44QNOOzj4tdZUIBfgqkfrtDPZVsWp8Wi3KUF9TXObUd3QZUf/Gaw9o7YmOs56zT24iTLaS+j2cokz1WaA5V6tlfRwQNsMh+kAARxDjfnk3qUGVkIue73oLYcKU1t1ueoTd8bUTtClPdCYrBmyE253b71nGez6NBKndhDhHFY3B6w9wKAsD2w7UBi1ksmgSt7GtdqXg/IXAMagnZ+jo5A0V0MHyGnLVnjnPtH/yk9BueEgZPAFe7DnQW7B3xV+3jOLFhAX//dKIvTnduccMkiYix/6c5LL9GCx6vSmoJFZZtnHSi1XhycadDV+D2YPov7biusoRyYkl+cPRfShcwP/nsOZx5V9gX/giZSKGg0sd8VXqb/PRVui+3OkzqgM8nJwGQGbPeQooW7HAM/vIuD1E8Pv4jTjIeYMaqvEFhKKJk/au2/hE9hPd+NLNfk4/kEh6UzotTFEToX3TjbSgQ=
+
 git:
   submodules: false
 
@@ -26,4 +35,8 @@ before_install:
   - grunt --version
 
 script:
-  - npm start
+- npm start
+
+after_success:
+- '[ "$TRAVIS_BRANCH" == "master" ] && [ "${TRAVIS_PULL_REQUEST}" = "false" ] && [
+  "$GH_TOKEN" ] && ./.bin/deploy-to-gh-pages.sh > /dev/null'

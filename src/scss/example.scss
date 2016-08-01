@@ -1,11 +1,11 @@
 @charset "UTF-8";
 
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
 
-@import "honoka/variables";
-@import "honoka/mixins";
+@import "nico/variables";
+@import "nico/mixins";
 
-$brand-honoka: #fdcea0;
+$brand-nico: #fec4d8;
 $brand-twitter: #55acee;
 $brand-facebook: #3b5998;
 $brand-hatena: #178fde;
@@ -74,18 +74,18 @@ body {
 	margin-bottom: 0;
 	overflow: hidden;
 	text-align: center;
-	background-color: $brand-honoka;
+	background-color: $brand-nico;
 	background-image: url("../img/circle.png");
 	background-repeat: no-repeat;
 	background-position: -35% center;
 	background-size: 70%;
-	.honoka {
+
+	.nico {
 		position: absolute;
 		bottom: -20px;
 		left: 0;
 		width: 400px;
-		height: 530px;
-		background-image: url("../img/honoka.png");
+		background-image: url("../img/nico.png");
 		background-repeat: no-repeat;
 	}
 	.outline {
@@ -113,7 +113,7 @@ section.section {
 		background-color: $body-bg;
 	}
 	&.section-inverse {
-		background-color: lighten($brand-honoka, 15%);
+		background-color: lighten($brand-nico, 15%);
 	}
 	.subtitle {
 		margin-bottom: $line-height-computed;
@@ -140,7 +140,7 @@ section.section {
 				background-color: $brand-success;
 			}
 			&.replace {
-				background-color: $brand-warning;
+				background-color: $brand-info;
 			}
 			&.compass {
 				background-color: $brand-primary;

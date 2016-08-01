@@ -1,24 +1,21 @@
-# Honoka
+# Nico
 
-[![Build Status by Travis CI](https://travis-ci.org/windyakin/Honoka.svg?branch=master)](https://travis-ci.org/windyakin/Honoka)
-[![Build status by AppVeyor](https://ci.appveyor.com/api/projects/status/6j4y6bugti7f1aff/branch/master?svg=true)](https://ci.appveyor.com/project/windyakin/honoka/branch/master)
-[![devDependency Status](https://david-dm.org/windyakin/Honoka/dev-status.svg)](https://david-dm.org/windyakin/Honoka#info=devDependencies)
+[![Build Status](https://travis-ci.org/kubosho/Nico.svg?branch=master)](https://travis-ci.org/kubosho/Nico)
+[![devDependency Status](https://david-dm.org/kubosho/Nico/dev-status.svg)](https://david-dm.org/kubosho/Nico#info=devDependencies)
 [![The MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-[http://honokak.osaka/](http://honokak.osaka/)
+"Nico"は"[Honoka](https://github.com/windyakin/Honoka)"を元にした、日本語も美しく表示できるBootstrapテーマです。
 
-[![Honoka](dist/assets/img/sample.png)](http://honokak.osaka/)
+## About "Nico"
 
-"Honoka" は日本語も美しく表示できるBootstrapテーマです。
-
-## About "Honoka"
-
-通常の[Bootstrap](http://getbootstrap.com/)では，日本語のフォント指定や文字サイズは最適とはいえません。"Honoka"はそんなBootstrapをベースに，日本語表示に適したフォント指定や，文字サイズに関するコードを追記したBootstrapテーマの一つです。
+通常の[Bootstrap](//getbootstrap.com/)では，日本語のフォント指定や文字サイズは最適とはいえません。
+"Honoka"はそんなBootstrapをベースに，日本語表示に適したフォント指定や，文字サイズに関するコードを追記したBootstrapテーマの一つです。
+"Nico"は"Honoka"を元に、ピンク系の配色を適用したテーマです。
 
 ## Live Demo
 
- * [http://honokak.osaka/bootstrap-ja.html](http://honokak.osaka/bootstrap-ja.html) (日本語レイアウト)
- * [http://honokak.osaka/bootstrap.html](http://honokak.osaka/bootstrap.html) (英語レイアウト)
+ * [Nico/bootstrap-ja.html](http://nico.kubosho.com/bootstrap-ja.html) (日本語レイアウト)
+ * [Nico/bootstrap.html](http://nico.kubosho.com/bootstrap.html) (英語レイアウト)
 
 ## Getting Started
 
@@ -39,25 +36,28 @@ bower install --save-dev $(node -e "$(curl -fsSL https://cdn.honokak.osaka/last.
 もしcURLが入っていない環境の場合には、
 
 ```
-bower install --save-dev Honoka#(version)
+bower install --save-dev Nico#(version)
 ```
 
-``(version)``にはバージョン番号を指定します(ex. ``Honoka#3.3.5-c``)。Honokaの最新バージョン番号は[Releases](https://github.com/windyakin/Honoka/releases)から確認してください。
+``(version)``にはバージョン番号を指定します(ex. ``Nico#3.3.6-1.1.0``)。Nicoの最新バージョン番号は[Relases](https://github.com/kubosho/Nico/releases)から確認してください。
 
 ## Usage
 
-Honokaは単なるBootstrapテーマにしか過ぎないため，基本的な使い方は本家Bootstrapとほとんど変わりません。よって以下に書くことは[本家Bootstrap](http://getbootstrap.com/getting-started/)からの引用，もしくはその一部を変更したものです。用意されたCSSクラスやコンポーネントなど，より詳細な使い方のドキュメントは本家Bootstrapの各種リファレンスページをご覧になることを推奨します。
+Nicoは単なるBootstrapテーマにしか過ぎないため，基本的な使い方は本家Bootstrapとほとんど変わりません。
+よって以下に書くことは[本家Bootstrap](//getbootstrap.com/getting-started/)からの引用，もしくはその一部を変更したものです。
+用意されたCSSクラスやコンポーネントなど，より詳細な使い方のドキュメントは本家Bootstrapの各種リファレンスページをご覧になることを推奨します。
 
- * [CSS](http://getbootstrap.com/css/)
- * [Components](http://getbootstrap.com/components/)
- * [JavaScript](http://getbootstrap.com/javascript/)
+ * [CSS](//getbootstrap.com/css/)
+ * [Components](//getbootstrap.com/components/)
+ * [JavaScript](//getbootstrap.com/javascript/)
 
 ### Package
 
-配布しているzipファイルの内容物は以下のとおりです。``bootstrap.min.*``といったように，ファイル名に``min``がつくファイルは，改行やインデント・スペーシングをなくした(minifyされた)コードで，ユーザがウェブページを読み込む際の転送量を少なくすることができます。通常はこの``bootstrap.min.*``を使うことをおすすめします。
+配布しているzipファイルの内容物は以下のとおりです。
+``bootstrap.min.*``といったように，ファイル名に``min``がつくファイルは，改行やインデント・スペーシングをなくした(minifyされた)コードで，ユーザがウェブページを読み込む際の転送量を少なくすることができます。通常はこの``bootstrap.min.*``を使うことをおすすめします。
 
 ```
-honoka/
+nico/
 ├─ bootstrap.html
 ├─ css/
 │   ├─ bootstrap.css
@@ -122,6 +122,10 @@ Bootstrapをつかってウェブページを作成する際に基本となるHT
 
 [MIT License](LICENSE)
 
-## Author
+## Author of "Honoka"
 
- * windyakin ([windyakin.net](http://windyakin.net/))
+- windyakin ([windyakin.net](//windyakin.net/))
+
+## Editor of "Nico"
+
+- kubosho ([blog.kubosho.com](//blog.kubosho.com/))

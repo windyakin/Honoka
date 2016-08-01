@@ -259,5 +259,4 @@ module.exports = function(grunt) {
 			grunt.log.error(warning);
 		};
 	});
-
 };
