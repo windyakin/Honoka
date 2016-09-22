@@ -18,6 +18,10 @@ a {
 	}
 }
 
+p {
+	word-break: break-all;
+}
+
 // navbar
 .navbar-nav {
 	@media (min-width: $grid-float-breakpoint) {
