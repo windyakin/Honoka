@@ -11,8 +11,68 @@
  * Licensed under the MIT license
  */
 
-/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@font-face {
+  font-family: "Yu Gothic";
+  font-weight: 100;
+
+  src: local("Yu Gothic Medium");
+}
+@font-face {
+  font-family: "Yu Gothic";
+  font-weight: 200;
+
+  src: local("Yu Gothic Medium");
+}
+@font-face {
+  font-family: "Yu Gothic";
+  font-weight: 300;
+
+  src: local("Yu Gothic Medium");
+}
+@font-face {
+  font-family: "Yu Gothic";
+  font-weight: 400;
+
+  src: local("Yu Gothic Medium");
+}
+@font-face {
+  font-family: "Yu Gothic";
+  font-weight: bold;
+
+  src: local("Yu Gothic Bold");
+}
+@font-face {
+  font-family: "Yu Mincho";
+  font-weight: 100;
+
+  src: local("Yu Mincho Medium");
+}
+@font-face {
+  font-family: "Yu Mincho";
+  font-weight: 200;
+
+  src: local("Yu Mincho Medium");
+}
+@font-face {
+  font-family: "Yu Mincho";
+  font-weight: 300;
+
+  src: local("Yu Mincho Medium");
+}
+@font-face {
+  font-family: "Yu Mincho";
+  font-weight: 400;
+
+  src: local("Yu Mincho Medium");
+}
+@font-face {
+  font-family: "Yu Mincho";
+  font-weight: bold;
+
+  src: local("Yu Mincho Bold");
+}
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -2309,7 +2369,7 @@ html {
 }
 
 body {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, "Arial", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, "Arial", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   color: #333;
@@ -7541,7 +7601,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, "Arial", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, "Arial", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: normal;
@@ -7664,7 +7724,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, "Arial", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, "Arial", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: normal;
