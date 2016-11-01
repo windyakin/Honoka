@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+// Open Sans
+@import url(#{$font-family-open-sans-import-path});
+
+// Yu Gothic (for Windows)
+@font-face {
+	font-family: "Yu Gothic";
+	src: local("Yu Gothic Medium");
+	font-weight: 100;
+}
+@font-face {
+	font-family: "Yu Gothic";
+	src: local("Yu Gothic Medium");
+	font-weight: 200;
+}
+@font-face {
+	font-family: "Yu Gothic";
+	src: local("Yu Gothic Medium");
+	font-weight: 300;
+}
+@font-face {
+	font-family: "Yu Gothic";
+	src: local("Yu Gothic Medium");
+	font-weight: 400;
+}
+@font-face {
+	font-family: "Yu Gothic";
+	src: local("Yu Gothic Bold");
+	font-weight: bold;
+}
+
+// Yu Mincho (for Windows)
+@font-face {
+	font-family: "Yu Mincho";
+	src: local("Yu Mincho Medium");
+	font-weight: 100;
+}
+@font-face {
+	font-family: "Yu Mincho";
+	src: local("Yu Mincho Medium");
+	font-weight: 200;
+}
+@font-face {
+	font-family: "Yu Mincho";
+	src: local("Yu Mincho Medium");
+	font-weight: 300;
+}
+@font-face {
+	font-family: "Yu Mincho";
+	src: local("Yu Mincho Medium");
+	font-weight: 400;
+}
+@font-face {
+	font-family: "Yu Mincho";
+	src: local("Yu Mincho Bold");
+	font-weight: bold;
+}

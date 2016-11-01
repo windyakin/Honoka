@@ -4,8 +4,8 @@ init:
   - git config --global core.autocrlf true
 
 environment:
-  nodejs_version: 4.2.2
-  ruby_verison: 22-x64
+  nodejs_version: 6.9.1
+  ruby_version: 23-x64
 
 install:
   - SET PATH=C:\Ruby%ruby_version%\bin;%PATH%

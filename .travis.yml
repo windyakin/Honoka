@@ -1,7 +1,7 @@
 language: node_js
 
 node_js:
-  - '4.2'
+  - '6.9'
 
 sudo: false
 
@@ -14,8 +14,8 @@ git:
   submodules: false
 
 before_install:
-  - rvm install 2.2.3
-  - rvm use 2.2.3 --fuzzy
+  - rvm install 2.3.0
+  - rvm use 2.3.0 --fuzzy
   - export GEMDIR=$(rvm gemdir)
   - ruby --version
   - gem --version
