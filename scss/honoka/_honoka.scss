@@ -6,6 +6,9 @@
 @import "bootstrap/mixins";
 @import "mixins";
 
+// Honoka Font Setting
+@import "font";
+
 @import "bootstrap/normalize";
 @import "bootstrap/grid";
 @import "bootstrap/print";
@@ -53,4 +56,5 @@
 @import "bootstrap/utilities";
 @import "bootstrap/responsive-utilities";
 
+// Honoka Original Setting
 @import "override";
