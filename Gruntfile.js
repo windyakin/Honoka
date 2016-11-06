@@ -81,7 +81,7 @@ module.exports = function(grunt) {
 				},
 				files: [{
 					expand: true,
-					cwd: 'src/scss',
+					cwd: 'docs/assets/scss',
 					src: ['**/*.scss'],
 					dest: 'docs/assets/css/',
 					ext: '.css'
@@ -128,7 +128,7 @@ module.exports = function(grunt) {
 				colorizeOutput: true
 			},
 			bootstrap: ['scss/**/*.scss'],
-			assets: ['src/scss/**/*.scss']
+			assets: ['docs/assets/scss/**/*.scss']
 		},
 		// clean
 		clean: {
@@ -151,7 +151,7 @@ module.exports = function(grunt) {
 		watch: {
 			// 自動コンパイル
 			bootstrap: {
-				files: ['scss/**/*.scss', 'src/scss/**/*.scss'],
+				files: ['scss/**/*.scss', 'docs/assets/scss/**/*.scss'],
 				tasks: ['scsslint', 'css', 'csscomb', 'copy:docs']
 			}
 		},
