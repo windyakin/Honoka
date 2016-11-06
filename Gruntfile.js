@@ -248,10 +248,10 @@ module.exports = function(grunt) {
 	grunt.registerTask('test', ['scsslint']);
 
 	// CSSビルド
-	grunt.registerTask('css', ['sass', 'autoprefixer']);
+	grunt.registerTask('css', ['sass', 'autoprefixer', 'csscomb']);
 
 	// 最適化
-	grunt.registerTask('optimize', ['csscomb', 'cssmin:minify']);
+	grunt.registerTask('optimize', ['cssmin:minify']);
 
 	// 開発用
 	grunt.registerTask('server', ['bower:install', 'getTwbsConfig', 'test', 'css', 'copy:docs', 'connect', 'watch']);
