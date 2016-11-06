@@ -83,7 +83,7 @@ module.exports = function(grunt) {
 					expand: true,
 					cwd: 'src/scss',
 					src: ['**/*.scss'],
-					dest: 'dist/assets/css/',
+					dest: 'docs/assets/css/',
 					ext: '.css'
 				}]
 			}
@@ -99,9 +99,9 @@ module.exports = function(grunt) {
 			},
 			assets: {
 				expand: true,
-				cwd: 'dist/assets/css/',
+				cwd: 'docs/assets/css/',
 				src: ['**/*.css'],
-				dest: 'dist/assets/css',
+				dest: 'docs/assets/css',
 				ext: '.css'
 			}
 		},
@@ -113,9 +113,9 @@ module.exports = function(grunt) {
 			},
 			assets: {
 				expand: true,
-				cwd: 'dist/assets/css/',
+				cwd: 'docs/assets/css/',
 				src: ['**/*.css'],
-				dest: 'dist/assets/css',
+				dest: 'docs/assets/css',
 				ext: '.css'
 			}
 		},
@@ -152,7 +152,15 @@ module.exports = function(grunt) {
 			// 自動コンパイル
 			bootstrap: {
 				files: ['scss/**/*.scss', 'src/scss/**/*.scss'],
-				tasks: ['scsslint', 'css']
+				tasks: ['scsslint', 'css', 'csscomb', 'copy:docs']
+			}
+		},
+		copy: {
+			docs: {
+				expand: true,
+				cwd: 'dist/',
+				src: ['{css,fonts,js}/**/*'],
+				dest: 'docs/'
 			}
 		},
 		// テストサーバ
@@ -161,7 +169,7 @@ module.exports = function(grunt) {
 				options: {
 					port: 8000,
 					hostname: '*',
-					base: 'dist'
+					base: 'docs'
 				}
 			}
 		},
@@ -195,7 +203,7 @@ module.exports = function(grunt) {
 					{
 						// Sample html
 						expand: true,
-						cwd: "dist/",
+						cwd: "docs/",
 						src: ["bootstrap.html"],
 						dest: name
 					},
@@ -246,10 +254,10 @@ module.exports = function(grunt) {
 	grunt.registerTask('optimize', ['csscomb', 'cssmin:minify']);
 
 	// 開発用
-	grunt.registerTask('server', ['bower:install', 'getTwbsConfig', 'test', 'css', 'connect', 'watch']);
+	grunt.registerTask('server', ['bower:install', 'getTwbsConfig', 'test', 'css', 'copy:docs', 'connect', 'watch']);
 
 	// ビルドタスク
-	grunt.registerTask('build', ['clean:build', 'bower:install', 'getTwbsConfig', 'test', 'css', 'optimize', 'replace:banner']);
+	grunt.registerTask('build', ['clean:build', 'bower:install', 'getTwbsConfig', 'test', 'css', 'optimize', 'replace:banner', 'copy:docs']);
 
 	// 配布用パッケージ作成
 	grunt.registerTask('package', ['build', 'compress:main']);
