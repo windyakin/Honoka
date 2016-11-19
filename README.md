@@ -7,7 +7,7 @@
 
 [http://rinhoshizo.la/](http://rinhoshizo.la/)
 
-[![Honoka](dist/assets/img/sample.png)](http://rinhoshizo.la/)
+[![Rin](docs/assets/img/sample.png)](http://rinhoshizo.la/)
 
 "Rin" は "Honoka" を元にした日本語も美しく表示できるBootstrapテーマです。
 
