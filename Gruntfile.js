@@ -64,7 +64,7 @@ module.exports = function(grunt) {
 				unixNewlines: true,
 				style: 'expanded',
 				bundleExec: true,
-				loadPath: ['bower_components/bootstrap-sass/assets/stylesheets/']
+				loadPath: ['bower_components/']
 			},
 			bootstrap: {
 				files: [{
@@ -77,7 +77,7 @@ module.exports = function(grunt) {
 			},
 			assets: {
 				options: {
-					loadPath: ['scss/']
+					loadPath: ['scss/', 'bower_components/']
 				},
 				files: [{
 					expand: true,
@@ -253,7 +253,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('optimize', ['cssmin:minify']);
 
 	// 開発用
-	grunt.registerTask('server', ['bower:install', 'getTwbsConfig', 'test', 'css', 'copy:docs', 'connect', 'watch']);
+	grunt.registerTask('server', ['bower:install', 'test', 'css', 'copy:docs', 'connect', 'watch']);
 
 	// ビルドタスク
 	grunt.registerTask('build', ['clean:build', 'bower:install', 'getTwbsConfig', 'test', 'css', 'optimize', 'replace:banner', 'copy:docs']);
