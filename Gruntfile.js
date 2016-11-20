@@ -138,14 +138,7 @@ module.exports = function(grunt) {
 		},
 		// bowerのインストール
 		bower: {
-			install: {
-				options: {
-					targetDir: 'dist/',
-					layout: function(type, component, source) {
-						return type;
-					}
-				}
-			}
+			install: {}
 		},
 		// ファイル更新監視
 		watch: {
@@ -156,6 +149,12 @@ module.exports = function(grunt) {
 			}
 		},
 		copy: {
+			bower: {
+				expand: true,
+				cwd: 'bower_components/bootstrap/dist/',
+				src: ['js/bootstrap**.js'],
+				dest: 'dist/'
+			},
 			docs: {
 				expand: true,
 				cwd: 'dist/',
