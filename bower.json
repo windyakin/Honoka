@@ -33,15 +33,11 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "bootstrap": "3.3.7",
-    "bootstrap-sass": "3.3.7"
+    "bootstrap": "4.0.0-alpha.5"
   },
   "exportsOverride": {
-    "bootstrap-sass": {},
-    "bootstrap": {
-      "js": "dist/js/bootstrap.**js",
-      "fonts": "dist/fonts/**/*"
-    },
-    "jquery": {}
+    "bootstrap": {},
+    "jquery": {},
+    "tether": {}
   }
 }
