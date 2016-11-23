@@ -3,7 +3,7 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 @import "honoka/variables";
-@import "honoka/mixins";
+@import "bootstrap/scss/mixins";
 
 $brand-honoka: #fdcea0;
 $brand-twitter: #55acee;
@@ -33,12 +33,12 @@ $brand-hatena: #178fde;
 }
 
 body {
-	margin-top: $navbar-height;
+	margin-top: $navbar-padding-y * 2 + $navbar-divider-padding-y * 2 + 1rem * $line-height-base;
 }
 
 .social-button {
 	position: relative;
-	padding: $padding-large-vertical 0;
+	padding: $spacer-y 0;
 	margin: 0 auto !important;
 	overflow: hidden;
 	> ul {
@@ -64,7 +64,7 @@ body {
 }
 
 .social {
-	padding: $padding-large-vertical 0;
+	padding: 0.7rem 0;
 	background: $gray-lighter;
 }
 
@@ -96,10 +96,10 @@ body {
 		font-family: Montserrat, sans-serif;
 	}
 	.download {
-		margin: $line-height-computed auto ($line-height-computed * 0.5);
+		margin: 1.5rem auto (1.5rem * 0.5);
 	}
 	.basedon {
-		margin: ($line-height-computed * 0.5) auto;
+		margin: (1.5rem * 0.5) auto;
 		color: $gray-light;
 		text-shadow: #fff 0 1px 2px;
 	}
@@ -108,7 +108,7 @@ body {
 
 
 section.section {
-	padding: ($padding-large-vertical * 10) 0;
+	padding: (0.7rem * 10) 0;
 	&.section-default {
 		background-color: $body-bg;
 	}
@@ -116,7 +116,7 @@ section.section {
 		background-color: lighten($brand-honoka, 15%);
 	}
 	.subtitle {
-		margin-bottom: $line-height-computed;
+		margin-bottom: 1.5rem;
 		text-align: center;
 		h2 {
 			margin-top: 0;
@@ -155,6 +155,7 @@ section.section {
 		}
 		.point-description {
 			h4 {
+				margin-top: $spacer-y;
 				text-align: center;
 			}
 			p {
@@ -173,7 +174,7 @@ section.section {
 .japanese-font {
 	.well {
 		> h3 {
-			margin-top: $line-height-computed;
+			margin-top: 1.5rem;
 		}
 	}
 }
@@ -209,7 +210,7 @@ section.section {
 			}
 		}
 		li {
-			padding: $padding-base-vertical $padding-large-horizontal;
+			padding: 1.4rem 3rem;
 		}
 	}
 }
@@ -224,12 +225,12 @@ section.section {
 }
 
 footer {
-	padding: $padding-large-vertical * 4 0;
+	padding: 0.7rem * 4 0;
 	color: $gray-lighter;
 	background-color: $gray-dark;
 	.copyright {
-		padding-top: $padding-large-vertical;
-		padding-bottom: $padding-large-vertical;
+		padding-top: 0.7rem;
+		padding-bottom: 0.7rem;
 	}
 }
 
