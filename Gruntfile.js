@@ -26,7 +26,7 @@ module.exports = function(grunt) {
 						'/*!\n' +
 						' * Bootstrap v<%= twbs.version %> (<%= twbs.homepage %>)\n' +
 						' * Copyright 2011-<%= grunt.template.today("yyyy") %> <%= twbs.author %>\n' +
-						' * Licensed under the <%= twbs.license %> license\n' +
+						' * Licensed under the <%= twbs.license %> (https://github.com/twbs/bootstrap/blob/master/LICENSE)\n' +
 						' */\n',
 		// bannerの調整
 		replace: {
@@ -36,8 +36,8 @@ module.exports = function(grunt) {
 				dest: 'dist/css/',
 				replacements: [
 					{
-						from: '@charset "UTF-8";',
-						to: '@charset "UTF-8";\n<%= banner %>'
+						from: '@charset \'UTF-8\';',
+						to: '@charset \'UTF-8\';\n<%= banner %>'
 					}
 				]
 			}
@@ -105,20 +105,6 @@ module.exports = function(grunt) {
 				ext: '.css'
 			}
 		},
-		autoprefixer: {
-			bootstrap: {
-				files: {
-					'dist/css/bootstrap.css': ['dist/css/bootstrap.css']
-				}
-			},
-			assets: {
-				expand: true,
-				cwd: 'docs/assets/css/',
-				src: ['**/*.css'],
-				dest: 'docs/assets/css',
-				ext: '.css'
-			}
-		},
 		// SCSSのLinter
 		scsslint: {
 			options: {
@@ -170,6 +156,12 @@ module.exports = function(grunt) {
 					hostname: '*',
 					base: 'docs'
 				}
+			}
+		},
+		// exec
+		exec: {
+			postcss: {
+				command: 'npm run postcss'
 			}
 		},
 		compress: {
@@ -226,7 +218,6 @@ module.exports = function(grunt) {
 	// 本家Bootstrapのautoprefixerの設定を読み込む
 	grunt.task.registerTask('getTwbsConfig', 'Get config from bootstrap', function() {
 		try {
-			var configBridge = grunt.file.readJSON('bower_components/bootstrap/grunt/configBridge.json');
 			var twbsPkg = grunt.file.readJSON('bower_components/bootstrap/package.json');
 			grunt.verbose.ok();
 		} catch (e) {
@@ -235,11 +226,6 @@ module.exports = function(grunt) {
 		}
 		grunt.config.merge({
 			twbs: twbsPkg,
-			autoprefixer: {
-				options: {
-					browsers: configBridge.config.autoprefixerBrowsers
-				}
-			}
 		});
 	});
 
@@ -247,7 +233,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('test', ['scsslint']);
 
 	// CSSビルド
-	grunt.registerTask('css', ['sass', 'autoprefixer', 'csscomb']);
+	grunt.registerTask('css', ['sass', 'exec:postcss', 'csscomb']);
 
 	// 最適化
 	grunt.registerTask('optimize', ['cssmin:minify']);
