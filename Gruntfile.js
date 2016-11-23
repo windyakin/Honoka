@@ -178,13 +178,6 @@ module.exports = function(grunt) {
 						dest: name +"/css"
 					},
 					{
-						// Font
-						expand: true,
-						cwd: "dist/fonts/",
-						src: ["**/*"],
-						dest: name +"/fonts"
-					},
-					{
 						// JavaScript
 						expand: true,
 						cwd: "dist/js/",
@@ -192,15 +185,8 @@ module.exports = function(grunt) {
 						dest: name +"/js"
 					},
 					{
-						// Sample html
-						expand: true,
-						cwd: "docs/",
-						src: ["bootstrap.html"],
-						dest: name
-					},
-					{
 						// README
-						src: ["README.md"],
+						src: ["README.md", "LICENSE"],
 						dest: name
 					}
 				]
@@ -242,7 +228,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('server', ['bower:install', 'test', 'css', 'copy:docs', 'connect', 'watch']);
 
 	// ビルドタスク
-	grunt.registerTask('build', ['clean:build', 'bower:install', 'getTwbsConfig', 'test', 'css', 'optimize', 'replace:banner', 'copy:docs']);
+	grunt.registerTask('build', ['clean:build', 'bower:install', 'copy:bower', 'getTwbsConfig', 'test', 'css', 'optimize', 'replace:banner', 'copy:docs']);
 
 	// 配布用パッケージ作成
 	grunt.registerTask('package', ['build', 'compress:main']);
