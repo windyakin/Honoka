@@ -1,6 +1,8 @@
 @charset "UTF-8";
 
 @import "honoka/variables";
+@import "honoka/mixins";
+
 // Core variables and mixins
 @import "bootstrap/scss/custom";
 @import "bootstrap/scss/variables";
@@ -48,3 +50,5 @@
 
 // Utility classes
 @import "bootstrap/scss/utilities";
+
+@import "honoka/override";
