@@ -185,6 +185,13 @@ module.exports = function(grunt) {
 						dest: name +"/js"
 					},
 					{
+						// Sample
+						expand: true,
+						cwd: "docs/",
+						src: ["bootstrap.html"],
+						dest: name
+					},
+					{
 						// README
 						src: ["README.md", "LICENSE"],
 						dest: name
