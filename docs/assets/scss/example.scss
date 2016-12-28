@@ -241,3 +241,15 @@ footer {
 		font-size: 24px;
 	}
 }
+
+.v4-pre {
+	display: block;
+	padding: 15px 20px;
+	font-weight: 700;
+	color: #fff;
+	text-align: center;
+	background-color: #0275d8;
+	&:hover {
+		color: #fff;
+	}
+}
