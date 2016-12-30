@@ -2,7 +2,6 @@ language: node_js
 
 notifications:
   email: false
-  slack: toa-heavy-industries:MmTZBdxMGfzoXsNOy7EIi6bZ
 
 node_js:
   - '6.9'
