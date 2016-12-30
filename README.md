@@ -1,7 +1,7 @@
 # Honoka
 
-[![Build Status by Travis CI](https://travis-ci.org/windyakin/Honoka.svg?branch=master)](https://travis-ci.org/windyakin/Honoka)
-[![Build status by AppVeyor](https://ci.appveyor.com/api/projects/status/6j4y6bugti7f1aff/branch/master?svg=true)](https://ci.appveyor.com/project/windyakin/honoka/branch/master)
+[![Build Status by Travis CI](https://travis-ci.org/windyakin/Honoka.svg?branch=v4-dev)](https://travis-ci.org/windyakin/Honoka)
+[![Build status by AppVeyor](https://ci.appveyor.com/api/projects/status/6j4y6bugti7f1aff/branch/v4-dev?svg=true)](https://ci.appveyor.com/project/windyakin/honoka/branch/v4-dev)
 [![devDependency Status](https://david-dm.org/windyakin/Honoka/dev-status.svg)](https://david-dm.org/windyakin/Honoka#info=devDependencies)
 [![The MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
@@ -17,8 +17,7 @@
 
 ## Live Demo
 
- * [http://honokak.osaka/bootstrap-ja.html](http://honokak.osaka/bootstrap-ja.html) (日本語レイアウト)
- * [http://honokak.osaka/bootstrap.html](http://honokak.osaka/bootstrap.html) (英語レイアウト)
+**[http://v4-alpha.honokak.osaka/bootstrap.html](http://honokak.osaka/bootstrap.html) **
 
 ## Getting Started
 
@@ -46,11 +45,9 @@ bower install --save-dev Honoka#(version)
 
 ## Usage
 
-Honokaは単なるBootstrapテーマにしか過ぎないため，基本的な使い方は本家Bootstrapとほとんど変わりません。よって以下に書くことは[本家Bootstrap](http://getbootstrap.com/getting-started/)からの引用，もしくはその一部を変更したものです。用意されたCSSクラスやコンポーネントなど，より詳細な使い方のドキュメントは本家Bootstrapの各種リファレンスページをご覧になることを推奨します。
+Honokaは単なるBootstrapテーマにしか過ぎないため，基本的な使い方は本家Bootstrapとほとんど変わりません。よって以下に書くことは[本家Bootstrap](http://v4-alpha.getbootstrap.com/getting-started/)からの引用，もしくはその一部を変更したものです。用意されたCSSクラスやコンポーネントなど，より詳細な使い方のドキュメントは本家Bootstrapの各種リファレンスページをご覧になることを推奨します。
 
- * [CSS](http://getbootstrap.com/css/)
- * [Components](http://getbootstrap.com/components/)
- * [JavaScript](http://getbootstrap.com/javascript/)
+ * [Documentation](http://v4-alpha.getbootstrap.com/getting-started/introduction/)
 
 ### Package
 
@@ -62,12 +59,6 @@ honoka/
 ├─ css/
 │   ├─ bootstrap.css
 │   └─ bootstrap.min.css
-├─ fonts/
-│   ├─ glyphicons-halflings-regular.eot
-│   ├─ glyphicons-halflings-regular.svg
-│   ├─ glyphicons-halflings-regular.ttf
-│   ├─ glyphicons-halflings-regular.woff
-│   └─ glyphicons-halflings-regular.woff2
 └─ js/
      ├─ bootstrap.js
      └─ bootstrap.min.js
@@ -81,28 +72,22 @@ Bootstrapをつかってウェブページを作成する際に基本となるHT
 <!DOCTYPE html>
 <html lang="ja">
   <head>
+    <!-- Required meta tags always come first -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <title>Bootstrap Template</title>
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
   </head>
   <body>
     <h1>Hello, world!</h1>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
