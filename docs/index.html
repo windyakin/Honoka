@@ -84,7 +84,7 @@
         <h1>Bootstrap Theme for Japanese.</h1>
         <p>"Honoka" は日本語も美しく表示できるBootstrapテーマです。</p>
         <div class="download">
-          <a href="//github.com/windyakin/Honoka/releases" class="btn btn-warning btn-lg"><i class="fa fa-github-alt"></i> Download from GitHub</a>
+          <a href="//github.com/windyakin/Honoka/releases" class="btn btn-warning btn-lg last-release-download-link"><i class="fa fa-github-alt"></i> Download from GitHub</a>
           <a href="/bootstrap-ja.html" class="btn btn-primary btn-lg"><i class="fa fa-play"></i> Watch Demo</a>
         </div>
         <div class="basedon small">
@@ -201,7 +201,7 @@
     <div class="row">
       <div class="col-md-12 text-center">
         <div class="form-group">
-          <a href="//github.com/windyakin/Honoka/releases" class="btn btn-primary btn-lg"><i class="fa fa-github-alt"></i> Download from GitHub</a>
+          <a href="//github.com/windyakin/Honoka/releases" class="btn btn-primary btn-lg last-release-download-link"><i class="fa fa-github-alt"></i> Download from GitHub</a>
           <p class="help-block">Last version v<span class="last-version"></span> ・ <a href="//github.com/windyakin/Honoka/blob/master/LICENSE">MIT License</a></p>
         </div>
         <p>使い方やファイルの説明など、詳しくは <a href="//github.com/windyakin/Honoka#readme">README</a> または <a href="//github.com/windyakin/Honoka/wiki">Wiki</a> をご確認ください</p>
@@ -420,6 +420,7 @@ $(document).ready(function(e) {
 	.done(function(last, base) {
 		$('.last-version').text(last[0].tag_name.split('v')[1]);
 		$('.base-version').text(base[0].devDependencies.bootstrap);
+		$('.last-release-download-link').attr({'href': '//github.com/windyakin/Honoka/releases/tag/' + last[0].tag_name })
 	});
 });
 </script>
