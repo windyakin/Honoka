@@ -4,6 +4,17 @@
   "description": "Honoka is one of the Bootstrap original theme.",
   "author": "windyakin",
   "website": "http://honokak.osaka/",
+  "keywords": [
+    "css",
+    "bootstrap",
+    "sass",
+    "scss",
+    "lovelive",
+    "web",
+    "front-end",
+    "framework",
+    "theme"
+  ],
   "license": "MIT",
   "main": "Gruntfile.js",
   "scripts": {
@@ -12,6 +23,7 @@
     "server": "grunt server",
     "release": "grunt package"
   },
+  "style": "dist/css/bootstrap.css",
   "repository": {
     "type": "git",
     "url": "https://github.com/windyakin/honoka.git"
@@ -32,5 +44,11 @@
     "grunt-csscomb": "^3.1.1",
     "grunt-scss-lint": "^0.5.0",
     "grunt-text-replace": "^0.4.0"
-  }
+  },
+  "files": [
+    "dist",
+    "scss/**/*.scss",
+    "Gruntfile.js",
+    "LICENSE"
+  ]
 }
