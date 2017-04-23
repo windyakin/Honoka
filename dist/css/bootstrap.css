@@ -1,4 +1,17 @@
 @charset "UTF-8";
+/*!
+ * Rin v3.3.7-2
+ * Website http://rinhoshizo.la/
+ * Copyright 2016 Hagihara Ryosuke
+ * The MIT License
+ * Based on Honoka (http://honokak.osaka/) by windyakin
+ */
+/*!
+ * Bootstrap v3.3.7 (http://getbootstrap.com)
+ * Copyright 2011-2017 Twitter, Inc.
+ * Licensed under the MIT license
+ */
+
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 @font-face {
   font-family: "Yu Gothic";
