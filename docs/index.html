@@ -31,9 +31,16 @@
     <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 
+	<!-- Rin Release 1st Anniversary -->
+	<style>
+	.modal-rin .modal-body {
+    background: url("assets/img/brand.png") no-repeat right 5px bottom 5px;
+	}
+	</style>
+
 </head>
 <body>
-<a href="//v4-alpha.rinhoshizo.la" class="v4-pre">Rin v4.0.0-alpha.3 (Pre-Release) Live Demoはこっちにゃ＞ω＜／</a>
+<a href="//v4-alpha.rinhoshizo.la" class="v4-pre">Rin v4.0.0-alpha.1 (Pre-Release) Live Demoはこちら</a>
 <header>
 	<div class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
@@ -368,6 +375,25 @@
 	</div>
 </footer>
 
+<aside class="modal modal-rin fade">
+	<div class="modal-dialog">
+		<article class="modal-content">
+			<header class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				<h4 class="modal-title">Rin 1st Anniversary🎉</h4>
+			</header>
+			<main class="modal-body text-center">
+        <p>「Rin - 日本語も美しく表示できるBootstrapテーマ」は<br><b>おかげさまで公開1周年！</b></p>
+					<div class="form-group">
+						<a href="https://twitter.com/intent/tweet?url=http://rinhoshizo.la/&text=%e3%80%901st%20Anniversary%f0%9f%8e%89%e3%80%91Rin%20%2d%20%e6%97%a5%e6%9c%ac%e8%aa%9e%e3%82%82%e7%be%8e%e3%81%97%e3%81%8f%e8%a1%a8%e7%a4%ba%e3%81%a7%e3%81%8d%e3%82%8bBootstrap%e3%83%86%e3%83%bc%e3%83%9e" class="btn btn-twitter"><i class="fa fa-twitter fa-lg"></i> Tweet</a>
+						<a href="http://www.facebook.com/sharer.php?u=http://rinhoshizo.la/" class="btn btn-facebook"><i class="fa fa-facebook fa-lg"></i> Share</a>
+						<a href="javascript:window.open('http://b.hatena.ne.jp/add?mode=confirm&is_bm=1&title='+escape(document.title)+'&url='+escape(location.href),%20'_blank',%20'width=520,height=600,resizable=1,scrollbars=1');undefined;" class="btn btn-hatebu"><i class="fa fa-hatebu fa-lg"></i> Bookmark</a>
+				</div>
+			</main>
+		</article><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</aside><!-- /.modal -->
+
 <script>
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -407,5 +433,21 @@ $(document).ready(function(e) {
 <div id="fb-root"></div>
 <script>(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=238369762859730&version=v2.3";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script>
 <script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+
+<!-- Rin Release 1st Anniversary -->
+<script>
+jQuery(function($){
+	//$('.modal').modal('show');
+	$('.modal-rin')
+		.on('show.bs.modal', function(e) {
+			$('body').addClass('modal-bgcolor-rin');
+		})
+	.on('hidden.bs.modal', function(e) {
+		$('body').removeClass('modal-bgcolor-rin');
+	})
+	.modal('show');
+});
+</script>
+
 </body>
 </html>
