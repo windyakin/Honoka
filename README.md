@@ -44,6 +44,20 @@ bower install --save-dev Rin#(version)
 
 ``(version)``にはバージョン番号を指定します(ex. ``Rin#3.3.6-3``)。Rinの最新バージョン番号は[Releases](https://github.com/raryosu/Rin/releases)から確認してください。
 
+### NPM
+
+現在対応を検討中です。(Issue [#10](https://github.com/raryosu/Rin/issues/10))
+
+### リポジトリからclone
+
+この方法は推奨されませんが，本リポジトリをcloneし利用することも可能です。
+
+その場合は，利用したいバージョンの[tag](https://github.com/raryosu/Rin/tags)をcheckoutして利用してください。
+
+```
+git checkout refs/tags/vX.X.X-X
+```
+
 ## Usage
 
 Rinは単なるBootstrapテーマにしか過ぎないため，基本的な使い方は本家Bootstrapとほとんど変わりません。よって以下に書くことは[本家Bootstrap](http://getbootstrap.com/getting-started/)からの引用，もしくはその一部を変更したものです。用意されたCSSクラスやコンポーネントなど，より詳細な使い方のドキュメントは本家Bootstrapの各種リファレンスページをご覧になることを推奨します。
