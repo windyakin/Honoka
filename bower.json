@@ -13,8 +13,10 @@
     "web",
     "lovelive"
   ],
-  "author": "raryosu",
-  "homepage": "http://rinhoshizo.la/",
+  "authors": [
+    "Hagihara Ryosuke <me@raryosu.info>"
+  ],
+  "homepage": "https://rinhoshizo.la/",
   "repository": {
     "type": "git",
     "url": "git://github.com/raryosu/Rin.git"
