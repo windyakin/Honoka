@@ -44,6 +44,14 @@ bower install --save-dev Rin#(version)
 
 ``(version)``にはバージョン番号を指定します(ex. ``Rin#3.3.6-3``)。Rinの最新バージョン番号は[Releases](https://github.com/raryosu/Rin/releases)から確認してください。
 
+バージョン番号を指定しなかった場合，Bowerの仕様上「Honoka」がインストールされます。
+
+また，django-bower等のラッパーを利用する場合は，以下のような指定を行うことでRinを利用することができます。
+
+```
+Rin=git://github.com/raryosu/Rin#(version)
+```
+
 ## Usage
 
 Rinは単なるBootstrapテーマにしか過ぎないため，基本的な使い方は本家Bootstrapとほとんど変わりません。よって以下に書くことは[本家Bootstrap](http://getbootstrap.com/getting-started/)からの引用，もしくはその一部を変更したものです。用意されたCSSクラスやコンポーネントなど，より詳細な使い方のドキュメントは本家Bootstrapの各種リファレンスページをご覧になることを推奨します。
