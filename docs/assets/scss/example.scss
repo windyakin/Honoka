@@ -36,6 +36,21 @@ body {
 	margin-top: $navbar-height;
 }
 
+.v4-dev {
+	a {
+		display: block;
+		padding: $padding-large-vertical;
+		font-weight: bold;
+		color: #fff;
+		text-align: center;
+		text-decoration: none;
+		background-color: $brand-primary;
+		&:hover, &:active, &:focus {
+			background-color: darken($brand-primary, 10%);
+		}
+	}
+}
+
 .social-button {
 	position: relative;
 	padding: $padding-large-vertical 0;
