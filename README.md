@@ -134,4 +134,4 @@ Bootstrapをつかってウェブページを作成する際に基本となるHT
 
 ## Author
 
- * windyakin ([windyakin.net](http://windyakin.net/))
+* windyakin ([@MITLicense](https://twitter.com/MITLicense))
