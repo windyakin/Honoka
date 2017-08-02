@@ -193,6 +193,11 @@ section.section {
 	}
 }
 
+h3 .package-system-logo {
+	width: auto;
+	height: $font-size-h3 * 2;
+}
+
 .available-bower {
 	position: relative;
 	overflow: hidden;

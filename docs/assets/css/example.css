@@ -294,6 +294,11 @@ section.section .subtitle h2 {
   margin-top: 24px;
 }
 
+h3 .package-system-logo {
+  width: auto;
+  height: 48px;
+}
+
 .available-bower {
   position: relative;
   overflow: hidden;
