@@ -26,6 +26,16 @@
 
 [Releases](https://github.com/windyakin/Honoka/releases)から最新版をダウンロードしてください。
 
+### npm
+
+Node.js のパッケージ管理システムである、 [npm](https://npmjs.com) からダウンロードすることができます。 [webpack](https://webpack.js.org/) など、npmを利用したmodule bundlerでご利用ください。
+
+```
+npm install --save bootstrap-honoka
+```
+
+パッケージ名が 「**bootstrap**-honoka」 であることに注意してください。
+
 ### Bower
 
 [Bower](http://bower.io/)からインストールすることができます。
