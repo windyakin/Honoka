@@ -29,7 +29,7 @@
 
 ### npm
 
-Node.js のパッケージ管理システムである、 [npm](https://npmjs.com) からダウンロードすることができます。 [webpack](https://webpack.js.org/) など、npmを利用したmodule bundlerでご利用ください。
+Node.js のパッケージ管理システムである、 [npm](https://npmjs.com) からダウンロードすることができます。[webpack](https://webpack.js.org/) など、npmを利用したmodule bundlerでご利用ください。
 
 ```
 npm install --save bootstrap-rin
