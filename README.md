@@ -4,6 +4,7 @@
 [![Build status by AppVeyor](https://ci.appveyor.com/api/projects/status/kly8aqr2ovqwg92p/branch/master?svg=true)](https://ci.appveyor.com/project/raryosu/rin/branch/master)
 [![devDependency Status](https://david-dm.org/raryosu/Rin/dev-status.svg)](https://david-dm.org/raryosu/Rin#info=devDependencies)
 [![The MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![npm](https://img.shields.io/npm/v/bootstrap-rin.svg)](https://www.npmjs.com/package/bootstrap-rin)
 
 [http://rinhoshizo.la/](http://rinhoshizo.la/)
 
@@ -25,6 +26,16 @@
 ### Download
 
 [Releases](https://github.com/raryosu/Rin/releases)から最新版をダウンロードしてください。
+
+### npm
+
+Node.js のパッケージ管理システムである、 [npm](https://npmjs.com) からダウンロードすることができます。 [webpack](https://webpack.js.org/) など、npmを利用したmodule bundlerでご利用ください。
+
+```
+npm install --save bootstrap-rin
+```
+
+パッケージ名が 「**bootstrap**-rin」 であることに注意してください。
 
 ### Bower
 
