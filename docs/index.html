@@ -81,7 +81,7 @@
 				<h1>Bootstrap Theme for Japanese.</h1>
 				<p>"Rin" は "Honoka" を元にした日本語も美しく表示できるBootstrapテーマです。</p>
 				<div class="download">
-					<a href="//github.com/raryosu/Rin/releases" class="btn btn-warning btn-lg"><i class="fa fa-github-alt"></i> Download from GitHub</a>
+					<a href="//github.com/raryosu/Rin/releases" class="btn btn-warning btn-lg last-release-download-link"><i class="fa fa-github-alt"></i> Download from GitHub</a>
 					<a href="/bootstrap-ja.html" class="btn btn-primary btn-lg"><i class="fa fa-play"></i> Live Demo</a>
 					<a href="http://honokak.osaka/" class="btn btn-warning btn-lg"><i class="fa fa-rocket"></i> Visit "Honoka"</a>
 				</div>
@@ -417,7 +417,7 @@ $(document).ready(function(e) {
 	.done(function(last, base) {
 		$('.last-version').text(last[0].tag_name.split('v')[1]);
 		$('.base-version').text(base[0].devDependencies.bootstrap);
-		$('.last-release-download-link').attr({'href': '//github.com/windyakin/Honoka/releases/tag/' + last[0].tag_name })
+		$('.last-release-download-link').attr({'href': '//github.com/raryosu/Rin/releases/tag/' + last[0].tag_name })
 	});
 });
 </script>

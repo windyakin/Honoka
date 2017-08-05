@@ -14,7 +14,7 @@
 
 ## About "Rin"
 
-通常の[Bootstrap](http://getbootstrap.com/)では，日本語のフォント指定や文字サイズは最適とはいえません。"Honoka"はそんなBootstrapをベースに，日本語表示に適したフォント指定や，文字サイズに関するコードを追記したBootstrapテーマの一つです。
+通常の[Bootstrap](http://getbootstrap.com/)では，日本語のフォント指定や文字サイズは最適とはいえません。"Rin"や"Honoka"はそんなBootstrapをベースに，日本語表示に適したフォント指定や，文字サイズに関するコードを追記したBootstrapテーマの一つです。
 
 ## Live Demo
 
@@ -55,7 +55,7 @@ bower install --save-dev Rin#(version)
 
 ``(version)``にはバージョン番号を指定します(ex. ``Rin#3.3.6-3``)。Rinの最新バージョン番号は[Releases](https://github.com/raryosu/Rin/releases)から確認してください。
 
-バージョン番号を指定しなかった場合，Bowerの仕様上「Honoka」がインストールされます。
+**バージョン番号を指定しなかった場合，Bowerの仕様上「Honoka」がインストールされます。**
 
 また，django-bower等のラッパーを利用する場合は，以下のような指定を行うことでRinを利用することができます。
 

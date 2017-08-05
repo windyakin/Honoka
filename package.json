@@ -4,6 +4,9 @@
   "description": "Rin is one of the Bootstrap original theme (based on Honoka).",
   "author": "Hagihara Ryosuke",
   "website": "http://rinhoshizo.la/",
+  "config": {
+    "package_name": "Rin"
+  },
   "keywords": [
     "css",
     "bootstrap",
