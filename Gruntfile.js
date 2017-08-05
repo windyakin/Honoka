@@ -12,12 +12,12 @@ module.exports = function(grunt) {
 		pkg: pkg,
 		bowerJSON: bower,
 		banner:	'/*!\n' +
-						' * <%= pkg.name %> v<%= pkg.version %>\n' +
+						' * <%= pkg.config.package_name %> v<%= pkg.version %>\n' +
 						' * Website <%= pkg.website %>\n' +
 						' * Copyright 2015 <%= pkg.author %>\n' +
 						' * The <%= pkg.license %> License\n' +
 						(
-							pkg.name !== "Honoka" ?
+							pkg.name !== "bootstrap-honoka" ?
 								' * Based on Honoka (http://honokak.osaka/) by windyakin\n'
 							:
 								''
