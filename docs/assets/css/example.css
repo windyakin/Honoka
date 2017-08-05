@@ -153,6 +153,19 @@ body {
   margin-top: 80px;
 }
 
+.v4-dev a {
+  display: block;
+  padding: 10px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  background-color: #2196f3;
+}
+.v4-dev a:hover, .v4-dev a:active, .v4-dev a:focus {
+  background-color: #0c7cd5;
+}
+
 .social-button {
   position: relative;
   padding: 10px 0;
@@ -278,6 +291,11 @@ section.section .subtitle h2 {
 
 .japanese-font .well > h3 {
   margin-top: 24px;
+}
+
+h3 .package-system-logo {
+  width: auto;
+  height: 48px;
 }
 
 .available-bower {

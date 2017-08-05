@@ -1,9 +1,23 @@
 {
-  "name": "Rin",
+  "name": "bootstrap-rin",
   "version": "3.3.7-2",
   "description": "Rin is one of the Bootstrap original theme (based on Honoka).",
   "author": "Hagihara Ryosuke",
   "website": "http://rinhoshizo.la/",
+  "config": {
+    "package_name": "Rin"
+  },
+  "keywords": [
+    "css",
+    "bootstrap",
+    "sass",
+    "scss",
+    "lovelive",
+    "web",
+    "front-end",
+    "framework",
+    "theme"
+  ],
   "license": "MIT",
   "main": "Gruntfile.js",
   "scripts": {
@@ -12,6 +26,7 @@
     "server": "grunt server",
     "release": "grunt package"
   },
+  "style": "dist/css/bootstrap.css",
   "repository": {
     "type": "git",
     "url": "https://github.com/raryosu/Rin.git"
@@ -32,5 +47,11 @@
     "grunt-csscomb": "^3.1.1",
     "grunt-scss-lint": "^0.5.0",
     "grunt-text-replace": "^0.4.0"
-  }
+  },
+  "files": [
+    "dist",
+    "scss/**/*.scss",
+    "Gruntfile.js",
+    "LICENSE"
+  ]
 }

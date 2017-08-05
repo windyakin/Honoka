@@ -70,6 +70,10 @@
 	</div>
 </header>
 
+<aside class="v4-dev">
+  <a href="http://v4-alpha.honokak.osaka/">Honoka v4.0.0-alpha.1 (Pre-release) だよっ！</a>
+</aside>
+
 <div class="jumbotron special">
 	<div class="honoka"></div>
 	<div class="container">
@@ -400,6 +404,7 @@ $(document).ready(function(e) {
 	.done(function(last, base) {
 		$('.last-version').text(last[0].tag_name.split('v')[1]);
 		$('.base-version').text(base[0].devDependencies.bootstrap);
+		$('.last-release-download-link').attr({'href': '//github.com/windyakin/Honoka/releases/tag/' + last[0].tag_name })
 	});
 });
 </script>
