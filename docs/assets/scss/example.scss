@@ -36,6 +36,21 @@ body {
 	margin-top: $navbar-height;
 }
 
+.v4-dev {
+	a {
+		display: block;
+		padding: $padding-large-vertical;
+		font-weight: bold;
+		color: #fff;
+		text-align: center;
+		text-decoration: none;
+		background-color: $brand-primary;
+		&:hover, &:active, &:focus {
+			background-color: darken($brand-primary, 10%);
+		}
+	}
+}
+
 .social-button {
 	position: relative;
 	padding: $padding-large-vertical 0;
@@ -177,6 +192,11 @@ section.section {
 	}
 }
 
+h3 .package-system-logo {
+	width: auto;
+	height: $font-size-h3 * 2;
+}
+
 .available-bower {
 	position: relative;
 	overflow: hidden;
@@ -239,5 +259,17 @@ footer {
 	> h3 {
 		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 		font-size: 24px;
+	}
+}
+
+.v4-pre {
+	display: block;
+	padding: 15px 20px;
+	font-weight: 700;
+	color: #fff;
+	text-align: center;
+	background-color: #0275d8;
+	&:hover {
+		color: #fff;
 	}
 }
