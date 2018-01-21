@@ -28,6 +28,11 @@
     "type": "git",
     "url": "https://github.com/windyakin/honoka.git"
   },
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "jquery": ">=1.9.1",
+    "popper.js": "^1.12.9"
+  },
   "devDependencies": {
     "del": "^3.0.0",
     "gulp": "^3.9.1",
