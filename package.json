@@ -19,8 +19,9 @@
     "theme"
   ],
   "license": "MIT",
-  "main": "dummy.js",
+  "main": "gulpfile.js",
   "scripts": {
+    "start": "gulp default"
   },
   "style": "dist/css/bootstrap.css",
   "repository": {
@@ -28,6 +29,7 @@
     "url": "https://github.com/windyakin/honoka.git"
   },
   "devDependencies": {
+    "gulp": "^3.9.1"
   },
   "files": [
     "dist",
