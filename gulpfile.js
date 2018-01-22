@@ -2,6 +2,7 @@ const Gulp = require('gulp');
 const Plugins = require('gulp-load-plugins')();
 const Fs = require('fs');
 const Del = require('del');
+const RunSequence = require('run-sequence');
 
 const PackageJSON = JSON.parse(Fs.readFileSync('./package.json'));
 
@@ -68,4 +69,8 @@ Gulp.task('minify:css', () => {
       extname: '.min.css'
     }))
     .pipe(Gulp.dest('dist/css'));
+});
+
+Gulp.task('css', () => {
+  RunSequence('build:css', 'minify:css', 'banner:css');
 });
