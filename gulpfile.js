@@ -6,6 +6,16 @@ Gulp.task('default', () => {
   console.log("Hello, world!");
 });
 
+Gulp.task('lint:css', () => {
+  return Gulp.src(['scss/**/*.scss'])
+    .pipe(Plugins.stylelint({
+      failAfterError: true,
+      reporters: [
+        {formatter: 'verbose', console: true}
+      ]
+    }));
+});
+
 Gulp.task('build:css', () => {
   return Gulp.src(['scss/**/*.scss'])
     .pipe(Plugins.plumber({

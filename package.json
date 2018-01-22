@@ -41,8 +41,14 @@
     "gulp-plumber": "^1.2.0",
     "gulp-postcss": "^7.0.1",
     "gulp-sass": "^3.1.0",
+    "gulp-stylelint": "^6.0.0",
     "postcss-flexbugs-fixes": "^3.3.0",
-    "run-sequence": "^2.2.1"
+    "run-sequence": "^2.2.1",
+    "stylelint": "^8.4.0",
+    "stylelint-config-recommended-scss": "^3.0.0",
+    "stylelint-config-standard": "^18.0.0",
+    "stylelint-order": "^0.8.0",
+    "stylelint-scss": "^2.2.0"
   },
   "files": [
     "dist",
