@@ -1,6 +1,15 @@
 const Gulp = require('gulp');
 const Plugins = require('gulp-load-plugins')();
+const Fs = require('fs');
 const Del = require('del');
+
+const PackageJSON = JSON.parse(Fs.readFileSync('./package.json'));
+
+const BANNER = `/*!
+ * ${PackageJSON.config.packageName} v${PackageJSON.version} (${PackageJSON.website})
+ * Copyright ${PackageJSON.config.projectStartYear} ${PackageJSON.author}
+ * Licensed under ${PackageJSON.license} (${PackageJSON.config.licenseUrl})
+ */`;
 
 Gulp.task('default', () => {
   console.log("Hello, world!");
@@ -41,6 +50,12 @@ Gulp.task('build:css', () => {
       config: '../build/postcss.config.js',
       replace: 'dist/css/bootstrap.css'
     }))
+    .pipe(Gulp.dest('dist/css'));
+});
+
+Gulp.task('banner:css', () => {
+  return Gulp.src(['dist/css/*.css'])
+    .pipe(Plugins.replace('/*!', `@charset "UTF-8";\n${BANNER}\n/*!`))
     .pipe(Gulp.dest('dist/css'));
 });
 
