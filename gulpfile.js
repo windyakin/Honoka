@@ -43,3 +43,14 @@ Gulp.task('build:css', () => {
     }))
     .pipe(Gulp.dest('dist/css'));
 });
+
+Gulp.task('minify:css', () => {
+  return Gulp.src(['dist/css/*.css', '!dist/css/*.min.css'])
+    .pipe(Plugins.cleanCss({
+      level: 1,
+    }))
+    .pipe(Plugins.rename({
+      extname: '.min.css'
+    }))
+    .pipe(Gulp.dest('dist/css'));
+});
