@@ -16,7 +16,7 @@ Gulp.task('default', () => {
   console.log("Hello, world!");
 });
 
-Gulp.task('lint:css', () => {
+Gulp.task('css:lint', () => {
   return Gulp.src(['scss/**/*.scss'])
     .pipe(Plugins.stylelint({
       failAfterError: true,
@@ -26,7 +26,7 @@ Gulp.task('lint:css', () => {
     }));
 });
 
-Gulp.task('build:css', () => {
+Gulp.task('css:build', () => {
   return Gulp.src(['scss/**/*.scss'])
     .pipe(Plugins.plumber({
       errorHandler: function(err) {
@@ -54,13 +54,13 @@ Gulp.task('build:css', () => {
     .pipe(Gulp.dest('dist/css'));
 });
 
-Gulp.task('banner:css', () => {
+Gulp.task('css:banner', () => {
   return Gulp.src(['dist/css/*.css'])
     .pipe(Plugins.replace('/*!', `@charset "UTF-8";\n${BANNER}\n/*!`))
     .pipe(Gulp.dest('dist/css'));
 });
 
-Gulp.task('minify:css', () => {
+Gulp.task('css:minify', () => {
   return Gulp.src(['dist/css/*.css', '!dist/css/*.min.css'])
     .pipe(Plugins.cleanCss({
       level: 1,
@@ -71,6 +71,6 @@ Gulp.task('minify:css', () => {
     .pipe(Gulp.dest('dist/css'));
 });
 
-Gulp.task('css', () => {
-  RunSequence('build:css', 'minify:css', 'banner:css');
+Gulp.task('css', (resolve) => {
+  RunSequence('css:build', 'css:minify', 'css:banner', () => resolve());
 });
