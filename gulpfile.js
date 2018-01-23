@@ -16,6 +16,10 @@ Gulp.task('default', () => {
   console.log("Hello, world!");
 });
 
+Gulp.task('css:clean', () => {
+  return Del(['dist/css/**/*']);
+});
+
 Gulp.task('css:lint', () => {
   return Gulp.src(['scss/**/*.scss'])
     .pipe(Plugins.stylelint({
@@ -71,6 +75,10 @@ Gulp.task('css:minify', () => {
     .pipe(Gulp.dest('dist/css'));
 });
 
+Gulp.task('clean', (resolve) => {
+  RunSequence(['css:clean'], () => resolve());
+});
+
 Gulp.task('css', (resolve) => {
-  RunSequence('css:build', 'css:minify', 'css:banner', () => resolve());
+  RunSequence('clean', 'css:build', 'css:minify', 'css:banner', () => resolve());
 });
