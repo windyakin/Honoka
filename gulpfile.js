@@ -15,6 +15,15 @@ const BANNER = `/*!
 Gulp.task('default', () => {
 });
 
+Gulp.task('js:clean', () => {
+  return Del(['dist/js/**/*']);
+});
+
+Gulp.task('js:copy', ['js:clean'],() => {
+  return Gulp.src(['bootstrap/dist/js/**/*.js'], { cwd: 'node_modules' })
+    .pipe(Gulp.dest('dist/js'));
+});
+
 Gulp.task('css:clean', () => {
   return Del(['dist/css/**/*']);
 });
