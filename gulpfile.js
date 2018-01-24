@@ -84,9 +84,13 @@ Gulp.task('css:minify', () => {
 });
 
 Gulp.task('clean', (resolve) => {
-  return RunSequence(['css:clean'], () => { resolve(); });
+  return RunSequence(['css:clean', 'js:clean'], () => { resolve(); });
 });
 
 Gulp.task('css', (resolve) => {
-  return RunSequence('clean', 'css:build', 'css:minify', 'css:banner', () => { resolve(); });
+  return RunSequence('css:clean', 'css:build', 'css:minify', 'css:banner', () => { resolve(); });
+});
+
+Gulp.task('js', (resolve) => {
+  return RunSequence('js:clean', 'js:copy', () => { resolve(); });
 });
