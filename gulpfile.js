@@ -3,6 +3,7 @@ const Plugins = require('gulp-load-plugins')();
 const Fs = require('fs');
 const Del = require('del');
 const RunSequence = require('run-sequence');
+const BrowserSync = require('browser-sync').create();
 
 const PackageJSON = JSON.parse(Fs.readFileSync('./package.json'));
 
@@ -82,6 +83,70 @@ Gulp.task('css:minify', () => {
     }))
     .pipe(Gulp.dest('dist/css'));
 });
+
+Gulp.task('docs:clean', () => {
+  return Del(['docs/css/**/*', 'docs/js/**/*']);
+});
+
+Gulp.task('docs:copy', () => {
+  return Gulp.src(['dist/**/*'], { base: 'dist' })
+    .pipe(Gulp.dest('docs'));
+});
+
+Gulp.task('docs:css', () => {
+  return Gulp.src(['docs/assets/scss/**/*.scss'])
+    .pipe(Plugins.plumber({
+      errorHandler(err) {
+        console.error(err.message);
+        this.emit('end');
+      },
+    }))
+    .pipe(Plugins.sass({
+      includePaths: [
+        'node_modules/',
+        'scss/',
+      ],
+      outputStyle: 'expanded',
+      sourceMap: true,
+      sourceMapContents: true,
+      lineFeed: 'lf',
+      precision: 6,
+    }))
+    .pipe(Plugins.plumber.stop())
+    .pipe(Plugins.postcss({
+      noMap: true,
+      use: 'autoprefixer',
+      config: '../../../build/postcss.config.js',
+      replace: 'docs/assets/css/bootstrap.css',
+    }))
+    .pipe(Gulp.dest('docs/assets/css'));
+});
+
+Gulp.task('docs:serve', () => {
+  BrowserSync.init({
+    server: 'docs/',
+    port: 8000,
+  });
+});
+
+Gulp.task('watch', () => {
+  const message = (ev) => {
+    console.log(`File: ${ev.path} was ${ev.type}, running tasks...`);
+  };
+  Gulp.watch(['scss/**/*'], () => { RunSequence('css', 'docs:copy'); })
+    .on('change', message);
+  Gulp.watch(['docs/**/*.html'])
+    .on('change', message)
+    .on('change', BrowserSync.reload);
+  Gulp.watch(['docs/assets/scss/**/*.scss'], ['docs:css'])
+    .on('change', message);
+});
+
+Gulp.task('docs', (resolve) => {
+  return RunSequence('docs:clean', 'docs:copy', 'docs:css', () => { resolve(); });
+});
+
+Gulp.task('serve', ['docs:serve', 'watch']);
 
 Gulp.task('clean', (resolve) => {
   return RunSequence(['css:clean', 'js:clean'], () => { resolve(); });

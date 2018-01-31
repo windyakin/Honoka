@@ -37,6 +37,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^7.2.5",
+    "browser-sync": "^2.23.6",
     "clean-css": "^4.1.9",
     "del": "^3.0.0",
     "eslint": "^4.16.0",
