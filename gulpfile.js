@@ -11,7 +11,14 @@ const BANNER = `/*!
  * ${PackageJSON.config.packageName} v${PackageJSON.version} (${PackageJSON.website})
  * Copyright ${PackageJSON.config.projectStartYear} ${PackageJSON.author}
  * Licensed under ${PackageJSON.license} (${PackageJSON.config.licenseUrl})
- */`;
+ */
+/*!
+ * Bootstrap v${PackageJSON.dependencies.bootstrap} (https://getbootstrap.com)
+ * Copyright 2011-2018 The Bootstrap Authors
+ * Copyright 2011-2018 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+`;
 
 Gulp.task('default', () => {
 });
@@ -69,7 +76,7 @@ Gulp.task('css:build', () => {
 
 Gulp.task('css:banner', () => {
   return Gulp.src(['dist/css/*.css'])
-    .pipe(Plugins.replace('/*!', `@charset "UTF-8";\n${BANNER}\n/*!`))
+    .pipe(Plugins.replace('/*! [<<original banner space>>] */', BANNER))
     .pipe(Gulp.dest('dist/css'));
 });
 
