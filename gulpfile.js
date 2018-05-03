@@ -160,11 +160,11 @@ Gulp.task('clean', (resolve) => {
 });
 
 Gulp.task('css', (resolve) => {
-  return RunSequence('css:clean', 'css:build', 'css:minify', 'css:banner', resolve);
+  return RunSequence('css:build', 'css:minify', 'css:banner', resolve);
 });
 
 Gulp.task('js', (resolve) => {
-  return RunSequence('js:clean', 'js:copy', resolve);
+  return RunSequence('js:copy', resolve);
 });
 
 Gulp.task('test', (resolve) => {
