@@ -20,7 +20,8 @@ const BANNER = `/*!
  */
 `;
 
-Gulp.task('default', () => {
+Gulp.task('default', (resolve) => {
+  return RunSequence('build', resolve);
 });
 
 Gulp.task('gulp:lint', () => {
