@@ -1,0 +1,14 @@
+{
+  "name": "honoka-thumbnail",
+  "version": "1.0.0",
+  "description": "Take a screenshots to use for OGP image",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "windyakin",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^1.3.0"
+  }
+}
