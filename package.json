@@ -23,7 +23,8 @@
   "license": "MIT",
   "main": "gulpfile.js",
   "scripts": {
-    "start": "gulp default"
+    "start": "gulp default",
+    "test": "gulp test"
   },
   "style": "dist/css/bootstrap.css",
   "repository": {
