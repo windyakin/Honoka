@@ -4,18 +4,11 @@ init:
   - git config --global core.autocrlf true
 
 environment:
-  nodejs_version: 6.9.1
-  ruby_version: 23-x64
+  nodejs_version: "8"
 
 install:
-  - SET PATH=C:\Ruby%ruby_version%\bin;%PATH%
-  - ruby --version
-  - gem --version
-  - gem install bundler --quiet --no-ri --no-rdoc
-  - bundler --version
-  - bundle install --without documentation --path vendor/bundle
   - ps: Install-Product node $env:nodejs_version
-  - npm install --force
+  - npm install
 
 build: off
 
@@ -30,4 +23,3 @@ matrix:
 cache:
   - C:\Users\appveyor\AppData\Roaming\npm-cache -> package.json
   - node_modules -> package.json
-  - vendor
