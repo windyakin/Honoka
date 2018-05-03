@@ -787,10 +787,12 @@ input[type="button"].btn-block {
 }
 
 .icon.icon-hatebu::before {
-  font-family: Verdana, sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  content: "B!";
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.1rem;
+  content: "";
+  background-image: url("../img/hatebu.svg");
+  background-size: 100% 100%;
 }
 
 .social-button {
@@ -831,7 +833,6 @@ input[type="button"].btn-block {
   min-height: 530px;
   margin-bottom: 0;
   overflow: hidden;
-  text-align: center;
   background-color: #ffd699;
   background-image: url("../img/circle.png");
   background-repeat: no-repeat;
@@ -841,7 +842,7 @@ input[type="button"].btn-block {
 
 .jumbotron.special .honoka {
   position: absolute;
-  bottom: -20px;
+  bottom: -5rem;
   left: 0;
   width: 400px;
   height: 530px;
@@ -851,11 +852,16 @@ input[type="button"].btn-block {
 
 .jumbotron.special .outline {
   position: relative;
-  margin-top: 180px;
 }
 
 .jumbotron.special .copy {
-  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+}
+
+@media (max-width: 767.98px) {
+  .jumbotron.special .copy {
+    font-size: 2.5rem;
+  }
 }
 
 .jumbotron.special .download {
@@ -944,24 +950,8 @@ input[type="button"].btn-block {
 h3 .package-system-logo {
   width: auto;
   height: 3.5rem;
-}
-
-.available-bower {
-  position: relative;
-  overflow: hidden;
-}
-
-.available-bower .bower-logo {
-  position: absolute;
-  right: 40px;
-  bottom: 0;
-  width: 300px;
-  height: 300px;
-  background-image: url("../img/bower-logo.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
-  opacity: .3;
+  font-size: 3.5rem;
+  line-height: 3.5rem;
 }
 
 .featured .subtitle h2 {
@@ -998,16 +988,6 @@ footer {
 footer .copyright {
   padding-top: 1rem;
   padding-bottom: 1rem;
-}
-
-.bootstrap-default {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-}
-
-.bootstrap-default > h3 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 24px;
 }
 
 /*# sourceMappingURL=example.css.map */

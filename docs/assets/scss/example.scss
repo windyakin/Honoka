@@ -41,10 +41,12 @@ $brand-colors: map-merge((
 }
 
 .icon.icon-hatebu::before {
-  font-family: Verdana, sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  content: "B!";
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.1rem;
+  content: "";
+  background-image: url("../img/hatebu.svg");
+  background-size: 100% 100%;
 }
 
 .social-button {
@@ -82,7 +84,6 @@ $brand-colors: map-merge((
   min-height: 530px;
   margin-bottom: 0;
   overflow: hidden;
-  text-align: center;
   background-color: lighten($brand-honoka, 30%);
   background-image: url("../img/circle.png");
   background-repeat: no-repeat;
@@ -90,7 +91,7 @@ $brand-colors: map-merge((
   background-size: 70%;
   .honoka {
     position: absolute;
-    bottom: -20px;
+    bottom: -1 * ($jumbotron-padding * 2 + $spacer);
     left: 0;
     width: 400px;
     height: 530px;
@@ -99,10 +100,12 @@ $brand-colors: map-merge((
   }
   .outline {
     position: relative;
-    margin-top: 180px;
   }
   .copy {
-    font-family: Montserrat, sans-serif;
+    font-weight: $font-weight-bold;
+    @include media-breakpoint-down(sm) {
+      font-size: $h1-font-size;
+    }
   }
   .download {
     margin: map-get($spacers, 3) auto map-get($spacers, 2);
@@ -190,23 +193,8 @@ $brand-colors: map-merge((
 h3 .package-system-logo {
   width: auto;
   height: $h3-font-size * 2;
-}
-
-.available-bower {
-  position: relative;
-  overflow: hidden;
-  .bower-logo {
-    position: absolute;
-    right: 40px;
-    bottom: 0;
-    width: 300px;
-    height: 300px;
-    background-image: url("../img/bower-logo.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    opacity: .3;
-  }
+  font-size: $h3-font-size * 2;
+  line-height: $h3-font-size * 2;
 }
 
 .featured {
@@ -249,14 +237,5 @@ footer {
   .copyright {
     padding-top: $spacer;
     padding-bottom: $spacer;
-  }
-}
-
-.bootstrap-default {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  > h3 {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 24px;
   }
 }

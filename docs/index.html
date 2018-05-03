@@ -29,7 +29,7 @@
 <body>
 
 <header>
-  <nav class="navbar navbar-expand-md navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
       <a class="navbar-brand" href="./">
         <img src="assets/img/brand.png" width="30" height="30" class="d-inline-block align-top mr-1" alt="Honoka">
@@ -70,18 +70,28 @@
   </nav>
 </header>
 
-
 <div class="jumbotron special">
-  <div class="honoka"></div>
-  <div class="outline">
-    <div class="display-3 copy">Bootstrap Theme for Japanese.</div>
-    <p class="lead">"Honoka" は日本語も美しく表示できるBootstrapテーマです。</p>
-    <div class="download">
-      <a href="//github.com/windyakin/Honoka/releases" class="btn btn-honoka btn-lg last-release-download-link"><i class="fab fa-github-alt"></i> Download from GitHub</a>
-      <a href="/bootstrap-ja.html" class="btn btn-primary btn-lg"><i class="fa fa-play-circle"></i> Live Demo</a>
-    </div>
-    <div class="basedon small">
-      Last version v<span class="last-version"></span> ・ Based on <a href="http://getbootstrap.com/">Bootstrap</a> v<span class="base-version"></span>
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-4 d-xl-block d-none">
+        <div class="honoka"></div>
+      </div>
+      <div class="col-xl-8 outline text-xl-left text-center">
+        <div class="display-3 copy">
+          <span class="d-inline-block">その Bootstrap は､</span><br>
+          <span class="d-inline-block">日本語も</span><span class="d-inline-block"><u>美しく</u></span><br>
+          <span class="d-inline-block">表示されて</span><span class="d-inline-block">ますか？</span>
+        </div>
+        <p class="lead mt-2">Honoka は日本語も美しく表示できる Bootstrap テーマです</p>
+        <hr>
+        <ul class="download list-inline">
+          <li class="list-inline-item"><a href="//github.com/windyakin/Honoka/releases" class="btn btn-honoka btn-lg last-release-download-link"><i class="fab fa-github-alt"></i> Download from GitHub</a></li>
+          <li class="list-inline-item"><a href="/bootstrap-ja.html" class="btn btn-primary btn-lg"><i class="fa fa-play-circle"></i> Live Demo</a></li>
+        </ul>
+        <div class="basedon small">
+          Last version v<span class="last-version"></span> ・ Based on <a href="http://getbootstrap.com/">Bootstrap</a> v<span class="base-version"></span>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -130,7 +140,7 @@
         </div>
         <div class="point-description">
           <h4>Open Source</h4>
-          <p>作成に使用したSASSファイルは全て公開されています。変数の定義ファイルを変更することで自分好みの設定に変更することも可能です。</p>
+          <p>Honokaを構成するファイルは全て公開されています。変数の定義ファイルを変更することで自分好みの設定に変更することも可能です。</p>
         </div>
       </div>
       <div class="col-md-3 col-sm-6 point-box">
@@ -139,53 +149,14 @@
         </div>
         <div class="point-description">
           <h4>Optimized Japanese</h4>
-          <p>本家Bootstrapでは指定されていない日本語フォントに関する指定が行われているため、美しく日本語を表示できます。</p>
+          <p>Bootstrapでは考慮されていない日本語のフォント指定やウェイトの変更を行っているので、美しく日本語を表示できます。</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section section-inverse japanese-font">
-  <div class="container">
-    <div class="row">
-      <div class="col-12 subtitle">
-        <h2>Honokaは日本語を美しく表示します</h2>
-        <p>本家Bootstrapでは指定されていない日本語のフォント指定を行っているので、日本語も美しく表示されます。</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="card bootstrap-default text-justify">
-          <div class="card-body">
-            <h3>従来の日本語表示</h3>
-            <p>
-              秋葉原と神田と神保町という3つの街のはざまにある伝統校、音ノ木坂学院は統廃合の危機に瀕していた。
-              学校の危機に、2年生の高坂穂乃果を中心とした9人の女子生徒が立ち上がる。
-              私たちの大好きな学校を守るために、私たちができること……。それは、アイドルになること！ アイドルになって学校を世に広く宣伝し、入学者を増やそう！
-              ここから、彼女たちの「みんなで叶える物語」（スクールアイドルプロジェクト）が始まった！
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="card text-justify">
-          <div class="card-body">
-            <h3>Honokaの日本語表示</h3>
-            <p>
-              秋葉原と神田と神保町という3つの街のはざまにある伝統校、音ノ木坂学院は統廃合の危機に瀕していた。
-              学校の危機に、2年生の高坂穂乃果を中心とした9人の女子生徒が立ち上がる。
-              私たちの大好きな学校を守るために、私たちができること……。それは、アイドルになること！ アイドルになって学校を世に広く宣伝し、入学者を増やそう！
-              ここから、彼女たちの「みんなで叶える物語」（スクールアイドルプロジェクト）が始まった！
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section section-default getting-started">
+<section class="section section-inverse getting-started">
   <div class="container">
     <div class="row">
       <div class="col-12 subtitle">
@@ -193,19 +164,46 @@
         <p class="lead">導入はとっても簡単です</p>
       </div>
     </div>
-    <div class="row">
+    <div class="row my-3">
       <div class="col-12 text-center">
         <div class="form-group">
-          <a href="//github.com/windyakin/Honoka/releases" class="btn btn-primary btn-lg last-release-download-link"><i class="fab fa-github-alt"></i> Download from GitHub</a>
-          <p class="help-block">Last version v<span class="last-version"></span> ・ <a href="//github.com/windyakin/Honoka/blob/master/LICENSE">MIT License</a></p>
+          <a href="//github.com/windyakin/Honoka/releases" class="btn btn-primary btn-lg last-release-download-link"><i class="fas fa-file-archive fa-lg mr-2"></i> Download from GitHub</a>
+          <p class="form-text text-muted"><small>Last version v<span class="last-version"></span> ・ <a href="//github.com/windyakin/Honoka/blob/master/LICENSE">MIT License</a></small></p>
         </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 text-center my-3">
+        <h3><a href="https://www.npmjs.com/package/bootstrap-honoka"><img src="assets/img/npm-logo.png" alt="npm" class="img-fluid package-system-logo"></a></h3>
+        <div class="input-group input-group-lg">
+          <input type="text" class="form-control border-secondary" id="npm-install-command" value="npm install --save bootstrap-honoka" onclick="this.select();" readonly="readonly">
+          <span class="input-group-append">
+            <button type="button" class="btn btn-light border-secondary" data-clipboard-target="#npm-install-command"><i class="fa fa-clipboard"></i></button>
+          </span>
+        </div>
+        <div><small class="form-text text-muted"><a href="https://www.npmjs.com/package/bootstrap-honoka">npmjs.com</a> / v3.3.7-a 以降から対応</small></div>
+      </div>
+      <div class="col-md-6 text-center my-3">
+        <h3><img src="assets/img/bower-logo.png" alt="Bower" class="img-fluid package-system-logo"> Bower</h3>
+        <div class="input-group input-group-lg">
+          <input type="text" class="form-control border-secondary" id="bower-install-command" value="bower install --save $(node -e &#34;$(curl -fsSL https://cdn.honokak.osaka/last.js)&#34; windyakin Honoka)"
+           onclick="this.select();" readonly="readonly">
+           <span class="input-group-append">
+            <button type="button" class="btn btn-light border-secondary" data-clipboard-target="#bower-install-command"><i class="fa fa-clipboard"></i></button>
+          </span>
+        </div>
+        <div><small class="form-text text-muted">v3.3.5-c 以降から対応</small></div>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center">
         <p>使い方やファイルの説明など、詳しくは <a href="//github.com/windyakin/Honoka#readme">README</a> または <a href="//github.com/windyakin/Honoka/wiki">Wiki</a> をご確認ください</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section section-inverse avaliable-webpack">
+<section class="section section-inverse avaliable-webpack d-none">
   <div class="container">
     <div class="row">
       <div class="col-12 subtitle">
@@ -219,7 +217,7 @@
         <div class="input-group input-group-lg">
           <input type="text" class="form-control" id="npm-install-command" value="npm install --save bootstrap-honoka" onclick="this.select();" readonly="readonly">
           <span class="input-group-append">
-            <button type="button" class="btn btn-default" data-clipboard-target="#npm-install-command"><i class="fa fa-clipboard"></i></button>
+            <button type="button" class="btn btn-secondary" data-clipboard-target="#npm-install-command"><i class="fa fa-clipboard"></i></button>
           </span>
         </div>
         <div><small class="form-text text-muted"><a href="https://www.npmjs.com/package/bootstrap-honoka">npmjs.com</a> / v3.3.7-a 以降から対応</small></div>
@@ -230,7 +228,7 @@
           <input type="text" class="form-control" id="bower-install-command" value="bower install --save $(node -e &#34;$(curl -fsSL https://cdn.honokak.osaka/last.js)&#34; windyakin Honoka)"
            onclick="this.select();" readonly="readonly">
            <span class="input-group-append">
-            <button type="button" class="btn btn-default" data-clipboard-target="#bower-install-command"><i class="fa fa-clipboard"></i></button>
+            <button type="button" class="btn btn-secondary" data-clipboard-target="#bower-install-command"><i class="fa fa-clipboard"></i></button>
           </span>
         </div>
         <div><small class="form-text text-muted">v3.3.5-c 以降から対応</small></div>
@@ -252,7 +250,7 @@
         <div class="card my-3">
           <a href="https://proconist.net/"><img src="//cdn.honokak.osaka/assets/img/proconist.png" class="card-img-top"></a>
           <div class="card-body text-center">
-            <h5 class="card-title">Proconist.net</h5>
+            <h5 class="card-title m-0">Proconist.net</h5>
           </div>
         </div>
       </div>
@@ -260,7 +258,7 @@
         <div class="card my-3">
           <a href="http://sugoi.windyakin.net/"><img src="//cdn.honokak.osaka/assets/img/sugoi.png" class="card-img-top"></a>
           <div class="card-body text-center">
-            <h5 class="card-title">この高専がすごい！</h5>
+            <h5 class="card-title m-0">この高専がすごい！</h5>
           </div>
         </div>
       </div>
@@ -268,7 +266,7 @@
         <div class="card my-3">
           <a href="http://yashihei.net/"><img src="//cdn.honokak.osaka/assets/img/yashihei.png" class="card-img-top"></a>
           <div class="card-body text-center">
-            <h5 class="card-title">yashihei.net</h5>
+            <h5 class="card-title m-0">yashihei.net</h5>
           </div>
         </div>
       </div>
@@ -278,7 +276,7 @@
         <div class="card my-3">
           <a href="http://sysken.org/advent2015/"><img src="//cdn.honokak.osaka/assets/img/sysken.png" class="card-img-top"></a>
           <div class="card-body text-center">
-            <h5 class="card-title">SYSKEN Advent Calendar</h5>
+            <h5 class="card-title m-0">SYSKEN Advent Calendar</h5>
           </div>
         </div>
       </div>
@@ -286,7 +284,7 @@
         <div class="card my-3">
           <a href="http://timers-inc.com/"><img src="//cdn.honokak.osaka/assets/img/timers-inc.png" class="card-img-top"></a>
           <div class="card-body text-center">
-            <h5 class="card-title">TIMERS Inc</h5>
+            <h5 class="card-title m-0">TIMERS Inc</h5>
           </div>
         </div>
       </div>
@@ -294,7 +292,7 @@
         <div class="card my-3">
           <a href="http://ost.procon-online.net/"><img src="//cdn.honokak.osaka/assets/img/ost.png" class="card-img-top"></a>
           <div class="card-body text-center">
-            <h5 class="card-title">PROCON O.S.T. Project</h5>
+            <h5 class="card-title m-0">PROCON O.S.T. Project</h5>
           </div>
         </div>
       </div>
