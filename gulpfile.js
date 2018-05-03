@@ -170,3 +170,7 @@ Gulp.task('js', (resolve) => {
 Gulp.task('test', (resolve) => {
   return RunSequence('css:lint', resolve);
 });
+
+Gulp.task('build', (resolve) => {
+  return RunSequence('clean', ['css', 'js'], ['docs'], resolve);
+});
