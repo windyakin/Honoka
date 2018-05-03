@@ -82,12 +82,6 @@ honoka/
     └─ bootstrap.min.js
 ```
 
-### Do you hate "YuGothic"?
-
-もしあなたが日本語フォントに游ゴシックを指定したくない場合、その要素に対して `.no-thank-yu` (※ `you` ではなく `yu`) を指定することで游ゴシックの指定はされなくなり、 Windows 環境であれば「メイリオ」、 macOS 環境であればヒラギノ角ゴを優先的に使用するようになります。
-
-例えばページ全体に対して游ゴシックを用いたくない場合は、 `<body>` に対して `.no-thank-yu` を指定 (`<body class="no-thank-yu">`) することで、ページ全体で游ゴシックは使用されなくなります。
-
 ## Build
 
 ビルドの方法については [Wiki](https://github.com/windyakin/Honoka/wiki) をご覧ください。
