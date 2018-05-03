@@ -21,7 +21,7 @@
     "theme"
   ],
   "license": "MIT",
-  "main": "gulpfile.js",
+  "main": "dist/js/bootstrap.js",
   "scripts": {
     "start": "gulp default",
     "test": "gulp test"
