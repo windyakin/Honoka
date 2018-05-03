@@ -23,6 +23,13 @@ const BANNER = `/*!
 Gulp.task('default', () => {
 });
 
+Gulp.task('gulp:lint', () => {
+  return Gulp.src(['gulpfile.js'])
+    .pipe(Plugins.eslint({ useEslintrc: true }))
+    .pipe(Plugins.eslint.format())
+    .pipe(Plugins.eslint.failAfterError());
+});
+
 Gulp.task('js:clean', () => {
   return Del(['dist/js/**/*']);
 });
@@ -182,7 +189,7 @@ Gulp.task('js', (resolve) => {
 });
 
 Gulp.task('test', (resolve) => {
-  return RunSequence('css:lint', resolve);
+  return RunSequence('css:lint', 'gulp:lint', resolve);
 });
 
 Gulp.task('build', (resolve) => {
