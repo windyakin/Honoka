@@ -166,3 +166,7 @@ Gulp.task('css', (resolve) => {
 Gulp.task('js', (resolve) => {
   return RunSequence('js:clean', 'js:copy', resolve);
 });
+
+Gulp.task('test', (resolve) => {
+  return RunSequence('css:lint', resolve);
+});
