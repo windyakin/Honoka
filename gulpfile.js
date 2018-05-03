@@ -129,6 +129,20 @@ Gulp.task('docs:css', () => {
     .pipe(Gulp.dest('docs/assets/css'));
 });
 
+Gulp.task('packing', () => {
+  return Gulp.src(['dist/**/*', 'docs/bootstrap.html', 'README.md', 'LICENSE'], { base: '.' })
+    .pipe(Plugins.rename((path) => {
+      // NOTE: ディレクトリ構造を変更するために gulp-rename を使う
+      // FIXME: gulp-rename の仕様により引数代入を許可する
+      /* eslint-disable no-param-reassign */
+      path.dirname = path.dirname.replace(/^(?:dist|docs)/, '');
+      path.dirname = `honoka/${path.dirname}`;
+      /* eslint-enable no-param-reassign */
+    }))
+    .pipe(Plugins.zip(`bootstrap-${PackageJSON.config.packageName.toLowerCase()}-${PackageJSON.version}-dist.zip`))
+    .pipe(Gulp.dest('./'));
+});
+
 Gulp.task('docs:serve', () => {
   BrowserSync.init({
     server: 'docs/',
@@ -173,4 +187,8 @@ Gulp.task('test', (resolve) => {
 
 Gulp.task('build', (resolve) => {
   return RunSequence('clean', ['css', 'js'], ['docs'], resolve);
+});
+
+Gulp.task('release', (resolve) => {
+  return RunSequence('build', 'packing', resolve);
 });
