@@ -1,0 +1,262 @@
+@charset "UTF-8";
+
+// $spacer: 1rem;
+@import "bootstrap/scss/functions";
+@import "honoka/variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/buttons";
+// @import "bootstrap/scss/variables";
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+// @import "honoka/mixins";
+
+// stylelint-disable
+$brand-honoka:   #ff9800;
+$brand-twitter:  #55acee;
+$brand-facebook: #3b5998;
+$brand-hatena:   #178fde;
+
+$brand-colors: ();
+$brand-colors: map-merge((
+  "honoka":   $brand-honoka,
+  "twitter":  $brand-twitter,
+  "facebook": $brand-facebook,
+  "hatena":   $brand-hatena
+), $brand-colors);
+// stylelint-enable
+
+@each $color, $value in $brand-colors {
+  .btn-#{$color} {
+    @include button-variant($value, $value);
+    color: #fff;
+  }
+}
+
+.btn-twitter,
+.btn-facebook,
+.btn-hatena {
+  .fa.fa-lg {
+    vertical-align: -1px;
+  }
+}
+
+.icon.icon-hatebu::before {
+  font-family: Verdana, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  content: "B!";
+}
+
+.social-button {
+  position: relative;
+  padding: get-maps($spacers, 2) 0;
+  margin: 0 auto;
+  overflow: hidden;
+  > ul {
+    position: relative;
+    left: 50%;
+    float: left;
+    padding: 0;
+    margin: 0;
+    list-style: outside none none;
+    > li {
+      position: relative;
+      left: -50%;
+      float: left;
+      padding: 0;
+      margin: 0 10px;
+      .fb-like > span {
+        vertical-align: 0 !important;
+      }
+    }
+  }
+}
+
+.social {
+  padding: $spacer 0;
+  background: $gray-200;
+}
+
+.jumbotron.special {
+  position: relative;
+  min-height: 530px;
+  margin-bottom: 0;
+  overflow: hidden;
+  text-align: center;
+  background-color: lighten($brand-honoka, 30%);
+  background-image: url("../img/circle.png");
+  background-repeat: no-repeat;
+  background-position: -35% center;
+  background-size: 70%;
+  .honoka {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 400px;
+    height: 530px;
+    background-image: url("../img/honoka.png");
+    background-repeat: no-repeat;
+  }
+  .outline {
+    position: relative;
+    margin-top: 180px;
+  }
+  .copy {
+    font-family: Montserrat, sans-serif;
+  }
+  .download {
+    margin: map-get($spacers, 3) auto map-get($spacers, 2);
+  }
+  .basedon {
+    margin: map-get($spacers, 2) auto;
+    color: $gray-600;
+    text-shadow: #fff 0 1px 2px;
+  }
+}
+
+.section {
+  padding: ($spacer * 10) 0;
+  &.section-default {
+    background-color: $body-bg;
+  }
+  &.section-inverse {
+    background-color: lighten($brand-honoka, 45%);
+  }
+  .subtitle {
+    margin-bottom: $spacer;
+    text-align: center;
+    h2 {
+      margin-top: 0;
+    }
+  }
+}
+
+.point {
+  .point-box {
+    text-align: center;
+    .point-circle {
+      $point-circle-size: 100px;
+      width: $point-circle-size;
+      height: $point-circle-size;
+      margin: 0 auto;
+      font-size: $point-circle-size * .6;
+      line-height: $point-circle-size;
+      color: #fff;
+      border-radius: 100%;
+      &.start {
+        background-color: $success;
+      }
+      &.replace {
+        background-color: $warning;
+      }
+      &.compass {
+        background-color: $primary;
+      }
+      &.japanese {
+        background-color: $danger;
+      }
+    }
+    .point-description {
+      h4 {
+        margin-top: $spacer;
+        text-align: center;
+      }
+      p {
+        text-align: justify;
+      }
+    }
+  }
+}
+
+.icon-jp::before {
+  font-weight: 700;
+  content: "あ";
+}
+
+.getting-started {
+  h3 {
+    margin-top: 0;
+  }
+}
+
+.japanese-font {
+  .well {
+    > h3 {
+      margin-top: $spacer;
+    }
+  }
+}
+
+h3 .package-system-logo {
+  width: auto;
+  height: $h3-font-size * 2;
+}
+
+.available-bower {
+  position: relative;
+  overflow: hidden;
+  .bower-logo {
+    position: absolute;
+    right: 40px;
+    bottom: 0;
+    width: 300px;
+    height: 300px;
+    background-image: url("../img/bower-logo.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    opacity: .3;
+  }
+}
+
+.featured {
+  .subtitle {
+    h2 {
+      font-size: $h3-font-size;
+    }
+  }
+  .featured-list {
+    a {
+      opacity: .7;
+      transition: opacity .2s;
+      &:hover,
+      &:active,
+      &:focus {
+        opacity: .5;
+      }
+    }
+    li {
+      padding: $spacer $spacer;
+    }
+  }
+}
+
+.card {
+  > a {
+    transition: opacity .2s;
+    &:hover,
+    &:active,
+    &:focus {
+      opacity: .7;
+    }
+  }
+}
+
+footer {
+  padding: $spacer * 4 0;
+  color: $gray-200;
+  background-color: $gray-800;
+  .copyright {
+    padding-top: $spacer;
+    padding-bottom: $spacer;
+  }
+}
+
+.bootstrap-default {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  > h3 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 24px;
+  }
+}
