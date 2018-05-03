@@ -150,19 +150,19 @@ Gulp.task('watch', () => {
 });
 
 Gulp.task('docs', (resolve) => {
-  return RunSequence('docs:clean', 'docs:copy', 'docs:css', () => { resolve(); });
+  return RunSequence('docs:clean', 'docs:copy', 'docs:css', resolve);
 });
 
 Gulp.task('serve', ['docs:serve', 'watch']);
 
 Gulp.task('clean', (resolve) => {
-  return RunSequence(['css:clean', 'js:clean'], () => { resolve(); });
+  return RunSequence(['css:clean', 'js:clean'], resolve);
 });
 
 Gulp.task('css', (resolve) => {
-  return RunSequence('css:clean', 'css:build', 'css:minify', 'css:banner', () => { resolve(); });
+  return RunSequence('css:clean', 'css:build', 'css:minify', 'css:banner', resolve);
 });
 
 Gulp.task('js', (resolve) => {
-  return RunSequence('js:clean', 'js:copy', () => { resolve(); });
+  return RunSequence('js:clean', 'js:copy', resolve);
 });
