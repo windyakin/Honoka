@@ -25,15 +25,15 @@
     "dist/css/bootstrap.min.css"
   ],
   "ignore": [
+    "build",
+    "docs",
+    "scss",
     "/.*",
-    "dist/assets",
-    "dist/*.html",
-    "src",
+    "appveyor.yml",
     "CNAME"
   ],
   "dependencies": {},
   "devDependencies": {
-    "bootstrap": "3.3.7",
-    "bootstrap-sass": "3.3.7"
+    "bootstrap": "4.0.0"
   }
 }
