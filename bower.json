@@ -1,6 +1,6 @@
 {
-  "name": "Honoka",
-  "description": "Honoka is one of the Bootstrap original theme.",
+  "name": "Rin",
+  "description": "Rin is one of the Bootstrap original theme (based on Honoka).",
   "keywords": [
     "css",
     "sass",
@@ -13,11 +13,13 @@
     "web",
     "lovelive"
   ],
-  "author": "windyakin",
-  "homepage": "http://honokak.osaka/",
+  "authors": [
+    "Hagihara Ryosuke <me@raryosu.info>"
+  ],
+  "homepage": "https://rinhoshizo.la/",
   "repository": {
     "type": "git",
-    "url": "git://github.com/windyakin/Honoka.git"
+    "url": "git://github.com/raryosu/Rin.git"
   },
   "license": "MIT",
   "moduleType": "globals",

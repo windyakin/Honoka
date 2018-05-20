@@ -160,10 +160,10 @@ body {
   color: #fff;
   text-align: center;
   text-decoration: none;
-  background-color: #2196f3;
+  background-color: #3b9ae0;
 }
 .v4-dev a:hover, .v4-dev a:active, .v4-dev a:focus {
-  background-color: #0c7cd5;
+  background-color: #2081c8;
 }
 
 .social-button {
@@ -202,7 +202,7 @@ body {
   margin-bottom: 0;
   overflow: hidden;
   text-align: center;
-  background-color: #fdcea0;
+  background-color: #f0e68c;
   background-image: url("../img/circle.png");
   background-repeat: no-repeat;
   background-position: -35% center;
@@ -215,7 +215,6 @@ body {
   left: 0;
   width: 400px;
   height: 530px;
-  background-image: url("../img/honoka.png");
   background-repeat: no-repeat;
 }
 .jumbotron.special .outline {
@@ -238,10 +237,10 @@ section.section {
   padding: 100px 0;
 }
 section.section.section-default {
-  background-color: #f9f9f9;
+  background-color: #fff;
 }
 section.section.section-inverse {
-  background-color: #fff5eb;
+  background-color: #f9f5d0;
 }
 section.section .subtitle {
   margin-bottom: 24px;
@@ -264,16 +263,16 @@ section.section .subtitle h2 {
   border-radius: 100%;
 }
 .point .point-box .point-circle.start {
-  background-color: #4caf50;
+  background-color: #b2cf3e;
 }
 .point .point-box .point-circle.replace {
-  background-color: #ff9800;
+  background-color: #f0ba32;
 }
 .point .point-box .point-circle.compass {
-  background-color: #2196f3;
+  background-color: #3b9ae0;
 }
 .point .point-box .point-circle.japanese {
-  background-color: #f44336;
+  background-color: #ea4b94;
 }
 .point .point-box .point-circle.japanese span.icon-jp::before {
   font-weight: bold;
@@ -355,4 +354,16 @@ footer .copyright {
 .bootstrap-default > h3 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 24px;
+}
+
+.v4-pre {
+  display: block;
+  padding: 15px 20px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  background-color: #0275d8;
+}
+.v4-pre:hover {
+  color: #fff;
 }

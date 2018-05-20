@@ -5,7 +5,7 @@
 @import "honoka/variables";
 @import "honoka/mixins";
 
-$brand-honoka: #fdcea0;
+$brand-honoka: #f0e68c;
 $brand-twitter: #55acee;
 $brand-facebook: #3b5998;
 $brand-hatena: #178fde;
@@ -100,7 +100,6 @@ body {
 		left: 0;
 		width: 400px;
 		height: 530px;
-		background-image: url("../img/honoka.png");
 		background-repeat: no-repeat;
 	}
 	.outline {
@@ -260,5 +259,17 @@ footer {
 	> h3 {
 		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 		font-size: 24px;
+	}
+}
+
+.v4-pre {
+	display: block;
+	padding: 15px 20px;
+	font-weight: 700;
+	color: #fff;
+	text-align: center;
+	background-color: #0275d8;
+	&:hover {
+		color: #fff;
 	}
 }

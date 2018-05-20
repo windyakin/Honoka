@@ -1,11 +1,11 @@
 {
-  "name": "bootstrap-honoka",
-  "version": "3.3.7-a",
-  "description": "Honoka is one of the Bootstrap original theme.",
-  "author": "windyakin",
-  "website": "http://honokak.osaka/",
+  "name": "bootstrap-rin",
+  "version": "3.3.7-2",
+  "description": "Rin is one of the Bootstrap original theme (based on Honoka).",
+  "author": "Hagihara Ryosuke",
+  "website": "http://rinhoshizo.la/",
   "config": {
-    "package_name": "Honoka"
+    "package_name": "Rin"
   },
   "keywords": [
     "css",
@@ -29,7 +29,7 @@
   "style": "dist/css/bootstrap.css",
   "repository": {
     "type": "git",
-    "url": "https://github.com/windyakin/honoka.git"
+    "url": "https://github.com/raryosu/Rin.git"
   },
   "devDependencies": {
     "bower": "^1.7.9",
