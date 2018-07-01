@@ -64,9 +64,10 @@
     "stylelint-scss": "^2.5.0"
   },
   "files": [
+    "build",
     "dist",
     "scss/**/*.scss",
-    "Gruntfile.js",
+    "gulpfile.js",
     "LICENSE"
   ]
 }
