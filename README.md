@@ -14,7 +14,7 @@
 
 ## About "Honoka"
 
-通常の [Bootstrap](http://getbootstrap.com/) では、日本語を表示した時にそのフォント指定やウェイトが最適とはいえません。 "Honoka" は Bootstrap をベースに、日本語表示に適したフォントの指定や、ウェイトに関するコードを追記した Bootstrap テーマです。
+通常の [Bootstrap](http://getbootstrap.com/) では、日本語の表示が最適であるとはいえません。 "Honoka" では Bootstrap をベースに、日本語表示に適したフォントの指定や、ウェイトに関するコードを追記した Bootstrap テーマです。
 
 ## Live Demo
 
@@ -29,7 +29,7 @@
 
 ### npm
 
-Node.js のパッケージ管理システムである、 [npm](https://npmjs.com) からダウンロードすることができます。 [webpack](https://webpack.js.org/) など、npmを利用したmodule bundlerでご利用ください。
+Node.js のパッケージ管理システムである、 [npm](https://npmjs.com) で [公開されています](https://www.npmjs.com/package/bootstrap-honoka)。 [webpack](https://webpack.js.org/) など、npmを利用したmodule bundlerでご利用ください。
 
 ```
 npm install --save bootstrap-honoka
@@ -57,11 +57,9 @@ bower install --save-dev Honoka#(version)
 
 ## Usage
 
-Honoka は単なる Bootstrap のテーマにしか過ぎないため、基本的な使い方は Bootstrap とほとんど変わりません。よって以下に書くことは [Bootstrap](http://getbootstrap.com/getting-started/) からの引用、もしくはその一部を変更したものです。Bootstrap によって用意されているCSSクラスやコンポーネントなど、より詳細な使い方のドキュメントは Bootstrap の各種リファレンスページをご覧になることを推奨します。
+Honoka は Bootstrap のテーマにしか過ぎないため、基本的な使い方は Bootstrap と変わりません。  Bootstrap のスタイルシートの読み込みを Honoka のスタイルシートに置き換えることで動作します。また JavaScript のコードは変更されていないので、 Bootstrap のものを使っても問題ありません。
 
-* [CSS](http://getbootstrap.com/css/)
-* [Components](http://getbootstrap.com/components/)
-* [JavaScript](http://getbootstrap.com/javascript/)
+そのほか Bootstrap の機能の詳細については [Bootstrap のドキュメント](https://getbootstrap.com/docs/4.1/getting-started/introduction/) を参照してください。
 
 ### Package
 
