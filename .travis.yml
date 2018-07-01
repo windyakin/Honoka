@@ -4,32 +4,20 @@ notifications:
   email: false
 
 node_js:
-- '6.9'
+- '8'
 
 sudo: false
 
 cache:
   directories:
-  - node_modules
-  - vendor/bundle
+    - node_modules
 
 git:
   submodules: false
 
-before_install:
-- rvm install 2.3.0
-- rvm use 2.3.0 --fuzzy
-- export GEMDIR=$(rvm gemdir)
-- ruby --version
-- gem --version
-- gem install bundler --quiet --no-ri --no-rdoc
-- bundle --version
-- bundle install --without documentation --path vendor/bundle
-- npm install -g grunt-cli
-- grunt --version
-
 script:
-- npm start
+  - npm test
+  - npm start
 
 deploy:
   provider: npm
@@ -37,7 +25,6 @@ deploy:
   api_key: $NPM_API_KEY
   on:
     tags: true
-    branch: master
 
 env:
   global:

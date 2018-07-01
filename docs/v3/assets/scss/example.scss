@@ -1,0 +1,264 @@
+@charset "UTF-8";
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+@import "honoka/variables";
+@import "honoka/mixins";
+
+$brand-honoka: #fdcea0;
+$brand-twitter: #55acee;
+$brand-facebook: #3b5998;
+$brand-hatena: #178fde;
+
+.btn-twitter,.btn-facebook {
+	.fa.fa-lg {
+		margin-right: 2px;
+		vertical-align: -1px;
+	}
+}
+.btn-twitter {
+	@include button-variant(#fff, $brand-twitter, darken($brand-twitter, 2%));
+}
+.btn-facebook {
+	@include button-variant(#fff, $brand-facebook, darken($brand-facebook, 2%));
+}
+.btn-hatebu {
+	@include button-variant(#fff, $brand-hatena, darken($brand-hatena, 2%));
+}
+
+.fa.fa-hatebu::before {
+	font-family: Verdana;
+	font-weight: bold;
+	content: "B!";
+}
+
+body {
+	margin-top: $navbar-height;
+}
+
+.v4-dev {
+	a {
+		display: block;
+		padding: $padding-large-vertical;
+		font-weight: bold;
+		color: #fff;
+		text-align: center;
+		text-decoration: none;
+		background-color: $brand-primary;
+		&:hover, &:active, &:focus {
+			background-color: darken($brand-primary, 10%);
+		}
+	}
+}
+
+.social-button {
+	position: relative;
+	padding: $padding-large-vertical 0;
+	margin: 0 auto !important;
+	overflow: hidden;
+	> ul {
+		position: relative;
+		left: 50%;
+		float: left;
+		padding: 0;
+		margin: 0;
+		list-style: outside none none;
+		> li {
+			position: relative;
+			left: -50%;
+			float: left;
+			padding: 0;
+			margin: 0 10px;
+			.fb-like {
+				> span {
+					vertical-align: 0 !important;
+				}
+			}
+		}
+	}
+}
+
+.social {
+	padding: $padding-large-vertical 0;
+	background: $gray-lighter;
+}
+
+.jumbotron.special {
+	position: relative;
+	min-height: 530px;
+	margin-bottom: 0;
+	overflow: hidden;
+	text-align: center;
+	background-color: $brand-honoka;
+	background-image: url("../img/circle.png");
+	background-repeat: no-repeat;
+	background-position: -35% center;
+	background-size: 70%;
+	.honoka {
+		position: absolute;
+		bottom: -20px;
+		left: 0;
+		width: 400px;
+		height: 530px;
+		background-image: url("../img/honoka.png");
+		background-repeat: no-repeat;
+	}
+	.outline {
+		margin-top: 180px;
+	}
+	h1,
+	.h1 {
+		font-family: Montserrat, sans-serif;
+	}
+	.download {
+		margin: $line-height-computed auto ($line-height-computed * 0.5);
+	}
+	.basedon {
+		margin: ($line-height-computed * 0.5) auto;
+		color: $gray-light;
+		text-shadow: #fff 0 1px 2px;
+	}
+}
+
+
+
+section.section {
+	padding: ($padding-large-vertical * 10) 0;
+	&.section-default {
+		background-color: $body-bg;
+	}
+	&.section-inverse {
+		background-color: lighten($brand-honoka, 15%);
+	}
+	.subtitle {
+		margin-bottom: $line-height-computed;
+		text-align: center;
+		h2 {
+			margin-top: 0;
+		}
+	}
+}
+
+.point {
+	.point-box {
+		text-align: center;
+		.point-circle {
+			$point-circle-size: 100px;
+			width: $point-circle-size;
+			height: $point-circle-size;
+			margin: 0 auto;
+			font-size: $point-circle-size * 0.6;
+			line-height: $point-circle-size;
+			color: #fff;
+			border-radius: 100%;
+			&.start {
+				background-color: $brand-success;
+			}
+			&.replace {
+				background-color: $brand-warning;
+			}
+			&.compass {
+				background-color: $brand-primary;
+			}
+			&.japanese {
+				background-color: $brand-danger;
+				span.icon-jp::before {
+					font-weight: bold;
+					content: "あ";
+				}
+			}
+		}
+		.point-description {
+			h4 {
+				text-align: center;
+			}
+			p {
+				text-align: justify;
+			}
+		}
+	}
+}
+
+.getting-started {
+	h3 {
+		margin-top: 0;
+	}
+}
+
+.japanese-font {
+	.well {
+		> h3 {
+			margin-top: $line-height-computed;
+		}
+	}
+}
+
+h3 .package-system-logo {
+	width: auto;
+	height: $font-size-h3 * 2;
+}
+
+.available-bower {
+	position: relative;
+	overflow: hidden;
+	.bower-logo {
+		position: absolute;
+		right: 40px;
+		bottom: 0;
+		width: 300px;
+		height: 300px;
+		background-image: url("../img/bower-logo.png");
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: contain;
+		opacity: 0.3;
+	}
+}
+
+.featured {
+	.subtitle {
+		h2 {
+			font-size: $font-size-h3;
+		}
+	}
+	ul.featured-list {
+		a {
+			opacity: 0.7;
+			&:hover, &:active, &:focus {
+				opacity: 0.5;
+			}
+		}
+		li {
+			padding: $padding-base-vertical $padding-large-horizontal;
+		}
+	}
+}
+
+.thumbnail {
+	background: #fff;
+	> a {
+		&:hover, &:active, &:focus {
+			opacity: 0.7;
+		}
+	}
+}
+
+footer {
+	padding: $padding-large-vertical * 4 0;
+	color: $gray-lighter;
+	background-color: $gray-dark;
+	.copyright {
+		padding-top: $padding-large-vertical;
+		padding-bottom: $padding-large-vertical;
+	}
+}
+
+.bootstrap-default {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.4285;
+	> h3 {
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		font-size: 24px;
+	}
+}

@@ -1,70 +1,42 @@
 @charset "UTF-8";
 
-// animation
-a {
-	transition-timing-function: ease;
-	transition-duration: 0.3s;
-	transition-property: all;
+.navbar {
+  .nav-item {
+    .nav-link {
+      position: relative;
+      margin-right: $spacer * .5;
+      &::before {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        margin: 0 auto;
+        content: "";
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        transition: width .2s;
+      }
+      @include hover-focus {
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+    &.active .nav-link::before {
+      width: 100%;
+    }
+  }
 }
 
-// buttons
-.btn {
-	&:active,
-	&.active {
-		box-shadow: none;
-	}
+.navbar-dark {
+  .nav-item .nav-link::before {
+    border-color: $navbar-dark-active-color;
+  }
 }
 
-// navbar
-.navbar-nav {
-	@media (min-width: $grid-float-breakpoint) {
-		> li {
-			> a {
-				padding-top:    ($navbar-padding-vertical / 4);
-				padding-bottom: ($navbar-padding-vertical / 4);
-				margin-top:     ($navbar-padding-vertical / 4 * 3);
-				margin-bottom:  ($navbar-padding-vertical / 4 * 3);
-				border-radius:  $border-radius-large;
-			}
-			> .dropdown-menu {
-				margin-top: (-$navbar-padding-vertical / 4 * 3);
-			}
-		}
-		> li:not(:last-child) {
-			margin-right: ($navbar-padding-horizontal / 3);
-		}
-	}
-}
-
-.navbar-brand {
-	margin-right: ($navbar-padding-horizontal / 3);
-	font-size: $font-size-large;
-}
-
-// label
-.label {
-	vertical-align: 2px;
-}
-
-// フォント指定
-.no-thank-yu,
-.navbar,
-.btn,
-.form-control,
-.input-gruop,
-.breadcrumb,
-.nav-tabs,
-.nav-pills,
-.panel-title,
-.list-group,
-.pagination,
-.pager,
-.alert,
-.label,
-.badge,
-.panel-heading,
-.lead,
-.tooltip,
-.popover {
-	font-family: $font-family-sans-serif;
+.navbar-light {
+  .nav-item .nav-link::before {
+    border-color: $navbar-light-active-color;
+  }
 }

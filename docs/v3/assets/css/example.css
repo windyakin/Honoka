@@ -1,0 +1,358 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+.btn-twitter .fa.fa-lg, .btn-facebook .fa.fa-lg {
+  margin-right: 2px;
+  vertical-align: -1px;
+}
+
+.btn-twitter {
+  color: #fff;
+  background-color: #55acee;
+  border-color: #4ca7ed;
+  -webkit-transition-timing-function: ease;
+       -o-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-transition-duration: .3s;
+       -o-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-property: all;
+       -o-transition-property: all;
+          transition-property: all;
+}
+.btn-twitter:focus, .btn-twitter.focus {
+  color: #fff;
+  background-color: #2795e9;
+  border-color: #1167a8;
+}
+.btn-twitter:hover {
+  color: #fff;
+  background-color: #2795e9;
+  border-color: #178ce5;
+}
+.btn-twitter:active, .btn-twitter.active, .open > .btn-twitter.dropdown-toggle {
+  color: #fff;
+  background-color: #3ea1ec;
+  border-color: #309aea;
+}
+.btn-twitter:active:hover, .btn-twitter:active:focus, .btn-twitter:active.focus, .btn-twitter.active:hover, .btn-twitter.active:focus, .btn-twitter.active.focus, .open > .btn-twitter.dropdown-toggle:hover, .open > .btn-twitter.dropdown-toggle:focus, .open > .btn-twitter.dropdown-toggle.focus {
+  color: #fff;
+  background-color: #1583d7;
+  border-color: #1167a8;
+}
+.btn-twitter:active, .btn-twitter.active, .open > .btn-twitter.dropdown-toggle {
+  background-image: none;
+}
+.btn-twitter.disabled, .btn-twitter.disabled:hover, .btn-twitter.disabled:focus, .btn-twitter.disabled.focus, .btn-twitter.disabled:active, .btn-twitter.disabled.active, .btn-twitter[disabled], .btn-twitter[disabled]:hover, .btn-twitter[disabled]:focus, .btn-twitter[disabled].focus, .btn-twitter[disabled]:active, .btn-twitter[disabled].active, fieldset[disabled] .btn-twitter, fieldset[disabled] .btn-twitter:hover, fieldset[disabled] .btn-twitter:focus, fieldset[disabled] .btn-twitter.focus, fieldset[disabled] .btn-twitter:active, fieldset[disabled] .btn-twitter.active {
+  background-color: #55acee;
+  border-color: #4ca7ed;
+}
+.btn-twitter .badge {
+  color: #55acee;
+  background-color: #fff;
+}
+
+.btn-facebook {
+  color: #fff;
+  background-color: #3b5998;
+  border-color: #385591;
+  -webkit-transition-timing-function: ease;
+       -o-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-transition-duration: .3s;
+       -o-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-property: all;
+       -o-transition-property: all;
+          transition-property: all;
+}
+.btn-facebook:focus, .btn-facebook.focus {
+  color: #fff;
+  background-color: #2d4373;
+  border-color: #141f35;
+}
+.btn-facebook:hover {
+  color: #fff;
+  background-color: #2d4373;
+  border-color: #273b65;
+}
+.btn-facebook:active, .btn-facebook.active, .open > .btn-facebook.dropdown-toggle {
+  color: #fff;
+  background-color: #344e86;
+  border-color: #30487b;
+}
+.btn-facebook:active:hover, .btn-facebook:active:focus, .btn-facebook:active.focus, .btn-facebook.active:hover, .btn-facebook.active:focus, .btn-facebook.active.focus, .open > .btn-facebook.dropdown-toggle:hover, .open > .btn-facebook.dropdown-toggle:focus, .open > .btn-facebook.dropdown-toggle.focus {
+  color: #fff;
+  background-color: #23345a;
+  border-color: #141f35;
+}
+.btn-facebook:active, .btn-facebook.active, .open > .btn-facebook.dropdown-toggle {
+  background-image: none;
+}
+.btn-facebook.disabled, .btn-facebook.disabled:hover, .btn-facebook.disabled:focus, .btn-facebook.disabled.focus, .btn-facebook.disabled:active, .btn-facebook.disabled.active, .btn-facebook[disabled], .btn-facebook[disabled]:hover, .btn-facebook[disabled]:focus, .btn-facebook[disabled].focus, .btn-facebook[disabled]:active, .btn-facebook[disabled].active, fieldset[disabled] .btn-facebook, fieldset[disabled] .btn-facebook:hover, fieldset[disabled] .btn-facebook:focus, fieldset[disabled] .btn-facebook.focus, fieldset[disabled] .btn-facebook:active, fieldset[disabled] .btn-facebook.active {
+  background-color: #3b5998;
+  border-color: #385591;
+}
+.btn-facebook .badge {
+  color: #3b5998;
+  background-color: #fff;
+}
+
+.btn-hatebu {
+  color: #fff;
+  background-color: #178fde;
+  border-color: #1689d5;
+  -webkit-transition-timing-function: ease;
+       -o-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-transition-duration: .3s;
+       -o-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-property: all;
+       -o-transition-property: all;
+          transition-property: all;
+}
+.btn-hatebu:focus, .btn-hatebu.focus {
+  color: #fff;
+  background-color: #1271b0;
+  border-color: #0a3f61;
+}
+.btn-hatebu:hover {
+  color: #fff;
+  background-color: #1271b0;
+  border-color: #10659d;
+}
+.btn-hatebu:active, .btn-hatebu.active, .open > .btn-hatebu.dropdown-toggle {
+  color: #fff;
+  background-color: #1580c7;
+  border-color: #1377b9;
+}
+.btn-hatebu:active:hover, .btn-hatebu:active:focus, .btn-hatebu:active.focus, .btn-hatebu.active:hover, .btn-hatebu.active:focus, .btn-hatebu.active.focus, .open > .btn-hatebu.dropdown-toggle:hover, .open > .btn-hatebu.dropdown-toggle:focus, .open > .btn-hatebu.dropdown-toggle.focus {
+  color: #fff;
+  background-color: #0f5c8f;
+  border-color: #0a3f61;
+}
+.btn-hatebu:active, .btn-hatebu.active, .open > .btn-hatebu.dropdown-toggle {
+  background-image: none;
+}
+.btn-hatebu.disabled, .btn-hatebu.disabled:hover, .btn-hatebu.disabled:focus, .btn-hatebu.disabled.focus, .btn-hatebu.disabled:active, .btn-hatebu.disabled.active, .btn-hatebu[disabled], .btn-hatebu[disabled]:hover, .btn-hatebu[disabled]:focus, .btn-hatebu[disabled].focus, .btn-hatebu[disabled]:active, .btn-hatebu[disabled].active, fieldset[disabled] .btn-hatebu, fieldset[disabled] .btn-hatebu:hover, fieldset[disabled] .btn-hatebu:focus, fieldset[disabled] .btn-hatebu.focus, fieldset[disabled] .btn-hatebu:active, fieldset[disabled] .btn-hatebu.active {
+  background-color: #178fde;
+  border-color: #1689d5;
+}
+.btn-hatebu .badge {
+  color: #178fde;
+  background-color: #fff;
+}
+
+.fa.fa-hatebu::before {
+  font-family: Verdana;
+  font-weight: bold;
+  content: "B!";
+}
+
+body {
+  margin-top: 80px;
+}
+
+.v4-dev a {
+  display: block;
+  padding: 10px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  background-color: #2196f3;
+}
+.v4-dev a:hover, .v4-dev a:active, .v4-dev a:focus {
+  background-color: #0c7cd5;
+}
+
+.social-button {
+  position: relative;
+  padding: 10px 0;
+  margin: 0 auto !important;
+  overflow: hidden;
+}
+.social-button > ul {
+  position: relative;
+  left: 50%;
+  float: left;
+  padding: 0;
+  margin: 0;
+  list-style: outside none none;
+}
+.social-button > ul > li {
+  position: relative;
+  left: -50%;
+  float: left;
+  padding: 0;
+  margin: 0 10px;
+}
+.social-button > ul > li .fb-like > span {
+  vertical-align: 0 !important;
+}
+
+.social {
+  padding: 10px 0;
+  background: #eee;
+}
+
+.jumbotron.special {
+  position: relative;
+  min-height: 530px;
+  margin-bottom: 0;
+  overflow: hidden;
+  text-align: center;
+  background-color: #fdcea0;
+  background-image: url("../img/circle.png");
+  background-repeat: no-repeat;
+  background-position: -35% center;
+  -webkit-background-size: 70% 70%;
+          background-size: 70%;
+}
+.jumbotron.special .honoka {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 400px;
+  height: 530px;
+  background-image: url("../img/honoka.png");
+  background-repeat: no-repeat;
+}
+.jumbotron.special .outline {
+  margin-top: 180px;
+}
+.jumbotron.special h1,
+.jumbotron.special .h1 {
+  font-family: Montserrat, sans-serif;
+}
+.jumbotron.special .download {
+  margin: 24px auto 12px;
+}
+.jumbotron.special .basedon {
+  margin: 12px auto;
+  color: #777;
+  text-shadow: #fff 0 1px 2px;
+}
+
+section.section {
+  padding: 100px 0;
+}
+section.section.section-default {
+  background-color: #f9f9f9;
+}
+section.section.section-inverse {
+  background-color: #fff5eb;
+}
+section.section .subtitle {
+  margin-bottom: 24px;
+  text-align: center;
+}
+section.section .subtitle h2 {
+  margin-top: 0;
+}
+
+.point .point-box {
+  text-align: center;
+}
+.point .point-box .point-circle {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  font-size: 60px;
+  line-height: 100px;
+  color: #fff;
+  border-radius: 100%;
+}
+.point .point-box .point-circle.start {
+  background-color: #4caf50;
+}
+.point .point-box .point-circle.replace {
+  background-color: #ff9800;
+}
+.point .point-box .point-circle.compass {
+  background-color: #2196f3;
+}
+.point .point-box .point-circle.japanese {
+  background-color: #f44336;
+}
+.point .point-box .point-circle.japanese span.icon-jp::before {
+  font-weight: bold;
+  content: "あ";
+}
+.point .point-box .point-description h4 {
+  text-align: center;
+}
+.point .point-box .point-description p {
+  text-align: justify;
+}
+
+.getting-started h3 {
+  margin-top: 0;
+}
+
+.japanese-font .well > h3 {
+  margin-top: 24px;
+}
+
+h3 .package-system-logo {
+  width: auto;
+  height: 48px;
+}
+
+.available-bower {
+  position: relative;
+  overflow: hidden;
+}
+.available-bower .bower-logo {
+  position: absolute;
+  right: 40px;
+  bottom: 0;
+  width: 300px;
+  height: 300px;
+  background-image: url("../img/bower-logo.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: contain;
+          background-size: contain;
+  opacity: .3;
+}
+
+.featured .subtitle h2 {
+  font-size: 24px;
+}
+.featured ul.featured-list a {
+  opacity: .7;
+}
+.featured ul.featured-list a:hover, .featured ul.featured-list a:active, .featured ul.featured-list a:focus {
+  opacity: .5;
+}
+.featured ul.featured-list li {
+  padding: 6px 20px;
+}
+
+.thumbnail {
+  background: #fff;
+}
+.thumbnail > a:hover, .thumbnail > a:active, .thumbnail > a:focus {
+  opacity: .7;
+}
+
+footer {
+  padding: 40px 0;
+  color: #eee;
+  background-color: #333;
+}
+footer .copyright {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.bootstrap-default {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.4285;
+}
+.bootstrap-default > h3 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+}

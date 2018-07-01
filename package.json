@@ -1,11 +1,13 @@
 {
   "name": "bootstrap-honoka",
-  "version": "3.3.7-a",
+  "version": "4.0.0",
   "description": "Honoka is one of the Bootstrap original theme.",
   "author": "windyakin",
   "website": "http://honokak.osaka/",
   "config": {
-    "package_name": "Honoka"
+    "packageName": "Honoka",
+    "projectStartYear": "2015",
+    "licenseUrl": "https://github.com/windyakin/Honoka/blob/master/LICENSE"
   },
   "keywords": [
     "css",
@@ -19,39 +21,53 @@
     "theme"
   ],
   "license": "MIT",
-  "main": "Gruntfile.js",
+  "main": "dist/js/bootstrap.js",
   "scripts": {
-    "test": "grunt test",
-    "start": "grunt build",
-    "server": "grunt server",
-    "release": "grunt package"
+    "start": "gulp default",
+    "test": "gulp test"
   },
   "style": "dist/css/bootstrap.css",
   "repository": {
     "type": "git",
     "url": "https://github.com/windyakin/honoka.git"
   },
+  "dependencies": {
+    "bootstrap": "4.0.0",
+    "jquery": ">=1.9.1",
+    "popper.js": "^1.14.3"
+  },
   "devDependencies": {
-    "bower": "^1.7.9",
-    "grunt": "^1.0.1",
-    "grunt-autoprefixer": "^3.0.4",
-    "grunt-bower-task": "^0.4.0",
-    "grunt-cli": "^1.2.0",
-    "grunt-contrib-clean": "^1.0.0",
-    "grunt-contrib-compress": "^1.3.0",
-    "grunt-contrib-connect": "^1.0.2",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-cssmin": "^1.0.2",
-    "grunt-contrib-sass": "^1.0.0",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-csscomb": "^3.1.1",
-    "grunt-scss-lint": "^0.5.0",
-    "grunt-text-replace": "^0.4.0"
+    "autoprefixer": "^7.2.6",
+    "browser-sync": "^2.24.2",
+    "clean-css": "^4.1.11",
+    "del": "^3.0.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.3",
+    "gulp-eslint": "^4.0.2",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.6.1",
+    "gulp-sass": "^3.2.1",
+    "gulp-stylelint": "^6.0.0",
+    "gulp-zip": "^4.1.0",
+    "postcss-flexbugs-fixes": "^3.3.1",
+    "run-sequence": "^2.2.1",
+    "stylelint": "^8.4.0",
+    "stylelint-config-recommended-scss": "^3.2.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-order": "^0.8.1",
+    "stylelint-scss": "^2.5.0"
   },
   "files": [
+    "build",
     "dist",
     "scss/**/*.scss",
-    "Gruntfile.js",
+    "gulpfile.js",
     "LICENSE"
   ]
 }
