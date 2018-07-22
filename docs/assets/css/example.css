@@ -18,6 +18,12 @@
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
+@media screen and (prefers-reduced-motion: reduce) {
+  .btn {
+    transition: none;
+  }
+}
+
 .btn:hover, .btn:focus {
   text-decoration: none;
 }
@@ -609,6 +615,7 @@ fieldset:disabled a.btn {
 
 .btn-link:disabled, .btn-link.disabled {
   color: #6c757d;
+  pointer-events: none;
 }
 
 .btn-lg {
