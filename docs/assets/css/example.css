@@ -41,10 +41,6 @@
   cursor: pointer;
 }
 
-.btn:not(:disabled):not(.disabled):active, .btn:not(:disabled):not(.disabled).active {
-  background-image: none;
-}
-
 a.btn.disabled,
 fieldset:disabled a.btn {
   pointer-events: none;
