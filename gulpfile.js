@@ -144,7 +144,7 @@ Gulp.task('packing', () => {
       /* eslint-enable no-param-reassign */
     }))
     .pipe(Plugins.zip(`bootstrap-${PackageJSON.config.packageName.toLowerCase()}-${PackageJSON.version}-dist.zip`))
-    .pipe(Gulp.dest('./'));
+    .pipe(Gulp.dest('dist'));
 });
 
 Gulp.task('docs:serve', () => {
