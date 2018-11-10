@@ -42,6 +42,7 @@ Gulp.task('css:clean', () => {
 Gulp.task('css:lint', () => {
   return Gulp.src(['scss/**/*.scss'])
     .pipe(Plugins.stylelint({
+      configFile: '.stylelintrc',
       failAfterError: true,
       reporters: [
         { formatter: 'verbose', console: true },
