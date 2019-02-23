@@ -154,24 +154,21 @@ Gulp.task('docs:serve', () => {
   });
 });
 
+Gulp.task('docs:reload', () => {
+  BrowserSync.reload();
+});
+
 Gulp.task('watch', () => {
-  const message = (filePath) => {
-    console.log(`File: ${filePath} was changed, running tasks...`);
-  };
-  Gulp.watch(['scss/**/*'], Gulp.series('css', 'docs:copy'))
-    .on('change', message);
-  Gulp.watch(['docs/**/*.html'])
-    .on('change', message)
-    .on('change', BrowserSync.reload);
-  Gulp.watch(['docs/assets/scss/**/*.scss'], Gulp.series('docs:css'))
-    .on('change', message);
+  Gulp.watch(['scss/**/*'], Gulp.series('css', 'docs:copy', 'docs:reload'));
+  Gulp.watch(['docs/**/*.html'], Gulp.series('docs:reload'));
+  Gulp.watch(['docs/assets/scss/**/*.scss'], Gulp.series('docs:css', 'docs:reload'));
 });
 
 Gulp.task('docs', Gulp.series(
   'docs:clean', 'docs:copy', 'docs:css',
 ));
 
-Gulp.task('serve', Gulp.series(
+Gulp.task('serve', Gulp.parallel(
   'docs:serve', 'watch',
 ));
 
