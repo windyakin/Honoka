@@ -738,6 +738,16 @@
               </div>
             </div>
             <div class="form-group">
+              <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitch1" checked="">
+                <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
+              </div>
+              <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" disabled="" id="customSwitch2">
+                <label class="custom-control-label" for="customSwitch2">Disabled switch element</label>
+              </div>
+            </div>
+            <div class="form-group">
               <select class="custom-select">
                 <option selected>Open this select menu</option>
                 <option value="1">One</option>
@@ -1121,6 +1131,89 @@
     </div>
   </section>
 
+
+  <!-- Spinners
+  ================================================== -->
+  <section class="bs-docs-section">
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="page-header">
+          <h1 id="spinners">Spinners</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 ">
+        <h3 id="spinners-border">Border Spinners</h3>
+        <div class="bs-component d-flex justify-content-around">
+          <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-border text-secondary" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-border text-success" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-border text-danger" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-border text-warning" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-border text-info" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-border text-light" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-border text-dark" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <h3 id="spinners-growing">Growing spinners</h3>
+        <div class="bs-component d-flex justify-content-around">
+          <div class="spinner-grow" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-grow text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-grow text-secondary" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-grow text-success" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-grow text-danger" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-grow text-warning" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-grow text-info" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-grow text-light" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-grow text-dark" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
   <!-- Containers
   ================================================== -->
   <section class="bs-docs-section">
@@ -1410,7 +1503,25 @@
             </div>
           </div>
         </div>
+
+        <h2>Toast</h2>
+        <div class="bs-component d-flex justify-content-center p-md-4">
+          <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+              <svg class="bd-placeholder-img rounded mr-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect fill="#007aff" width="100%" height="100%"></rect></svg>
+              <strong class="mr-auto">Bootstrap</strong>
+              <small>11 mins ago</small>
+              <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="toast-body">
+              Hello, world! This is a toast message.
+            </div>
+          </div>
+        </div>
       </div>
+
       <div class="col-lg-6">
         <h2>Popovers</h2>
         <div class="bs-component" style="margin-bottom: 3em;">
