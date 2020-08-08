@@ -37,10 +37,10 @@
     "popper.js": "^1.14.7"
   },
   "devDependencies": {
-    "autoprefixer": "^9.6.1",
-    "browser-sync": "^2.26.7",
-    "clean-css": "^4.2.1",
-    "del": "^5.0.0",
+    "autoprefixer": "^9.8.6",
+    "browser-sync": "^2.26.12",
+    "clean-css": "^4.2.3",
+    "del": "^5.1.0",
     "eslint": "^7.6.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.0",
@@ -55,7 +55,7 @@
     "gulp-sass": "^4.1.0",
     "gulp-stylelint": "^13.0.0",
     "gulp-zip": "^5.0.2",
-    "postcss-flexbugs-fixes": "^4.1.0",
+    "postcss-flexbugs-fixes": "^4.2.1",
     "run-sequence": "^2.2.1",
     "stylelint": "^13.6.1",
     "stylelint-config-recommended-scss": "^4.2.0",
