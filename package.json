@@ -24,6 +24,7 @@
   "main": "dist/js/bootstrap.js",
   "scripts": {
     "start": "gulp default",
+    "build": "gulp release",
     "test": "gulp test"
   },
   "style": "dist/css/bootstrap.css",

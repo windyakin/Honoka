@@ -1,15 +1,12 @@
-all: image-build build copy down
-
-image-build:
-	docker build -t honoka-build -f Dockerfile .
+all: build copy down
 
 build:
-	docker run --name honoka-build honoka-build release
+	docker-compose up
 
 copy:
-	docker cp honoka-build:/usr/src/app/dist .
+	docker cp $$(docker-compose ps -q honoka):/usr/src/app/dist .
 
 down:
-	docker rm honoka-build
+	docker-compose down
 
-.PHONY: all image-build build copy down
+.PHONY: all build copy down
