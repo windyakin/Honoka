@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-honoka",
-  "version": "4.3.1",
+  "version": "4.4.0",
   "description": "Honoka is one of the Bootstrap original theme.",
   "author": "windyakin",
   "website": "http://honokak.osaka/",
@@ -33,7 +33,7 @@
     "url": "https://github.com/windyakin/honoka.git"
   },
   "dependencies": {
-    "bootstrap": "4.3.1",
+    "bootstrap": "4.4.0",
     "jquery": "1.9.1 - 3",
     "popper.js": "^1.14.7"
   },
