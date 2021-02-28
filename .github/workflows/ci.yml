@@ -22,9 +22,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - runs: npm install
+      - run: npm install
 
-      - runs: npm lint
+      - run: npm lint
 
   build:
     runs-on: ubuntu-latest
@@ -43,6 +43,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - runs: npm install
+      - run: npm install
 
-      - runs: npm start
+      - run: npm start
